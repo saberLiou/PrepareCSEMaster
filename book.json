@@ -5,7 +5,7 @@
     "structure": {
         "readme": "INTRODUCTION.md"
     },
-    "plugins": ["mathjax"],
+    "plugins": ["katex"],
     "variables": {
         "linear_algebra": {
             "title": "Linear Algebra"
