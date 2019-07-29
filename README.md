@@ -1,3 +1,3 @@
-# PrepareCSEMaster
+# Prepare CSE Master Cheatsheet
 
-Notes for preparing CSE master examination.
+**[Cheatsheet](https://saberliou.gitbook.io/preparecsemaster/)** for preparing CSE master examination.

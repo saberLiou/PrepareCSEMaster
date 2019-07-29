@@ -1,3 +1,26 @@
 {
-    "plugins": ["mathjax"]
+    "title": "Prepare CSE Master Cheatsheet",
+    "description": "Cheatsheet for preparing CSE master examination.",
+    "author": "saberLiou <saberliou@gmail.com",
+    "links": {
+        "sharing": {
+            "github": "https://github.com/saberLiou",
+            "facebook": "https://www.facebook.com/saberLiou",
+            "twitter": "https://twitter.com/saberliou"
+        }
+    },
+    "structure": {
+        "readme": "OUTLINE.md"
+    },
+    "plugins": ["mathjax"],
+    "variables": {
+        "computer_organization": {
+            "title": "Computer Organization",
+            "chapter1": "01. 指令: 計算機的語言"
+        },
+        "data_structure": {
+            "title": "Data Structure",
+            "chapter1": "01. Basic Concepts"
+        }
+    }
 }

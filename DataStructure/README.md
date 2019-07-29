@@ -1,3 +1,3 @@
-# Data Structure
+# {{ book.data_structure.title }}
 
-* [01. Basic Concepts](Chapter01.md)
+* [{{ book.data_structure.chapter1 }}](Chapter01.md)

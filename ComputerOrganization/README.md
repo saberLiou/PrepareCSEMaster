@@ -1,3 +1,3 @@
-# Computer Organization
+# {{ book.computer_organization.title }}
 
-* [01. 指令: 計算機的語言](Chapter01.md)
+* [{{ book.computer_organization.chapter1 }}](Chapter01.md)
