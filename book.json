@@ -27,5 +27,12 @@
             "title": "Computer Organization",
             "chapter1": "01. 指令: 計算機的語言"
         }
+    },
+    "links": {
+        "sharing": {
+            "twitter": false,
+            "facebook": false,
+            "all": false
+        }
     }
 }
