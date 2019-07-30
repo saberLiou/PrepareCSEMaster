@@ -65,6 +65,11 @@
         "filename": "FOOTER.md"
     },
     "variables": {
+        "images_root_url": "../images",
+        "authors": [
+            { "name": "Samy" },
+            { "name": "Aaron" }
+        ],
         "linear_algebra": {
             "title": "Linear Algebra"
         },
@@ -73,7 +78,10 @@
         },
         "data_structure": {
             "title": "Data Structure",
-            "chapter1": "01. Basic Concepts"
+            "chapter1": {
+                "title": "01. Basic Concepts",
+                "images_url": "DataStructure/Chapter01"
+            }
         },
         "algorithm": {
             "title": "Algorithm"
@@ -83,7 +91,16 @@
         },
         "computer_organization": {
             "title": "Computer Organization",
-            "chapter1": "01. 指令: 計算機的語言"
+            "chapter1": {
+                "title": "01. 指令: 計算機的語言",
+                "images_url": "ComputerOrganization/Chapter01",
+                "images": [
+                    {
+                        "name": "Basic Computer Structure in ISA",
+                        "file": "basic_computer_structure.jpg"
+                    }
+                ]
+            }
         }
     }
 }

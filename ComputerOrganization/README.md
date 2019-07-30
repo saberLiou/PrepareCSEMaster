@@ -1,3 +1,3 @@
 # {{ book.computer_organization.title }}
 
-[{{ book.computer_organization.chapter1 }}](Chapter01.md)
+[{{ book.computer_organization.chapter1.title }}](Chapter01.md)

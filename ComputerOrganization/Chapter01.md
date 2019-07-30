@@ -1,4 +1,4 @@
-# {{ book.computer_organization.chapter1 }}
+# {{ book.computer_organization.chapter1.title }}
 <!-- toc -->
 
 ## 基本概念
@@ -48,7 +48,11 @@ Prior to the early 1980's, machines were built with more and more complex instru
   - 輸入設備(Input Device)
   - 輸出設備(Output Device)
 
-![Hardware Information](../images/ComputerOrganization/Chapter01/basic_computer_structure.jpg "Basic Computer Structure in ISA")
+![Basic Computer Structure in ISA][Basic Computer Structure in ISA]
 
 - 記憶體(Memory)
 
+<!-- Reference Links -->
+{% for image in book.computer_organization.chapter1.images %}
+[{{ image.name }}]: {{ book.images_root_url }}/{{ book.computer_organization.chapter1.images_url }}/{{ image.file }} "{{ image.name }}"
+{% endfor %}
