@@ -3,7 +3,7 @@
     "description": "Cheatsheet for preparing CSE master examination.",
     "author": "saberLiou <saberliou@gmail.com>",
     "links": {
-        "-sharing": {
+        "sharing": {
             "facebook": false,
             "twitter": false,
             "all": false
@@ -26,9 +26,8 @@
             "google": false,
             "hatenaBookmark": false,
             "instapaper": false,
-            "line": false,
             "linkedin": false,
-            "messenger": false,
+            "messenger": true,
             "pocket": false,
             "qq": false,
             "qzone": false,
@@ -38,7 +37,8 @@
             "vk": false,
             "weibo": false,
             "whatsapp": false,
-            "all": ["line", "twitter", "facebook", "messenger", "whatsapp"]
+            "line": true,
+            "all": []
         },
         "github": {
             "url": "https://github.com/saberLiou/PrepareCSEMaster"
