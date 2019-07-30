@@ -2,10 +2,33 @@
     "title": "Prepare CSE Master Cheatsheet",
     "description": "Cheatsheet for preparing CSE master examination.",
     "author": "saberLiou <saberliou@gmail.com>",
+    "links": {
+        "sharing": {
+            "twitter": false,
+            "facebook": false,
+            "all": false
+        }
+    },
     "structure": {
         "readme": "INTRODUCTION.md"
     },
-    "plugins": ["katex"],
+    "plugins": [
+        "katex",
+        "localized-footer",
+        "page-footer-ex"
+    ],
+    "pluginsConfig": {
+        "page-footer-ex": {
+            "copyright": "[saberLiou](https://github.com/saberLiou) © All Rights Reserved",
+            "markdown": true,
+            "update_label": "<i>updated at</i>",
+            "update_format": "YYYY-MM-DD HH:mm:ss"
+        }
+    },
+    "localized-footer": {
+        "hline": true,
+        "filename": "FOOTER.md"
+    },
     "variables": {
         "linear_algebra": {
             "title": "Linear Algebra"
@@ -26,13 +49,6 @@
         "computer_organization": {
             "title": "Computer Organization",
             "chapter1": "01. 指令: 計算機的語言"
-        }
-    },
-    "links": {
-        "sharing": {
-            "twitter": false,
-            "facebook": false,
-            "all": false
         }
     }
 }

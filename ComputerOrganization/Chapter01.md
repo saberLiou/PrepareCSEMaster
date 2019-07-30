@@ -23,7 +23,7 @@ Prior to the early 1980's, machines were built with more and more complex instru
 ## MIPS (Microprocessor without Interlocked Pipe Stages)
 ---
 - 課本使用: MIPS **R2000**
-- **字組(word)**: ? bits(字組大小)的CPU一次可以處理的資料量，其一般目的暫存器(general purpose register)、算術邏輯運算單元(ALU)亦為 ? bits
+- **字組(word)**: ? bits(字組大小)的CPU一次可以處理的資料量，其一般目的暫存器(General Purpose Registers, GPR)與算術邏輯運算單元(Arithmetic Logic Unit, ALU)亦為 ? bits
 
 ## 內儲式程式概念 (Stored-Program Computer or Von Neuman Machine)
 ---
@@ -31,10 +31,23 @@ Prior to the early 1980's, machines were built with more and more complex instru
   - **指令被表示成像數字一般的形式**，使程式能以二進制檔案的方式散佈，因此相容的指令集所造成的計算機便可共用一些現成的軟體
   - **要被執行的程式一定得先放置於記憶體中，像數字一般的被存取**
   
-## 指令集架構
+## 指令集架構: Hardware Information + Instruction Set
 ---
+### Hardware Information
 - 學習低階組合語言時所必須了解的硬體資訊應包含以下項目:
   - **記憶體(Memory)**
   - **暫存器(Register)**
   - **指令格式(Instruction Format)**
   - **定址模式(Addressing Mode)**
+- 計算機基礎架構(Basic Computer Structure)五個單元:
+  - 控制單元(Control Unit)
+  - 資料路徑(Datapath): ALU + Registers, 真正處理資料和執行指令之電路
+    > **處理器(Processor)**: Control Unit + Datapath
+  - 記憶體(Memory)
+  - 輸入設備(Input Device)
+  - 輸出設備(Output Device)
+
+![Hardware Information](../images/ComputerOrganization/Chapter01/basic_computer_structure.jpg "Basic Computer Structure in ISA")
+
+- 記憶體(Memory)
+

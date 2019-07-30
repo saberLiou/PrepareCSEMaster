@@ -21,6 +21,10 @@
                 
             
                 
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -331,7 +335,7 @@
 <hr>
 <ul>
 <li>&#x8AB2;&#x672C;&#x4F7F;&#x7528;: MIPS <strong>R2000</strong></li>
-<li><strong>&#x5B57;&#x7D44;(word)</strong>: ? bits(&#x5B57;&#x7D44;&#x5927;&#x5C0F;)&#x7684;CPU&#x4E00;&#x6B21;&#x53EF;&#x4EE5;&#x8655;&#x7406;&#x7684;&#x8CC7;&#x6599;&#x91CF;&#xFF0C;&#x5176;&#x4E00;&#x822C;&#x76EE;&#x7684;&#x66AB;&#x5B58;&#x5668;(general purpose register)&#x3001;&#x7B97;&#x8853;&#x908F;&#x8F2F;&#x904B;&#x7B97;&#x55AE;&#x5143;(ALU)&#x4EA6;&#x70BA; ? bits</li>
+<li><strong>&#x5B57;&#x7D44;(word)</strong>: ? bits(&#x5B57;&#x7D44;&#x5927;&#x5C0F;)&#x7684;CPU&#x4E00;&#x6B21;&#x53EF;&#x4EE5;&#x8655;&#x7406;&#x7684;&#x8CC7;&#x6599;&#x91CF;&#xFF0C;&#x5176;&#x4E00;&#x822C;&#x76EE;&#x7684;&#x66AB;&#x5B58;&#x5668;(General Purpose Registers, GPR)&#x8207;&#x7B97;&#x8853;&#x908F;&#x8F2F;&#x904B;&#x7B97;&#x55AE;&#x5143;(Arithmetic Logic Unit, ALU)&#x4EA6;&#x70BA; ? bits</li>
 </ul>
 <h2 id="&#x5167;&#x5132;&#x5F0F;&#x7A0B;&#x5F0F;&#x6982;&#x5FF5;-stored-program-computer-or-von-neuman-machine">&#x5167;&#x5132;&#x5F0F;&#x7A0B;&#x5F0F;&#x6982;&#x5FF5; (Stored-Program Computer or Von Neuman Machine)</h2>
 <hr>
@@ -342,8 +346,9 @@
 </ul>
 </li>
 </ul>
-<h2 id="&#x6307;&#x4EE4;&#x96C6;&#x67B6;&#x69CB;">&#x6307;&#x4EE4;&#x96C6;&#x67B6;&#x69CB;</h2>
+<h2 id="&#x6307;&#x4EE4;&#x96C6;&#x67B6;&#x69CB;-hardware-information--instruction-set">&#x6307;&#x4EE4;&#x96C6;&#x67B6;&#x69CB;: Hardware Information + Instruction Set</h2>
 <hr>
+<h3 id="hardware-information">Hardware Information</h3>
 <ul>
 <li>&#x5B78;&#x7FD2;&#x4F4E;&#x968E;&#x7D44;&#x5408;&#x8A9E;&#x8A00;&#x6642;&#x6240;&#x5FC5;&#x9808;&#x4E86;&#x89E3;&#x7684;&#x786C;&#x9AD4;&#x8CC7;&#x8A0A;&#x61C9;&#x5305;&#x542B;&#x4EE5;&#x4E0B;&#x9805;&#x76EE;:<ul>
 <li><strong>&#x8A18;&#x61B6;&#x9AD4;(Memory)</strong></li>
@@ -352,8 +357,24 @@
 <li><strong>&#x5B9A;&#x5740;&#x6A21;&#x5F0F;(Addressing Mode)</strong></li>
 </ul>
 </li>
+<li>&#x8A08;&#x7B97;&#x6A5F;&#x57FA;&#x790E;&#x67B6;&#x69CB;(Basic Computer Structure)&#x4E94;&#x500B;&#x55AE;&#x5143;:<ul>
+<li>&#x63A7;&#x5236;&#x55AE;&#x5143;(Control Unit)</li>
+<li>&#x8CC7;&#x6599;&#x8DEF;&#x5F91;(Datapath): ALU + Registers, &#x771F;&#x6B63;&#x8655;&#x7406;&#x8CC7;&#x6599;&#x548C;&#x57F7;&#x884C;&#x6307;&#x4EE4;&#x4E4B;&#x96FB;&#x8DEF;<blockquote>
+<p><strong>&#x8655;&#x7406;&#x5668;(Processor)</strong>: Control Unit + Datapath</p>
+</blockquote>
+</li>
+<li>&#x8A18;&#x61B6;&#x9AD4;(Memory)</li>
+<li>&#x8F38;&#x5165;&#x8A2D;&#x5099;(Input Device)</li>
+<li>&#x8F38;&#x51FA;&#x8A2D;&#x5099;(Output Device)</li>
 </ul>
-
+</li>
+</ul>
+<p><img src="../images/ComputerOrganization/Chapter01/basic_computer_structure.jpg" alt="Hardware Information" title="Basic Computer Structure in ISA"></p>
+<ul>
+<li>&#x8A18;&#x61B6;&#x9AD4;(Memory)</li>
+</ul>
+<p><div id="page-footer" class="localized-footer"><hr></div></p>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> <a href="https://github.com/saberLiou" target="_blank">saberLiou</a> &#xA9; All Rights Reserved </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <i>updated at</i> 2019-07-30 18:09:01 </span> </footer>
                                 
                                 </section>
                             
@@ -392,7 +413,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"01. 指令: 計算機的語言","level":"2.6.1","depth":2,"next":{"title":"Author's Github","level":"3.1","depth":1,"url":"https://github.com/saberLiou","ref":"https://github.com/saberLiou","articles":[]},"previous":{"title":"Computer Organization","level":"2.6","depth":1,"path":"ComputerOrganization/README.md","ref":"ComputerOrganization/README.md","articles":[{"title":"01. 指令: 計算機的語言","level":"2.6.1","depth":2,"path":"ComputerOrganization/Chapter01.md","ref":"ComputerOrganization/Chapter01.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["katex","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"katex":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"saberLiou <saberliou@gmail.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"INTRODUCTION.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"linear_algebra":{"title":"Linear Algebra"},"discrete_mathematics":{"title":"Discrete Mathematics"},"data_structure":{"title":"Data Structure","chapter1":"01. Basic Concepts"},"algorithm":{"title":"Algorithm"},"operating_system":{"title":"Operating System"},"computer_organization":{"title":"Computer Organization","chapter1":"01. 指令: 計算機的語言"}},"title":"Prepare CSE Master Cheatsheet","links":{"sharing":{"twitter":false,"facebook":false,"all":false}},"gitbook":"*","description":"Cheatsheet for preparing CSE master examination."},"file":{"path":"ComputerOrganization/Chapter01.md","mtime":"2019-07-29T15:30:12.633Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-29T19:11:12.510Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"01. 指令: 計算機的語言","level":"2.6.1","depth":2,"next":{"title":"Author's Github","level":"3.1","depth":1,"url":"https://github.com/saberLiou","ref":"https://github.com/saberLiou","articles":[]},"previous":{"title":"Computer Organization","level":"2.6","depth":1,"path":"ComputerOrganization/README.md","ref":"ComputerOrganization/README.md","articles":[{"title":"01. 指令: 計算機的語言","level":"2.6.1","depth":2,"path":"ComputerOrganization/Chapter01.md","ref":"ComputerOrganization/Chapter01.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["katex","localized-footer","page-footer-ex","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"page-footer-ex":{"copyright":"[saberLiou](https://github.com/saberLiou) © All Rights Reserved","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<i>updated at</i>"},"search":{},"localized-footer":{"filename":"FOOTER.md","hline":"true"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"saberLiou <saberliou@gmail.com>","localized-footer":{"hline":true,"filename":"FOOTER.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"INTRODUCTION.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"linear_algebra":{"title":"Linear Algebra"},"discrete_mathematics":{"title":"Discrete Mathematics"},"data_structure":{"title":"Data Structure","chapter1":"01. Basic Concepts"},"algorithm":{"title":"Algorithm"},"operating_system":{"title":"Operating System"},"computer_organization":{"title":"Computer Organization","chapter1":"01. 指令: 計算機的語言"}},"title":"Prepare CSE Master Cheatsheet","links":{"sharing":{"twitter":false,"facebook":false,"all":false}},"gitbook":"*","description":"Cheatsheet for preparing CSE master examination."},"file":{"path":"ComputerOrganization/Chapter01.md","mtime":"2019-07-30T10:09:01.151Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-30T10:04:33.206Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
