@@ -1,6 +1,11 @@
 # {{ book.computer_organization.chapter1.title }}
 <!-- toc -->
 
+<!-- Reference Style Image Links -->
+{% for image in book.computer_organization.chapter1.images %}
+[{{ image.name }}]: {{ book.images_root_url }}/{{ book.computer_organization.chapter1.images_url }}/{{ image.file }} "{{ image.name }}"
+{% endfor %}
+
 ## 基本概念
 ---
 - 計算機組織:「軟體最硬，硬體最軟」
@@ -51,8 +56,3 @@ Prior to the early 1980's, machines were built with more and more complex instru
 ![Basic Computer Structure in ISA][Basic Computer Structure in ISA]
 
 - 記憶體(Memory)
-
-<!-- Reference Links -->
-{% for image in book.computer_organization.chapter1.images %}
-[{{ image.name }}]: {{ book.images_root_url }}/{{ book.computer_organization.chapter1.images_url }}/{{ image.file }} "{{ image.name }}"
-{% endfor %}
