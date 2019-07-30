@@ -5,8 +5,8 @@
     "language": "zh-tw",
     "links": {
         "sharing": {
-            "facebook": true,
-            "twitter": true,
+            "facebook": false,
+            "twitter": false,
             "all": false
         }
     },
@@ -19,6 +19,7 @@
         "github",
         "-sharing",
         "sharing-plus",
+        "back-to-top-button",
         "localized-footer",
         "page-footer-ex"
     ],
@@ -31,7 +32,7 @@
 		},
         "sharing": {
             "douban": false,
-            "facebook": true,
+            "facebook": false,
             "google": false,
             "hatenaBookmark": false,
             "instapaper": false,
@@ -41,7 +42,7 @@
             "qq": false,
             "qzone": false,
             "stumbleupon": false,
-            "twitter": true,
+            "twitter": false,
             "viber": false,
             "vk": false,
             "weibo": false,
