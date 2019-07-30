@@ -2,10 +2,11 @@
     "title": "Prepare CSE Master Cheatsheet",
     "description": "Cheatsheet for preparing CSE master examination.",
     "author": "saberLiou <saberliou@gmail.com>",
+    "language": "zh-tw",
     "links": {
         "sharing": {
-            "facebook": false,
-            "twitter": false,
+            "facebook": true,
+            "twitter": true,
             "all": false
         }
     },
@@ -13,16 +14,24 @@
         "readme": "INTRODUCTION.md"
     },
     "plugins": [
+        "etoc",
         "katex",
         "github",
+        "-sharing",
         "sharing-plus",
         "localized-footer",
         "page-footer-ex"
     ],
     "pluginsConfig": {
+        "etoc": {
+			"h2lb": 3,
+            "mindepth": 3,
+            "maxdepth": 4,
+            "notoc": false
+		},
         "sharing": {
             "douban": false,
-            "facebook": false,
+            "facebook": true,
             "google": false,
             "hatenaBookmark": false,
             "instapaper": false,
@@ -32,7 +41,7 @@
             "qq": false,
             "qzone": false,
             "stumbleupon": false,
-            "twitter": false,
+            "twitter": true,
             "viber": false,
             "vk": false,
             "weibo": false,

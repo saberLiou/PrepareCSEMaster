@@ -1,4 +1,5 @@
 # {{ book.computer_organization.chapter1 }}
+<!-- toc -->
 
 ## 基本概念
 ---
