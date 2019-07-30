@@ -3,9 +3,9 @@
     "description": "Cheatsheet for preparing CSE master examination.",
     "author": "saberLiou <saberliou@gmail.com>",
     "links": {
-        "sharing": {
-            "twitter": false,
+        "-sharing": {
             "facebook": false,
+            "twitter": false,
             "all": false
         }
     },
@@ -14,12 +14,37 @@
     },
     "plugins": [
         "katex",
+        "github",
+        "sharing-plus",
         "localized-footer",
         "page-footer-ex"
     ],
     "pluginsConfig": {
+        "sharing": {
+            "douban": false,
+            "facebook": false,
+            "google": false,
+            "hatenaBookmark": false,
+            "instapaper": false,
+            "line": false,
+            "linkedin": false,
+            "messenger": false,
+            "pocket": false,
+            "qq": false,
+            "qzone": false,
+            "stumbleupon": false,
+            "twitter": false,
+            "viber": false,
+            "vk": false,
+            "weibo": false,
+            "whatsapp": false,
+            "all": ["line", "twitter", "facebook", "messenger", "whatsapp"]
+        },
+        "github": {
+            "url": "https://github.com/saberLiou/PrepareCSEMaster"
+        },
         "page-footer-ex": {
-            "copyright": "[saberLiou](https://github.com/saberLiou) © All Rights Reserved",
+            "copyright": "Copyright© [saberLiou](https://github.com/saberLiou) all rights reserved.",
             "markdown": true,
             "update_label": "<i>updated at</i>",
             "update_format": "YYYY-MM-DD HH:mm:ss"
