@@ -75,7 +75,8 @@
         "data_structure": {
             "title": "Data Structure",
             "chapter1": {
-                "title": "01. Basic Concepts"
+                "title": "01. Basic Concepts",
+                "images_url": "DataStructure/Chapter01"
             }
         },
         "algorithm": {
@@ -87,7 +88,8 @@
         "computer_organization": {
             "title": "Computer Organization",
             "chapter1": {
-                "title": "01. 指令: 計算機的語言"
+                "title": "01. 指令: 計算機的語言",
+                "images_url": "ComputerOrganization/Chapter01"
             }
         }
     }

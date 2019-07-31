@@ -55,4 +55,4 @@ Prior to the early 1980's, machines were built with more and more complex instru
 
 
 <!-- Reference Style Image Links -->
-[Basic Computer Structure in ISA]: {{ book.images_root_url }}/{{ file.path | replace(".md", "") }}/basic_computer_structure.jpg "Basic Computer Structure in ISA"
+[Basic Computer Structure in ISA]: {{ book.images_root_url }}/{{ book.computer_organization.chapter1.images_url }}/basic_computer_structure.jpg "Basic Computer Structure in ISA"
