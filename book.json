@@ -65,7 +65,6 @@
         "filename": "FOOTER.md"
     },
     "variables": {
-        "images_root_url": "../images",
         "linear_algebra": {
             "title": "Linear Algebra"
         },
@@ -75,8 +74,7 @@
         "data_structure": {
             "title": "Data Structure",
             "chapter1": {
-                "title": "01. Basic Concepts",
-                "images_url": "DataStructure/Chapter01"
+                "title": "01. Basic Concepts"
             }
         },
         "algorithm": {
@@ -88,8 +86,7 @@
         "computer_organization": {
             "title": "Computer Organization",
             "chapter1": {
-                "title": "01. 指令: 計算機的語言",
-                "images_url": "ComputerOrganization/Chapter01"
+                "title": "01. 指令: 計算機的語言"
             }
         }
     }
