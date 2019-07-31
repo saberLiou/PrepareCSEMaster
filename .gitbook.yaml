@@ -4,4 +4,8 @@ structure:
   readme: INTRODUCTION.md
   summary: SUMMARY.md
 
-plugins: "etoc katex github -sharing sharing-plus back-to-top-button localized-footer page-footer-ex"
+plugins: "github"
+
+pluginConfig:
+  github:
+    url: "https://github.com/saberLiou/PrepareCSEMaster"
