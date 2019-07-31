@@ -75,8 +75,7 @@
         "data_structure": {
             "title": "Data Structure",
             "chapter1": {
-                "title": "01. Basic Concepts",
-                "images_url": "DataStructure/Chapter01"
+                "title": "01. Basic Concepts"
             }
         },
         "algorithm": {
@@ -88,14 +87,7 @@
         "computer_organization": {
             "title": "Computer Organization",
             "chapter1": {
-                "title": "01. 指令: 計算機的語言",
-                "images_url": "ComputerOrganization/Chapter01",
-                "images": [
-                    {
-                        "name": "Basic Computer Structure in ISA",
-                        "file": "basic_computer_structure.jpg"
-                    }
-                ]
+                "title": "01. 指令: 計算機的語言"
             }
         }
     }
