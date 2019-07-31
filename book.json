@@ -66,10 +66,6 @@
     },
     "variables": {
         "images_root_url": "../images",
-        "authors": [
-            { "name": "Samy" },
-            { "name": "Aaron" }
-        ],
         "linear_algebra": {
             "title": "Linear Algebra"
         },
