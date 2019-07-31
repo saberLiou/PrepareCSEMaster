@@ -50,4 +50,28 @@ Prior to the early 1980's, machines were built with more and more complex instru
 
 ![Basic Computer Structure in ISA](../images/ComputerOrganization/Chapter01/basic_computer_structure.jpg "Basic Computer Structure in ISA")
 
-- 記憶體(Memory)
+#### 記憶體 (Memory)
+- 一個一維的大陣列: 位址(address) => 位元組(byte, 8 bits)
+- **byte addressing** (32 bits Memory):
+
+| address             | data   |
+|:-------------------:|:------:|
+| 0                   | 8 bits |
+| 1                   | 8 bits |
+| 2                   | 8 bits |
+| ...                 | ...    |
+| $$ 2 ^ {32}  - 1 $$ | 8 bits |
+
+- **word addressing** (32 bits Memory):
+
+| address              <th colspan=4>data</th>            |
+|:-------------------:|:------:|:------:|:------:|:------:|
+| 0                   | 8 bits | 8 bits | 8 bits | 8 bits |
+| 4                   | 8 bits | 8 bits | 8 bits | 8 bits |
+| 8                   | 8 bits | 8 bits | 8 bits | 8 bits |
+| ...                 | ...    | ...    | ...    | ...    |
+| $$ 2 ^ {32}  - 4 $$ | 8 bits | 8 bits | 8 bits | 8 bits |
+
+- **對齊(alignment)**: MIPS裡所有字組都要從位元組位址(byte address)為4的倍數放起，如此一來CPU只要花一次存取時間便能自記憶體讀取一個指令或一個字組資料
+
+#### 位元順序 (Byte-Order or Endianness)

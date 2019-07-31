@@ -1,7 +1,7 @@
 function changeFavicon(link) {
   var $favicon = document.querySelector('link[rel="shortcut icon"]');
 
-  // If a <link rel="icon"> element already exists,
+  // If a <link rel="shortcut icon"> element already exists,
   // change its href to the given link.
   if ($favicon !== null) {
     $favicon.href = link
