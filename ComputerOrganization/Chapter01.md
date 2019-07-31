@@ -97,9 +97,9 @@ Prior to the early 1980's, machines were built with more and more complex instru
 |:----------------- |:--------- |:--------- |:----------------------- |
 | Assember related  | $at       | $1        | Preserved for Assembler |
 | OS related        | $ko - $k1 | $26 - $27 | Preserved for OS        |
-| Procedure call <br> (副程式呼叫相關) | $vo - $v1 <br> $a0 - $a3 <br> $ra | $2 - $3 <br> $4 - $7 <br> $31 | (returned) Values for results <br> Function Arguments <br> Return address |
-| Memory management | $gp <br> $sp <br> $fp | $28 <br> $29 <br> $30 | Global pointer <br> Stack pointer <br> Frame pointer |
-| Variables / <br> Temporaries / <br> Zero | $s0 - $s7 <br> $t0 - $t7 <br> $t8 - $t9 <br> $zero | $16 - $23 <br> $8 - $15 <br> $24 - $25 <br> $0 | Saved ("store" to Memory if spilled) <br> Temporaries (運算過程中之結果) <br> More Temporaries (運算過程中之結果) <br> Constant of Zero (read only) |
+| Procedure call<br>(副程式呼叫相關) | $vo - $v1<br>$a0 - $a3<br>$ra | $2 - $3<br>$4 - $7<br>$31 | (returned) Values for results<br>Function arguments<br>Return address |
+| Memory management | $gp<br>$sp<br>$fp | $28<br>$29<br>$30 | Global pointer<br>Stack pointer<br>Frame pointer |
+| Variables/<br>Temporaries/<br>Zero | $s0 - $s7<br>$t0 - $t7<br>$t8 - $t9<br>$zero | $16 - $23<br>$8 - $15<br>$24 - $25<br>$0 | Saved ("store" to Memory if spilled)<br>Temporaries (運算過程中之結果)<br>More Temporaries (運算過程中之結果)<br>Constant of Zero (read only) |
 > **注意: 若上方表格在手機或平板裝置上跑版，可參考下圖**
 
 ![MIPS General Purpose Registers](../images/ComputerOrganization/Chapter01/mips_general_purpose_registers.jpg "MIPS General Purpose Registers")
