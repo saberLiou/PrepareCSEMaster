@@ -3,8 +3,3 @@ root: ./
 structure:
   readme: INTRODUCTION.md
   summary: SUMMARY.md
-
-title: "Prepare CSE Master Cheatsheet"
-description: "Cheatsheet for preparing CSE master examination."
-author: "saberLiou <saberliou@gmail.com>"
-language: "zh-tw"
