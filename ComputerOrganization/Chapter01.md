@@ -1,6 +1,8 @@
 # {{ book.computer_organization.chapter1.title }}
 <!-- toc -->
 
+{% set chapter_images_url = book.images_root_url + '/' + file.path.replace(".md", "") %}
+
 <!-- Reference Style Image Links -->
 <!-- {% for image in book.computer_organization.chapter1.images %}
 [{{ image.name }}]: {{ book.images_root_url }}/{{ book.computer_organization.chapter1.images_url }}/{{ image.file }} "{{ image.name }}"
@@ -55,5 +57,6 @@ Prior to the early 1980's, machines were built with more and more complex instru
 
 ![Basic Computer Structure in ISA][Basic Computer Structure in ISA]
 
-[Basic Computer Structure in ISA]: ../images/ComputerOrganization/Chapter01/basic_computer_structure.jpg "Basic Computer Structure in ISA"
+[Basic Computer Structure in ISA]: {{ chapter_images_url }}/basic_computer_structure.jpg "Basic Computer Structure in ISA"
+
 - 記憶體(Memory)
