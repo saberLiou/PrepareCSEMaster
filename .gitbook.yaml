@@ -4,8 +4,7 @@ structure:
   readme: INTRODUCTION.md
   summary: SUMMARY.md
 
-plugins: "github"
-
-pluginConfig:
-  github:
-    url: "https://github.com/saberLiou/PrepareCSEMaster"
+title: "Prepare CSE Master Cheatsheet"
+description: "Cheatsheet for preparing CSE master examination."
+author: "saberLiou <saberliou@gmail.com>"
+language: "zh-tw"
