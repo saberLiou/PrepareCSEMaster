@@ -14,6 +14,7 @@
         }
     },
     "plugins": [
+        "scripts",
         "favicon",
         "insert-logo-link-website",
         "-sharing",
@@ -26,6 +27,11 @@
         "page-footer-ex"
     ],
     "pluginsConfig": {
+        "scripts": {
+            "files": [
+                "./scripts/change_favicon.js"
+            ]
+        },
         "favicon":{
             "shortcut": "https://res.cloudinary.com/saberliou/image/upload/v1564558001/PrepareCSEMaster/favicon.ico",
             "bookmark": "https://res.cloudinary.com/saberliou/image/upload/v1564558001/PrepareCSEMaster/favicon.ico",
