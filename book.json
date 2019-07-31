@@ -3,6 +3,9 @@
     "description": "Cheatsheet for preparing CSE master examination.",
     "author": "saberLiou <saberliou@gmail.com>",
     "language": "zh-tw",
+    "structure": {
+        "readme": "INTRODUCTION.md"
+    },
     "links": {
         "sharing": {
             "facebook": false,
@@ -10,26 +13,34 @@
             "all": false
         }
     },
-    "structure": {
-        "readme": "INTRODUCTION.md"
-    },
     "plugins": [
-        "etoc",
-        "katex",
-        "github",
+        "favicon",
+        "insert-logo-link-website",
         "-sharing",
         "sharing-plus",
+        "github",
+        "etoc",
+        "katex",
         "back-to-top-button",
         "localized-footer",
         "page-footer-ex"
     ],
     "pluginsConfig": {
-        "etoc": {
-			"h2lb": 3,
-            "mindepth": 3,
-            "maxdepth": 4,
-            "notoc": false
-		},
+        "favicon":{
+            "shortcut": "./images/favicon.ico",
+            "bookmark": "./images/favicon.ico",
+            "appleTouch": "./images/apple-touch-icon.jpg",
+            "appleTouchMore": {
+                "120x120": "./images/apple-touch-icon.jpg",
+                "180x180": "./images/apple-touch-icon.jpg"
+            }
+        },
+        "insert-logo-link-website": {
+            "url": "../images/logo.png",
+            "link": "./",
+            "target": "_self",
+            "style": "width: 100%"
+        },
         "sharing": {
             "douban": false,
             "facebook": false,
@@ -53,6 +64,12 @@
         "github": {
             "url": "https://github.com/saberLiou/PrepareCSEMaster"
         },
+        "etoc": {
+			"h2lb": 3,
+            "mindepth": 3,
+            "maxdepth": 4,
+            "notoc": false
+		},
         "page-footer-ex": {
             "copyright": "Copyright© [saberLiou](https://github.com/saberLiou) all rights reserved.",
             "markdown": true,
