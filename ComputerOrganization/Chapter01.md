@@ -54,17 +54,17 @@ Prior to the early 1980's, machines were built with more and more complex instru
 - 一個一維的大陣列: 位址(address) => 位元組(byte, 8 bits)
 - **byte addressing** (32 bits Memory):
 
-| address             | data   |
-|:-------------------:|:------:|
-| 0                   | 8 bits |
-| 1                   | 8 bits |
-| 2                   | 8 bits |
-| ...                 | ...    |
-| $$ 2 ^ {32}  - 1 $$ | 8 bits |
+| address            |        |
+|:------------------:|:------:|
+| 0                  | 8 bits |
+| 1                  | 8 bits |
+| 2                  | 8 bits |
+| ...                | ...    |
+| $$ 2 ^ {32} - 1 $$ | 8 bits |
 
 - **word addressing** (32 bits Memory):
 
-| address              <th colspan=4>data</th>            |
+| address             |        |        |        |        |
 |:-------------------:|:------:|:------:|:------:|:------:|
 | 0                   | 8 bits | 8 bits | 8 bits | 8 bits |
 | 4                   | 8 bits | 8 bits | 8 bits | 8 bits |
