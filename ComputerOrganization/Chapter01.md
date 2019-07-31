@@ -93,14 +93,19 @@ Prior to the early 1980's, machines were built with more and more complex instru
     - 存在 **Coprocessor1** 裡，又稱浮點運算器(Floaing Point Unit, **FPU**)
   - **32-bits**一般目的暫存器(General Purpose Register, **GPR**) x **32**
 
+> **注意: 若下方表格在手機、平板裝置或電腦上跑版，可參照表格下方圖片**
+
 | type              | name      | number    | usage                   |
 |:----------------- |:--------- |:--------- |:----------------------- |
 | Assember related  | $at       | $1        | Preserved for Assembler |
 | OS related        | $ko - $k1 | $26 - $27 | Preserved for OS        |
-| Procedure call<br>(副程式呼叫相關) | $vo - $v1<br>$a0 - $a3<br>$ra | $2 - $3<br>$4 - $7<br>$31 | (returned) Values for results<br>Function arguments<br>Return address |
+| \*Procedure call  | $vo - $v1<br>$a0 - $a3<br>$ra | $2 - $3<br>$4 - $7<br>$31 | Values for results<br>Function arguments<br>Return address |
 | Memory management | $gp<br>$sp<br>$fp | $28<br>$29<br>$30 | Global pointer<br>Stack pointer<br>Frame pointer |
-| Variables/<br>Temporaries/<br>Zero | $s0 - $s7<br>$t0 - $t7<br>$t8 - $t9<br>$zero | $16 - $23<br>$8 - $15<br>$24 - $25<br>$0 | Saved ("store" to Memory if spilled)<br>Temporaries (運算過程中之結果)<br>More Temporaries (運算過程中之結果)<br>Constant of Zero (read only) |
-> **注意: 若上方表格在手機或平板裝置上跑版，可參考下圖**
+| Variables/<br>Temporaries/<br>Zero | $s0 - $s7<br>$t0 - $t7<br>$t8 - $t9<br>$zero | $16 - $23<br>$8 - $15<br>$24 - $25<br>$0 | \*Saved<br>\*Temporaries<br>\*More Temporaries<br>\*Constant of Zero |
+> - Procedure call: 副程式呼叫相關
+> - Saved: 分配給常用變數, store to Memory if spilled.
+> - Temporaries & More Temporaries: 存放運算過程中之結果
+> - Constant of Zero: Read only.
 
 ![MIPS General Purpose Registers](../images/ComputerOrganization/Chapter01/mips_general_purpose_registers.jpg "MIPS General Purpose Registers")
 
