@@ -72,6 +72,16 @@ Prior to the early 1980's, machines were built with more and more complex instru
 | ...                 | ...    | ...    | ...    | ...    |
 | $$ 2 ^ {32}  - 4 $$ | 8 bits | 8 bits | 8 bits | 8 bits |
 
-- **對齊(alignment)**: MIPS裡所有字組都要從位元組位址(byte address)為4的倍數放起，如此一來CPU只要花一次存取時間便能自記憶體讀取一個指令或一個字組資料
+- **對齊(alignment)**: MIPS裡所有字組都要從**位元組位址(byte address)為4的倍數**放起，如此一來CPU只要花一次存取時間便能自記憶體讀取一個指令或一個字組資料
 
 #### 位元順序 (Byte-Order or Endianness)
+- **Big Endian**:
+  - 32-bits word中**最左邊**或**最大位元組(Most Significand Byte, MSB)**被放置於**最低記憶體位置**
+  - **MIPS**, IBM System/360, Motorola 68000, SPARC, HP PA-RISC, ...etc.
+- **Little Endian**:
+  - 32-bits word中**最右邊**或**最小位元組(Least Significand Byte, LSB)**被放置於**最低記憶體位置**
+  - **Intel 80x86**, **ARM**, DEC VAX, DEC Alpha, ...etc.
+
+![Big & Little Endian](../images/ComputerOrganization/Chapter01/endianness.jpg "Big & Little Endian")
+
+#### 暫存器 (Register)
