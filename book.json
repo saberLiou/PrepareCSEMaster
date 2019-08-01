@@ -96,7 +96,6 @@
         "filename": "FOOTER.md"
     },
     "variables": {
-        "under_construction": "Under Construction. 趕工中...",
         "linear_algebra": {
             "title": "Linear Algebra",
             "chapter0": {

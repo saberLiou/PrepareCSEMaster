@@ -2,5 +2,5 @@
 <!-- notoc -->
 
 {% hint style='danger' %}
-**{{ book.under_construction }}**
+### Under Construction. 趕工中...
 {% endhint %}
