@@ -21,6 +21,7 @@
         "sharing-plus",
         "github",
         "etoc",
+        "hints",
         "katex",
         "back-to-top-button",
         "localized-footer",
@@ -75,7 +76,13 @@
             "mindepth": 3,
             "maxdepth": 4,
             "notoc": false
-		},
+        },
+        "hints": {
+            "info": "fa fa-info-circle",
+            "tip": "fa fa-mortar-board",
+            "danger": "fa fa-exclamation-cicle",
+            "working": "fa fa-wrench"
+        },
         "page-footer-ex": {
             "copyright": "Copyright© **[saberLiou](https://github.com/saberLiou)** all rights reserved.",
             "markdown": true,
