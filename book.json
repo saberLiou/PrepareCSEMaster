@@ -77,9 +77,9 @@
             "notoc": false
 		},
         "page-footer-ex": {
-            "copyright": "Copyright© [saberLiou](https://github.com/saberLiou) all rights reserved.",
+            "copyright": "Copyright© **[saberLiou](https://github.com/saberLiou)** all rights reserved.",
             "markdown": true,
-            "update_label": "<i>updated at</i>",
+            "update_label": "<i>last updated at</i>",
             "update_format": "YYYY-MM-DD HH:mm:ss"
         }
     },
