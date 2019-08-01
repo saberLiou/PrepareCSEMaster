@@ -25,7 +25,8 @@
         "katex",
         "back-to-top-button",
         "localized-footer",
-        "page-footer-ex"
+        "page-footer-ex",
+        "word-count"
     ],
     "pluginsConfig": {
         "scripts": {
