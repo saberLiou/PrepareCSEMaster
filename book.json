@@ -89,7 +89,19 @@
     },
     "variables": {
         "linear_algebra": {
-            "title": "Linear Algebra"
+            "title": "Linear Algebra",
+            "chapter0": {
+                "title": "00. 基礎數學"
+            },
+            "chapter1": {
+                "title": "01. 矩陣與線性方程組"
+            },
+            "chapter2": {
+                "title": "02. 行列式"
+            },
+            "chapter3": {
+                "title": "03. 向量空間"
+            }
         },
         "discrete_mathematics": {
             "title": "Discrete Mathematics"

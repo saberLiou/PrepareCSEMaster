@@ -93,7 +93,7 @@ Prior to the early 1980's, machines were built with more and more complex instru
     - 存在 **Coprocessor1** 裡，又稱浮點運算器(Floaing Point Unit, **FPU**)
   - **32-bits**一般目的暫存器(General Purpose Register, **GPR**) x **32**
 
-> **注意: 若下方表格在手機、平板裝置或電腦上跑版，可參照表格下方圖片**
+> **注意: 若下方表格在手機、平板裝置或電腦螢幕上跑版，可參照表格下方圖片**
 
 | type              | name      | number    | usage                   |
 |:----------------- |:--------- |:--------- |:----------------------- |

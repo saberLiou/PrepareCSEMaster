@@ -1,0 +1,540 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-tw" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>03. 向量空間 · Prepare CSE Master Cheatsheet</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="saberLiou <saberliou@gmail.com>">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-insert-logo-link-website/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-etoc/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../DiscreteMathematics/" />
+    
+    
+    <link rel="prev" href="Chapter02.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../https:/res.cloudinary.com/saberliou/image/upload/v1564558001/PrepareCSEMaster/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../https:/res.cloudinary.com/saberliou/image/upload/v1564558001/PrepareCSEMaster/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../https:/res.cloudinary.com/saberliou/image/upload/v1564558002/PrepareCSEMaster/apple-touch-icon.jpg'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../https:/res.cloudinary.com/saberliou/image/upload/w_120,h_120/v1564558002/PrepareCSEMaster/apple-touch-icon.jpg">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../https:/res.cloudinary.com/saberliou/image/upload/w_180,h_180/v1564558002/PrepareCSEMaster/apple-touch-icon.jpg">
+        
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Subjects</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Linear Algebra
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="Chapter00.html">
+            
+                <a href="Chapter00.html">
+            
+                    
+                    00. 基礎數學
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="Chapter01.html">
+            
+                <a href="Chapter01.html">
+            
+                    
+                    01. 矩陣與線性方程組
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="Chapter02.html">
+            
+                <a href="Chapter02.html">
+            
+                    
+                    02. 行列式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.1.4" data-path="Chapter03.html">
+            
+                <a href="Chapter03.html">
+            
+                    
+                    03. 向量空間
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../DiscreteMathematics/">
+            
+                <a href="../DiscreteMathematics/">
+            
+                    
+                    Discrete Mathematics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../DataStructure/">
+            
+                <a href="../DataStructure/">
+            
+                    
+                    Data Structure
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../DataStructure/Chapter01.html">
+            
+                <a href="../DataStructure/Chapter01.html">
+            
+                    
+                    01. Basic Concepts
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../Algorithm/">
+            
+                <a href="../Algorithm/">
+            
+                    
+                    Algorithm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../OperatingSystem/">
+            
+                <a href="../OperatingSystem/">
+            
+                    
+                    Operating System
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../ComputerOrganization/">
+            
+                <a href="../ComputerOrganization/">
+            
+                    
+                    Computer Organization
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.6.1" data-path="../ComputerOrganization/Chapter01.html">
+            
+                <a href="../ComputerOrganization/Chapter01.html">
+            
+                    
+                    01. 指令: 計算機的語言
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <a target="_blank" href="https://github.com/saberLiou">
+            
+                    
+                    Author's Github
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本書使用 GitBook 釋出
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >03. 向量空間</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="03-&#x5411;&#x91CF;&#x7A7A;&#x9593;">03. &#x5411;&#x91CF;&#x7A7A;&#x9593;</h1>
+<!-- toc --><div id="toc" class="toc">
+
+<ul>
+<li><a href="#3-1-&#x5411;&#x91CF;&#x7A7A;&#x9593;">3-1. &#x5411;&#x91CF;&#x7A7A;&#x9593;</a><ul>
+<li><a href="#define">Define</a></li>
+</ul>
+</li>
+</ul>
+
+</div><!-- tocstop -->
+<h2 id="3-1-&#x5411;&#x91CF;&#x7A7A;&#x9593;">3-1. &#x5411;&#x91CF;&#x7A7A;&#x9593;</h2>
+<hr>
+<h3 id="define">Define</h3>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>V</mi><mo>&#x2260;</mo><mi mathvariant="normal">&#x2205;</mi></mrow><annotation encoding="application/x-tex"> V \ne \emptyset </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:0.965em;vertical-align:-0.215em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.22222em;">V</span><span class="mrel">&#x2260;</span><span class="mord mathrm">&#x2205;</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>F</mi><mo>:</mo><mi>f</mi><mi>i</mi><mi>e</mi><mi>l</mi><mi>d</mi></mrow><annotation encoding="application/x-tex"> F: field </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">F</span><span class="mrel">:</span><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mord mathit">i</span><span class="mord mathit">e</span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mord mathit">d</span></span></span></span>, &#x5B9A;&#x7FA9;&#x4E8C;&#x904B;&#x7B97;</p>
+<ul>
+<li>&#x5411;&#x91CF;&#x52A0;&#x6CD5;(vector addition): +</li>
+<li>&#x7D14;&#x91CF;&#x7A4D;(vector multiplication): <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x22C5;</mo></mrow><annotation encoding="application/x-tex"> \cdot </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.44445em;"></span><span class="strut bottom" style="height:0.44445em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord">&#x22C5;</span></span></span></span></li>
+</ul>
+<blockquote>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>V</mi></mrow><annotation encoding="application/x-tex"> V </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.22222em;">V</span></span></span></span>: &#x5411;&#x91CF;&#x7684;&#x96C6;&#x5408;; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>F</mi></mrow><annotation encoding="application/x-tex"> F </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">F</span></span></span></span>: &#x7D14;&#x91CF;&#x7684;&#x96C6;&#x5408;&#xFF0C;&#x975E; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>R</mi></mrow><annotation encoding="application/x-tex"> R </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.00773em;">R</span></span></span></span> &#x5373; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex"> C </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.07153em;">C</span></span></span></span></p>
+</blockquote>
+<p>&#x6EFF;&#x8DB3;&#x4EE5;&#x4E0B;&#x5341;&#x500B;&#x516C;&#x8A2D;:</p>
+<ul>
+<li>(1) <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">&#x2200;</mi><mover accent="true"><mrow><mi>u</mi></mrow><mo>&#x20D7;</mo></mover><mo separator="true">,</mo><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x20D7;</mo></mover><mo>&#x2208;</mo><mi>V</mi><mo separator="true">,</mo><mover accent="true"><mrow><mi>u</mi></mrow><mo>&#x20D7;</mo></mover><mo>+</mo><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x20D7;</mo></mover><mo>&#x2208;</mo><mi>V</mi></mrow><annotation encoding="application/x-tex"> \forall \vec{u}, \vec{v} \in V, \vec{u} + \vec{v} \in V </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.71444em;"></span><span class="strut bottom" style="height:0.9088799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">&#x2200;</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit">u</span></span></span><span style="top:0em;margin-left:0.05556em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mpunct">,</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">v</span></span></span><span style="top:0em;margin-left:0.05556em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mrel">&#x2208;</span><span class="mord mathit" style="margin-right:0.22222em;">V</span><span class="mpunct">,</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit">u</span></span></span><span style="top:0em;margin-left:0.05556em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mbin">+</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">v</span></span></span><span style="top:0em;margin-left:0.05556em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mrel">&#x2208;</span><span class="mord mathit" style="margin-right:0.22222em;">V</span></span></span></span></li>
+<li>(2) <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">&#x2200;</mi><mi>c</mi><mo>&#x2208;</mo><mi>F</mi><mo separator="true">,</mo><mi mathvariant="normal">&#x2200;</mi><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x20D7;</mo></mover><mo>&#x2208;</mo><mi>V</mi><mo separator="true">,</mo><mi>c</mi><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x20D7;</mo></mover><mo>&#x2208;</mo><mi>V</mi></mrow><annotation encoding="application/x-tex"> \forall c \in F, \forall \vec{v} \in V, c\vec{v} \in V </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.71444em;"></span><span class="strut bottom" style="height:0.9088799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">&#x2200;</span><span class="mord mathit">c</span><span class="mrel">&#x2208;</span><span class="mord mathit" style="margin-right:0.13889em;">F</span><span class="mpunct">,</span><span class="mord mathrm">&#x2200;</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">v</span></span></span><span style="top:0em;margin-left:0.05556em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mrel">&#x2208;</span><span class="mord mathit" style="margin-right:0.22222em;">V</span><span class="mpunct">,</span><span class="mord mathit">c</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">v</span></span></span><span style="top:0em;margin-left:0.05556em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mrel">&#x2208;</span><span class="mord mathit" style="margin-right:0.22222em;">V</span></span></span></span><blockquote>
+<p>(1) <strong>&#x5411;&#x91CF;&#x52A0;&#x6CD5;</strong>&#x7684;<strong>&#x5C01;&#x9589;&#x6027;</strong><br>(2) <strong>&#x7D14;&#x91CF;&#x7A4D;</strong>&#x7684;<strong>&#x5C01;&#x9589;&#x6027;</strong></p>
+</blockquote>
+</li>
+<li>(3) <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">&#x2200;</mi><mover accent="true"><mrow><mi>u</mi></mrow><mo>&#x20D7;</mo></mover><mo separator="true">,</mo><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x20D7;</mo></mover><mo>&#x2208;</mo><mi>V</mi><mo separator="true">,</mo><mover accent="true"><mrow><mi>u</mi></mrow><mo>&#x20D7;</mo></mover><mo>+</mo><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x20D7;</mo></mover><mo>=</mo><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x20D7;</mo></mover><mo>+</mo><mover accent="true"><mrow><mi>u</mi></mrow><mo>&#x20D7;</mo></mover></mrow><annotation encoding="application/x-tex"> \forall \vec{u}, \vec{v} \in V, \vec{u} + \vec{v} = \vec{v} + \vec{u} </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.71444em;"></span><span class="strut bottom" style="height:0.9088799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">&#x2200;</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit">u</span></span></span><span style="top:0em;margin-left:0.05556em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mpunct">,</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">v</span></span></span><span style="top:0em;margin-left:0.05556em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mrel">&#x2208;</span><span class="mord mathit" style="margin-right:0.22222em;">V</span><span class="mpunct">,</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit">u</span></span></span><span style="top:0em;margin-left:0.05556em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mbin">+</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">v</span></span></span><span style="top:0em;margin-left:0.05556em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mrel">=</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">v</span></span></span><span style="top:0em;margin-left:0.05556em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mbin">+</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit">u</span></span></span><span style="top:0em;margin-left:0.05556em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></li>
+<li>(4) <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">&#x2200;</mi><mover accent="true"><mrow><mi>u</mi></mrow><mo>&#x20D7;</mo></mover><mo separator="true">,</mo><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x20D7;</mo></mover><mo separator="true">,</mo><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x20D7;</mo></mover><mo>&#x2208;</mo><mi>V</mi><mo separator="true">,</mo><mo>(</mo><mover accent="true"><mrow><mi>u</mi></mrow><mo>&#x20D7;</mo></mover><mo>+</mo><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x20D7;</mo></mover><mo>)</mo><mo>+</mo><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x20D7;</mo></mover><mo>=</mo><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x20D7;</mo></mover><mo>+</mo><mo>(</mo><mover accent="true"><mrow><mi>u</mi></mrow><mo>&#x20D7;</mo></mover><mo>+</mo><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x20D7;</mo></mover><mo>)</mo></mrow><annotation encoding="application/x-tex"> \forall \vec{u}, \vec{v}, \vec{w} \in V, (\vec{u} + \vec{v}) + \vec{w} = \vec{v} + (\vec{u} + \vec{w}) </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">&#x2200;</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit">u</span></span></span><span style="top:0em;margin-left:0.05556em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mpunct">,</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">v</span></span></span><span style="top:0em;margin-left:0.05556em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mpunct">,</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit" style="margin-right:0.02691em;">w</span></span></span><span style="top:0em;margin-left:0.16668em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mrel">&#x2208;</span><span class="mord mathit" style="margin-right:0.22222em;">V</span><span class="mpunct">,</span><span class="mopen">(</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit">u</span></span></span><span style="top:0em;margin-left:0.05556em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mbin">+</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">v</span></span></span><span style="top:0em;margin-left:0.05556em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose">)</span><span class="mbin">+</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit" style="margin-right:0.02691em;">w</span></span></span><span style="top:0em;margin-left:0.16668em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mrel">=</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">v</span></span></span><span style="top:0em;margin-left:0.05556em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mbin">+</span><span class="mopen">(</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit">u</span></span></span><span style="top:0em;margin-left:0.05556em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mbin">+</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit" style="margin-right:0.02691em;">w</span></span></span><span style="top:0em;margin-left:0.16668em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose">)</span></span></span></span></li>
+<li>(5) <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">&#x2203;</mi><mover accent="true"><mrow><mn>0</mn></mrow><mo>&#x20D7;</mo></mover><mo>&#x2208;</mo><mi>V</mi></mrow><annotation encoding="application/x-tex"> \exists \vec{0} \in V </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.92788em;"></span><span class="strut bottom" style="height:0.9669800000000001em;vertical-align:-0.0391em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">&#x2203;</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathrm">0</span></span></span><span style="top:-0.21344000000000002em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mrel">&#x2208;</span><span class="mord mathit" style="margin-right:0.22222em;">V</span></span></span></span> s.t. <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">&#x2200;</mi><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x20D7;</mo></mover><mo>&#x2208;</mo><mi>V</mi><mo separator="true">,</mo><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x20D7;</mo></mover><mo>+</mo><mover accent="true"><mrow><mn>0</mn></mrow><mo>&#x20D7;</mo></mover><mo>=</mo><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x20D7;</mo></mover></mrow><annotation encoding="application/x-tex"> \forall \vec{v} \in V, \vec{v} + \vec{0} = \vec{v} </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.92788em;"></span><span class="strut bottom" style="height:1.12232em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">&#x2200;</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">v</span></span></span><span style="top:0em;margin-left:0.05556em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mrel">&#x2208;</span><span class="mord mathit" style="margin-right:0.22222em;">V</span><span class="mpunct">,</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">v</span></span></span><span style="top:0em;margin-left:0.05556em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mbin">+</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathrm">0</span></span></span><span style="top:-0.21344000000000002em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mrel">=</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">v</span></span></span><span style="top:0em;margin-left:0.05556em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></li>
+<li>(6) <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">&#x2200;</mi><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x20D7;</mo></mover><mo>&#x2208;</mo><mi>V</mi><mo separator="true">,</mo><mi mathvariant="normal">&#x2203;</mi><mo>(</mo><mo>&#x2212;</mo><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x20D7;</mo></mover><mo>)</mo><mo>&#x2208;</mo><mi>V</mi></mrow><annotation encoding="application/x-tex"> \forall \vec{v} \in V, \exists (-\vec{v}) \in V </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">&#x2200;</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">v</span></span></span><span style="top:0em;margin-left:0.05556em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mrel">&#x2208;</span><span class="mord mathit" style="margin-right:0.22222em;">V</span><span class="mpunct">,</span><span class="mord mathrm">&#x2203;</span><span class="mopen">(</span><span class="mord">&#x2212;</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">v</span></span></span><span style="top:0em;margin-left:0.05556em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose">)</span><span class="mrel">&#x2208;</span><span class="mord mathit" style="margin-right:0.22222em;">V</span></span></span></span> s.t. <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x20D7;</mo></mover><mo>+</mo><mo>(</mo><mo>&#x2212;</mo><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x20D7;</mo></mover><mo>)</mo><mo>=</mo><mover accent="true"><mrow><mn>0</mn></mrow><mo>&#x20D7;</mo></mover></mrow><annotation encoding="application/x-tex"> \vec{v} + (-\vec{v}) = \vec{0} </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.92788em;"></span><span class="strut bottom" style="height:1.17788em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">v</span></span></span><span style="top:0em;margin-left:0.05556em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mbin">+</span><span class="mopen">(</span><span class="mord">&#x2212;</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">v</span></span></span><span style="top:0em;margin-left:0.05556em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose">)</span><span class="mrel">=</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathrm">0</span></span></span><span style="top:-0.21344000000000002em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span><blockquote>
+<p><strong>&#x5411;&#x91CF;&#x52A0;&#x6CD5;</strong>&#x7684;:<br>(3) <strong>&#x4EA4;&#x63DB;&#x6027;</strong><br>(4) <strong>&#x7D50;&#x5408;&#x6027;</strong><br>(5) <strong>&#x55AE;&#x4F4D;&#x5143;&#x7D20;</strong><br>(6) <strong>&#x53CD;&#x5143;&#x7D20;</strong></p>
+</blockquote>
+</li>
+<li>(7) <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">&#x2200;</mi><mi>c</mi><mo>&#x2208;</mo><mi>F</mi><mo separator="true">,</mo><mi mathvariant="normal">&#x2200;</mi><mover accent="true"><mrow><mi>u</mi></mrow><mo>&#x20D7;</mo></mover><mo separator="true">,</mo><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x20D7;</mo></mover><mo>&#x2208;</mo><mi>V</mi><mo separator="true">,</mo><mi>c</mi><mo>(</mo><mover accent="true"><mrow><mi>u</mi></mrow><mo>&#x20D7;</mo></mover><mo>+</mo><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x20D7;</mo></mover><mo>)</mo><mo>=</mo><mi>c</mi><mover accent="true"><mrow><mi>u</mi></mrow><mo>&#x20D7;</mo></mover><mo>+</mo><mi>c</mi><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x20D7;</mo></mover></mrow><annotation encoding="application/x-tex"> \forall c \in F, \forall \vec{u}, \vec{v} \in V, c(\vec{u} + \vec{v}) = c\vec{u} + c\vec{v} </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">&#x2200;</span><span class="mord mathit">c</span><span class="mrel">&#x2208;</span><span class="mord mathit" style="margin-right:0.13889em;">F</span><span class="mpunct">,</span><span class="mord mathrm">&#x2200;</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit">u</span></span></span><span style="top:0em;margin-left:0.05556em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mpunct">,</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">v</span></span></span><span style="top:0em;margin-left:0.05556em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mrel">&#x2208;</span><span class="mord mathit" style="margin-right:0.22222em;">V</span><span class="mpunct">,</span><span class="mord mathit">c</span><span class="mopen">(</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit">u</span></span></span><span style="top:0em;margin-left:0.05556em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mbin">+</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">v</span></span></span><span style="top:0em;margin-left:0.05556em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose">)</span><span class="mrel">=</span><span class="mord mathit">c</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit">u</span></span></span><span style="top:0em;margin-left:0.05556em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mbin">+</span><span class="mord mathit">c</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">v</span></span></span><span style="top:0em;margin-left:0.05556em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></li>
+<li>(8) <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">&#x2200;</mi><mi>c</mi><mo separator="true">,</mo><mi>d</mi><mo>&#x2208;</mo><mi>F</mi><mo separator="true">,</mo><mi mathvariant="normal">&#x2200;</mi><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x20D7;</mo></mover><mo>&#x2208;</mo><mi>V</mi><mo separator="true">,</mo><mo>(</mo><mi>c</mi><mo>+</mo><mi>d</mi><mo>)</mo><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x20D7;</mo></mover><mo>=</mo><mi>c</mi><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x20D7;</mo></mover><mo>+</mo><mi>d</mi><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x20D7;</mo></mover></mrow><annotation encoding="application/x-tex"> \forall c, d \in F, \forall \vec{v} \in V, (c + d)\vec{v} = c\vec{v} + d\vec{v} </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">&#x2200;</span><span class="mord mathit">c</span><span class="mpunct">,</span><span class="mord mathit">d</span><span class="mrel">&#x2208;</span><span class="mord mathit" style="margin-right:0.13889em;">F</span><span class="mpunct">,</span><span class="mord mathrm">&#x2200;</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">v</span></span></span><span style="top:0em;margin-left:0.05556em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mrel">&#x2208;</span><span class="mord mathit" style="margin-right:0.22222em;">V</span><span class="mpunct">,</span><span class="mopen">(</span><span class="mord mathit">c</span><span class="mbin">+</span><span class="mord mathit">d</span><span class="mclose">)</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">v</span></span></span><span style="top:0em;margin-left:0.05556em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mrel">=</span><span class="mord mathit">c</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">v</span></span></span><span style="top:0em;margin-left:0.05556em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mbin">+</span><span class="mord mathit">d</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">v</span></span></span><span style="top:0em;margin-left:0.05556em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></li>
+<li>(9) <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">&#x2200;</mi><mi>c</mi><mo separator="true">,</mo><mi>d</mi><mo>&#x2208;</mo><mi>F</mi><mo separator="true">,</mo><mi mathvariant="normal">&#x2200;</mi><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x20D7;</mo></mover><mo>&#x2208;</mo><mi>V</mi><mo separator="true">,</mo><mi>c</mi><mo>(</mo><mi>d</mi><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x20D7;</mo></mover><mo>)</mo><mo>=</mo><mo>(</mo><mi>c</mi><mi>d</mi><mo>)</mo><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x20D7;</mo></mover></mrow><annotation encoding="application/x-tex"> \forall c, d \in F, \forall \vec{v} \in V, c(d\vec{v}) = (cd)\vec{v} </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">&#x2200;</span><span class="mord mathit">c</span><span class="mpunct">,</span><span class="mord mathit">d</span><span class="mrel">&#x2208;</span><span class="mord mathit" style="margin-right:0.13889em;">F</span><span class="mpunct">,</span><span class="mord mathrm">&#x2200;</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">v</span></span></span><span style="top:0em;margin-left:0.05556em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mrel">&#x2208;</span><span class="mord mathit" style="margin-right:0.22222em;">V</span><span class="mpunct">,</span><span class="mord mathit">c</span><span class="mopen">(</span><span class="mord mathit">d</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">v</span></span></span><span style="top:0em;margin-left:0.05556em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose">)</span><span class="mrel">=</span><span class="mopen">(</span><span class="mord mathit">c</span><span class="mord mathit">d</span><span class="mclose">)</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">v</span></span></span><span style="top:0em;margin-left:0.05556em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></li>
+<li>(10) <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">&#x2200;</mi><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x20D7;</mo></mover><mo>&#x2208;</mo><mi>V</mi><mo separator="true">,</mo><mn>1</mn><mo>&#x22C5;</mo><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x20D7;</mo></mover><mo>=</mo><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x20D7;</mo></mover></mrow><annotation encoding="application/x-tex"> \forall \vec{v} \in V, 1 \cdot \vec{v} = \vec{v} </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.71444em;"></span><span class="strut bottom" style="height:0.9088799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">&#x2200;</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">v</span></span></span><span style="top:0em;margin-left:0.05556em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mrel">&#x2208;</span><span class="mord mathit" style="margin-right:0.22222em;">V</span><span class="mpunct">,</span><span class="mord mathrm">1</span><span class="mbin">&#x22C5;</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">v</span></span></span><span style="top:0em;margin-left:0.05556em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mrel">=</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">v</span></span></span><span style="top:0em;margin-left:0.05556em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span><blockquote>
+<p><strong>&#x7D14;&#x91CF;&#x7A4D;</strong>&#x7684;:<br>(7) <strong>&#x5411;&#x91CF;&#x52A0;&#x6CD5;&#x5206;&#x914D;&#x6027;</strong><br>(8) <strong>&#x7D14;&#x91CF;&#x52A0;&#x6CD5;&#x5206;&#x914D;&#x6027;</strong>(&quot;+&quot;: &#x7B2C;&#x4E00;&#x500B;&#x70BA;<strong>&#x7D14;&#x91CF;&#x52A0;</strong>, &#x7B2C;&#x4E8C;&#x500B;&#x70BA;<strong>&#x5411;&#x91CF;&#x52A0;</strong>)<br>(9) <strong>&#x4E58;&#x6CD5;&#x7D50;&#x5408;&#x6027;</strong><br>&#xFF0C;&#x8207;<br>(10) <strong>&#x55AE;&#x4F4D;&#x7D14;&#x91CF;&#x7A4D;</strong>&#x7684;<strong>&#x4E0D;&#x8B8A;&#x6027;</strong></p>
+</blockquote>
+</li>
+</ul>
+<p>&#x5247;&#x7A31; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>V</mi></mrow><annotation encoding="application/x-tex"> V </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.22222em;">V</span></span></span></span> &#x70BA;&#x4F48;&#x65BC; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>F</mi></mrow><annotation encoding="application/x-tex"> F </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">F</span></span></span></span> &#x7684;&#x5411;&#x91CF;&#x7A7A;&#x9593;(vector space over <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>F</mi></mrow><annotation encoding="application/x-tex"> F </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">F</span></span></span></span>)&#xFF0C;&#x6709;&#x6642;&#x6703;&#x5C07; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>V</mi></mrow><annotation encoding="application/x-tex"> V </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.22222em;">V</span></span></span></span> &#x8A18;&#x4F5C; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>V</mi><mo separator="true">,</mo><mo>+</mo><mo separator="true">,</mo><mo>&#x22C5;</mo><mo>)</mo></mrow><annotation encoding="application/x-tex"> (V, +, \cdot ) </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.22222em;">V</span><span class="mpunct">,</span><span class="mord">+</span><span class="mpunct">,</span><span class="mord">&#x22C5;</span><span class="mclose">)</span></span></span></span> &#x4EE5;&#x5F37;&#x8ABF;&#x5176;&#x904B;&#x7B97;&#x7B26;&#x865F;
+<div id="page-footer" class="localized-footer"><hr></div></p>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> Copyright&#xA9; <a href="https://github.com/saberLiou" target="_blank">saberLiou</a> all rights reserved. </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <i>updated at</i> 2019-08-01 17:48:14 </span> </footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Chapter02.html" class="navigation navigation-prev " aria-label="Previous page: 02. 行列式">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../DiscreteMathematics/" class="navigation navigation-next " aria-label="Next page: Discrete Mathematics">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"03. 向量空間","level":"2.1.4","depth":2,"next":{"title":"Discrete Mathematics","level":"2.2","depth":1,"path":"DiscreteMathematics/README.md","ref":"DiscreteMathematics/README.md","articles":[]},"previous":{"title":"02. 行列式","level":"2.1.3","depth":2,"path":"LinearAlgebra/Chapter02.md","ref":"LinearAlgebra/Chapter02.md","articles":[]},"dir":"ltr"},"config":{"plugins":["scripts","favicon","insert-logo-link-website","-sharing","sharing-plus","github","etoc","katex","back-to-top-button","localized-footer","page-footer-ex","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"github":{"url":"https://github.com/saberLiou/PrepareCSEMaster"},"livereload":{},"page-footer-ex":{"copyright":"Copyright© [saberLiou](https://github.com/saberLiou) all rights reserved.","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<i>updated at</i>"},"scripts":{"files":["./scripts/change_favicon.js"]},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"localized-footer":{"filename":"FOOTER.md","hline":"true"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"https://res.cloudinary.com/saberliou/image/upload/v1564558001/PrepareCSEMaster/favicon.ico","bookmark":"https://res.cloudinary.com/saberliou/image/upload/v1564558001/PrepareCSEMaster/favicon.ico","appleTouch":"https://res.cloudinary.com/saberliou/image/upload/v1564558002/PrepareCSEMaster/apple-touch-icon.jpg","appleTouchMore":{"120x120":"https://res.cloudinary.com/saberliou/image/upload/w_120,h_120/v1564558002/PrepareCSEMaster/apple-touch-icon.jpg","180x180":"https://res.cloudinary.com/saberliou/image/upload/w_180,h_180/v1564558002/PrepareCSEMaster/apple-touch-icon.jpg"}},"insert-logo-link-website":{"link":"./","style":"width: 100%","target":"_self","url":"https://res.cloudinary.com/saberliou/image/upload/v1564558000/PrepareCSEMaster/logo.png"},"back-to-top-button":{},"sharing":{"qq":false,"all":[],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":true,"line":true,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"saberLiou <saberliou@gmail.com>","localized-footer":{"hline":true,"filename":"FOOTER.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"INTRODUCTION.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"linear_algebra":{"title":"Linear Algebra","chapter0":{"title":"00. 基礎數學"},"chapter1":{"title":"01. 矩陣與線性方程組"},"chapter2":{"title":"02. 行列式"},"chapter3":{"title":"03. 向量空間"}},"discrete_mathematics":{"title":"Discrete Mathematics"},"data_structure":{"title":"Data Structure","chapter1":{"title":"01. Basic Concepts"}},"algorithm":{"title":"Algorithm"},"operating_system":{"title":"Operating System"},"computer_organization":{"title":"Computer Organization","chapter1":{"title":"01. 指令: 計算機的語言"}}},"title":"Prepare CSE Master Cheatsheet","language":"zh-tw","links":{"sharing":{"facebook":false,"twitter":false,"all":false}},"gitbook":"*","description":"Cheatsheet for preparing CSE master examination."},"file":{"path":"LinearAlgebra/Chapter03.md","mtime":"2019-08-01T09:48:14.093Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-01T08:59:06.624Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-scripts/000a13c6237abab0b0a6f3634497f448-change_favicon.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-insert-logo-link-website/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-etoc/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

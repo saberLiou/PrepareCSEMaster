@@ -5,6 +5,10 @@
 ## Subjects
 
 * [Linear Algebra](LinearAlgebra/README.md)
+    * [00. 基礎數學](LinearAlgebra/Chapter00.md)
+    * [01. 矩陣與線性方程組](LinearAlgebra/Chapter01.md)
+    * [02. 行列式](LinearAlgebra/Chapter02.md)
+    * [03. 向量空間](LinearAlgebra/Chapter03.md)
 * [Discrete Mathematics](DiscreteMathematics/README.md)
 * [Data Structure](DataStructure/README.md)
     * [01. Basic Concepts](DataStructure/Chapter01.md)
