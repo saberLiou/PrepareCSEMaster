@@ -1,5 +1,6 @@
 # {{ book.data_structure.chapter1.title }}
+<!-- notoc -->
 
-When $$a \ne 0$$, there are two solutions to $$(ax^2 + bx + c = 0)$$ and they are $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
-
-$$ a^b $$
+{% hint style='working' %}
+### {{ book.under_construction }}
+{% endhint %}
