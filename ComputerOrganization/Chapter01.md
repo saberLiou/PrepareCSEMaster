@@ -15,8 +15,9 @@
     - 兼具基本指令
 - **指令集架構(Instruction Set Architecture, ISA)**: 為了學習撰寫低階語言而所必須了解的基本硬體架構及指令集之合稱
 
-###### Q&A
+{% hint style='info' %}
 Prior to the early 1980's, machines were built with more and more complex instruction set, but why has there been a move to RISC machines away from complex instruction machines?
+{% endhint %}
 > 1. Since **early computers** had **limited memory capacities** and were **expensive**, having a **CISC** instruction set enabled performing **complex operations with very few instructions**.
 > 2. **Writing a compiler to generate efficient code** easier: **RISC > CISC** architecture.
 > 3. **Pipeline** easier: **RISC > CISC** instructions.
@@ -94,7 +95,7 @@ Prior to the early 1980's, machines were built with more and more complex instru
   - **32-bits**一般目的暫存器(General Purpose Register, **GPR**) x **32**
 
 {% hint style='danger' %}
-**注意: 若下方表格在手機、平板裝置或電腦螢幕上跑版，可參照表格下方圖片**
+**注意**: 若下方表格在手機、平板裝置或電腦螢幕上跑版，可參照表格下方圖片
 {% endhint %}
 
 | type              | name      | number    | usage                   |
@@ -114,7 +115,8 @@ Prior to the early 1980's, machines were built with more and more complex instru
 - **溢出暫存器(splling register)**: 將不常用的變數從暫存器放入記憶體
   - $$ \because $$ 程式裡使用的變數 > 暫存器數量 $$ \therefore $$ compiler 將常用變數存暫存器，其餘放記憶體，並 I/O by load & store 指令
 
-###### Q&A
+{% hint style='info' %}
 存取速度: 暫存器 > 記憶體，為何不多設計一些暫存器來存取變數?
+{% endhint %}
 > CPU 存取暫存器時需經解碼程序以指定所要的暫存器: 暫存器 $$ \uparrow $$  
 > $$ \Rightarrow $$ 解碼時間 $$ \uparrow $$ $$ \Rightarrow $$ CPU的時脈週期(clock cycle time) $$ \uparrow $$ $$ \Rightarrow $$ CPU 執行效率 $$ \downarrow $$ $$ \Rightarrow $$ CPU 功率消耗 $$ \uparrow $$

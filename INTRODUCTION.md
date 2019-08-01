@@ -1,7 +1,7 @@
 # Introduction
 <!-- notoc -->
 
-Cheatsheet for preparing CSE master examination.
+{% em type="yellow" %}Cheatsheet for preparing CSE master examination.{% endem %}
 
 ## Subjects
 ---
