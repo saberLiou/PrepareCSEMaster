@@ -1,5 +1,3 @@
-var images_folder = getCorrectImagesFolder();
-
 function changeFavicon(link) {
   var $favicon = document.querySelector('link[rel="shortcut icon"]');
 
@@ -16,4 +14,7 @@ function changeFavicon(link) {
   }
 }
 
-changeFavicon(images_folder + "favicon.ico");
+gitbook.events.bind("page.change", function() {
+  var images_folder = getCorrectImagesFolder();
+  changeFavicon(images_folder + "favicon.ico");
+});
