@@ -14,4 +14,4 @@ function changeFavicon(link) {
   }
 }
 
-changeFavicon("images/favicon.ico");
+changeFavicon("/images/favicon.ico");

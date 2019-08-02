@@ -48,7 +48,7 @@ Prior to the early 1980's, machines were built with more and more complex instru
   - 輸入設備(Input Device)
   - 輸出設備(Output Device)
 
-![Basic Computer Structure in ISA](../images/ComputerOrganization/Chapter01/basic_computer_structure.jpg "Basic Computer Structure in ISA")
+![Basic Computer Structure in ISA](/images/ComputerOrganization/Chapter01/basic_computer_structure.jpg "Basic Computer Structure in ISA")
 
 ### 記憶體 (Memory)
 - 一個一維的大陣列: 位址(address) => 位元組(byte, 8 bits)
@@ -82,7 +82,7 @@ Prior to the early 1980's, machines were built with more and more complex instru
   - 32-bits word 中**最右邊**或**最小位元組(Least Significand Byte, LSB)**被放置於**最低記憶體位置**
   - **Intel 80x86**, **ARM**, DEC VAX, DEC Alpha, ...etc.
 
-![Big & Little Endian](../images/ComputerOrganization/Chapter01/endianness.jpg "Big & Little Endian")
+![Big & Little Endian](/images/ComputerOrganization/Chapter01/endianness.jpg "Big & Little Endian")
 
 ### 暫存器 (Register)
 - CPU 裡儲存運算元的記憶元件，量少而資料存取快速
@@ -110,7 +110,7 @@ Prior to the early 1980's, machines were built with more and more complex instru
 > - Temporaries & More Temporaries: 存放運算過程中之結果
 > - Constant of Zero: Read only.
 
-![MIPS General Purpose Registers](../images/ComputerOrganization/Chapter01/mips_general_purpose_registers.jpg "MIPS General Purpose Registers")
+![MIPS General Purpose Registers](/images/ComputerOrganization/Chapter01/mips_general_purpose_registers.jpg "MIPS General Purpose Registers")
 
 - **溢出暫存器(splling register)**: 將不常用的變數從暫存器放入記憶體
   - $$ \because $$ 程式裡使用的變數 > 暫存器數量 $$ \therefore $$ compiler 將常用變數存暫存器，其餘放記憶體，並 I/O by load & store 指令
