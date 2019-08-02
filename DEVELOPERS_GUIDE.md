@@ -1,7 +1,7 @@
 # Developer's Guide
 
 ## Developing
----
+
 ### Writing
 
 #### SUMMARY.md
@@ -23,7 +23,7 @@ $ gitbook serve ./ docs
 to launch a local debugging server in valid ready-to-deploy folder for [production on Github Pages][Github Pages Version].
 
 ## Deploying
----
+
 ```bash
 $ gitbook build --no-live ./ docs
 ```
