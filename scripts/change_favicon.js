@@ -1,3 +1,5 @@
+var images_folder = getCorrectImagesFolder();
+
 function changeFavicon(link) {
   var $favicon = document.querySelector('link[rel="shortcut icon"]');
 
@@ -14,8 +16,4 @@ function changeFavicon(link) {
   }
 }
 
-var loc = window.location.pathname;
-var dir = loc.substring(0, loc.lastIndexOf('/'));
-console.log(dir);
-
-// changeFavicon(dir + "/images/favicon.ico");
+changeFavicon(images_folder + "favicon.ico");
