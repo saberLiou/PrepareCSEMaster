@@ -14,4 +14,8 @@ function changeFavicon(link) {
   }
 }
 
-changeFavicon("/images/favicon.ico");
+var loc = window.location.pathname;
+var dir = loc.substring(0, loc.lastIndexOf('/'));
+console.log(dir);
+
+// changeFavicon(dir + "/images/favicon.ico");

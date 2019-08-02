@@ -15,8 +15,6 @@
     },
     "plugins": [
         "scripts",
-        "favicon",
-        "insert-logo-link-website",
         "-sharing",
         "sharing-plus",
         "github",
@@ -34,21 +32,6 @@
                 "./scripts/change_apple_touch_icon_precomposed.js",
                 "./scripts/change_favicon.js"
             ]
-        },
-        "favicon":{
-            "shortcut": "/images/favicon.ico",
-            "bookmark": "/images/favicon.ico",
-            "appleTouch": "/images/apple-touch-icon.jpg",
-            "appleTouchMore": {
-                "120x120": "/images/apple-touch-icon.jpg",
-                "180x180": "/images/apple-touch-icon.jpg"
-            }
-        },
-        "insert-logo-link-website": {
-            "url": "/images/logo.png",
-            "link": "/",
-            "target": "_self",
-            "style": "width: 100%"
         },
         "sharing": {
             "douban": false,
