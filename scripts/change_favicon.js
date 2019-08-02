@@ -14,4 +14,4 @@ function changeFavicon(link) {
   }
 }
 
-changeFavicon("https://res.cloudinary.com/saberliou/image/upload/v1564558001/PrepareCSEMaster/favicon.ico");
+changeFavicon("images/favicon.ico");

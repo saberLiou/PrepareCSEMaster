@@ -35,16 +35,16 @@
             ]
         },
         "favicon":{
-            "shortcut": "https://res.cloudinary.com/saberliou/image/upload/v1564558001/PrepareCSEMaster/favicon.ico",
-            "bookmark": "https://res.cloudinary.com/saberliou/image/upload/v1564558001/PrepareCSEMaster/favicon.ico",
-            "appleTouch": "https://res.cloudinary.com/saberliou/image/upload/v1564558002/PrepareCSEMaster/apple-touch-icon.jpg",
+            "shortcut": "images/favicon.ico",
+            "bookmark": "images/favicon.ico",
+            "appleTouch": "images/apple-touch-icon.jpg",
             "appleTouchMore": {
-                "120x120": "https://res.cloudinary.com/saberliou/image/upload/w_120,h_120/v1564558002/PrepareCSEMaster/apple-touch-icon.jpg",
-                "180x180": "https://res.cloudinary.com/saberliou/image/upload/w_180,h_180/v1564558002/PrepareCSEMaster/apple-touch-icon.jpg"
+                "120x120": "images/apple-touch-icon.jpg",
+                "180x180": "images/apple-touch-icon.jpg"
             }
         },
         "insert-logo-link-website": {
-            "url": "https://res.cloudinary.com/saberliou/image/upload/v1564558000/PrepareCSEMaster/logo.png",
+            "url": "images/logo.png",
             "link": "./",
             "target": "_self",
             "style": "width: 100%"
