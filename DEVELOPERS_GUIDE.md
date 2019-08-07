@@ -13,7 +13,7 @@
   - only parse **header without katex syntax** for linking.
 - `hints`:
   - only **hints with `info` & `danger` styles** are appearing correctly on both productions of [Github Pages][Github Pages Version] and [New Gitbook][New Gitbook Version].
-  - **cannot use katex** inside `{% hint style='' %}``{% endhint %}`.
+  - **cannot use katex** inside `{% hint style='' %}` `{% endhint %}`.
 - `katex`: always wrapped double-dollar signs for **really required mathematical symbols or numbers** to split the whole line into **katex pieces** for mobile correct RWD website format.
 > example:  
 > **ax^2 + bx + c = d, for all x belongs to real number**  
