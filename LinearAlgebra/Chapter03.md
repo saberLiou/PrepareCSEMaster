@@ -162,7 +162,7 @@ $$ \vec{v} $$ = $$ \vec{v_1} $$ + $$ \vec{v_2} $$, $$ \vec{v_1} \in W_1 $$, $$ \
 $$ \Rightarrow c\vec{u} $$ + $$ d\vec{v} $$ = $$ c $$($$ \vec{u_1} $$ + $$ \vec{u_2} $$) + $$ d $$($$ \vec{v_1} $$ + $$ \vec{v_2} $$) = ($$ c\vec{u_1} $$ + $$ d\vec{v_1} $$) + ($$ c\vec{u_2} $$ + $$ d\vec{v_2} $$) $$ \in W_1 $$ + $$ W_2 $$
 
 ### Define 四個基本子空間
-$$ A \in F^{m \times n} $$, 
+$$ A \in F^{m \times n} $$,
 - **核空間(kernel of $$ A $$, nullspace, $$ N $$($$ A $$))**:
   - $$ ker $$($$ A $$) = { $$ \vec{x} $$: $$ n \times 1 $$ | $$ A\vec{x} $$ = $$ \vec{0} $$ }
   - **齊次解集**，收集 $$ A\vec{x} $$ = $$ \vec{0} $$ 之 $$ \vec{x} $$
@@ -219,3 +219,37 @@ $$ $$ \Rightarrow $$ $$ CS $$($$ B $$) $$ = \begin{Bmatrix}
 \end{bmatrix} | b \in R
 \end{Bmatrix} $$
 
+### Theorem of 四個基本子空間
+$$ A \in F^{m \times n} $$,
+1. $$ ker $$($$ A $$) is a subspace of $$ F^{n \times 1} $$
+2. $$ CS $$($$ A $$) is a subspace of $$ F^{m \times 1} $$
+> $$ \forall \vec{y} \in CS $$($$ A $$) $$ \Leftrightarrow \vec{y} $$ = $$ A\vec{x} $$, for some $$ \vec{x} $$
+3. $$ Lker $$($$ A $$) is a subspace of $$ F^{1 \times m} $$
+4. $$ RS $$($$ A $$) is a subspace of $$ F^{1 \times n} $$
+
+###### proof:
+1. $$ \because A \cdot \vec{0} $$ = $$ \vec{0} $$, $$ \therefore \vec{0} \in ker $$($$ A $$) $$ \Rightarrow ker $$($$ A $$) $$ \ne \emptyset $$  
+$$ \forall c $$, $$ d \in F $$, $$ \forall \vec{x_1} $$, $$ \vec{x_2} \in ker $$($$ A $$) $$ \Rightarrow A\vec{x_1} $$ = $$ A\vec{x_2} $$ = $$ \vec{0} $$  
+$$ \Rightarrow A $$($$ c\vec{x_1} $$ + $$ d\vec{x_2} $$) = $$ cA\vec{x_1} $$ + $$ dA\vec{x_2} $$ = $$ c \cdot \vec{0} $$ + $$ d \cdot \vec{0} $$ = $$ \vec{0} $$  
+$$ \Rightarrow c\vec{x_1} $$ + $$ d\vec{x_2} \in ker $$($$ A $$)
+> 3 同理
+2. $$ \vec{0} $$ = $$ A \cdot \vec{0} \in CS $$($$ A $$) $$ \Rightarrow CS $$($$ A $$) $$ \ne \emptyset $$  
+$$ \forall c $$, $$ d \in F $$, $$ \forall \vec{y_1} $$, $$ \vec{y_2} \in CS $$($$ A $$) $$ \Rightarrow \vec{y_1} $$ = $$ A\vec{x_1} $$, $$ \vec{y_2} $$ = $$ A\vec{x_2} $$, $$ \vec{x_1} $$, $$ \vec{x_2} $$: $$ n \times 1 $$  
+$$ \Rightarrow c\vec{y_1} $$ + $$ d\vec{y_2} $$ = $$ cA\vec{x_1} $$ + $$ dA\vec{x_2} $$ = $$ A $$($$ c\vec{x_1} $$ + $$ d\vec{x_2} $$) $$ \in CS $$($$ A $$)
+> 4 同理
+
+### 四個基本子空間 with Invertible Matrix
+1. $$ ker $$($$ B $$) $$ \subseteq ker $$($$ AB $$), 當 $$ A $$ is nonsingular 時, $$ ker $$($$ B $$) = $$ ker $$($$ AB $$)
+> $$ AB\vec{x} $$ = $$ \vec{0} \rightarrow B\vec{x} $$ = $$ \vec{0} $$
+2. $$ Lker $$($$ A $$) $$ \subseteq Lker $$($$ AB $$), 當 $$ B $$ is nonsingular 時, $$ Lker $$($$ A $$) = $$ Lker $$($$ AB $$)
+3. $$ CS $$($$ AB $$) $$ \subseteq CS $$($$ A $$), 當 $$ B $$ 為可逆時, $$ CS $$($$ AB $$) = $$ CS $$($$ A $$)
+4. $$ RS $$($$ AB $$) = $$ RS $$($$ B $$)
+
+### 四個基本子空間 with Row and Column Equivalence
+$$ A $$, $$ B \in F^{m \times n} $$,
+1. $$ A $$ **列等價**於 $$ B $$, 則
+   - $$ ker $$($$ A $$) = $$ ker $$($$ B $$)
+   - $$ RS $$($$ A $$) = $$ RS $$($$ B $$)
+2. $$ A $$ **行等價**於 $$ B $$, 則
+   - $$ Lker $$($$ A $$) = $$ Lker $$($$ B $$)
+   - $$ CS $$($$ A $$) = $$ CS $$($$ B $$)
