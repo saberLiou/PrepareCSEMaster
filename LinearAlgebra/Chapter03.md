@@ -3,7 +3,7 @@
 
 ## 3-1. 向量空間
 ---
-### Define of Vector Space
+### Define Vector Space
 $$ V \ne \emptyset $$, $$ F $$: $$ field $$, 定義二運算
 - 向量加法(vector addition): +
 - 純量積(vector multiplication): $$ \cdot $$
@@ -87,7 +87,7 @@ $$ V \ne \emptyset $$, $$ F $$: $$ field $$, 定義二運算
 
 ## 3-2. 子空間
 ---
-### Define of 子空間 (subspace)
+### Define Subspace
 ($$ V $$, +, $$ \cdot $$ ): vector space,
 - $$ W \subseteq V $$
 - ($$ W $$, +, $$ \cdot $$ ): vector space
@@ -147,7 +147,7 @@ but $$ W_1 \cup W_2 $$ is not a subspace of $$ V $$.
 ### Theorem of 兩子空間聯集
 $$ W_1 $$, $$ W_2 $$ are subspaces of $$ V $$, $$ W_1 \cap W_2 \Leftrightarrow W_1 \subseteq W_2 $$ or $$ W_2 \subseteq W_1 $$
 
-### Define of 和空間 (sum space)
+### Define 和空間 (Sum Space)
 $$ W_1 $$, $$ W_2 $$ are subspaces of $$ V $$, $$ W_1 $$ + $$ W_2 $$ = { $$ \vec{w_1} $$ + $$ \vec{w_2} $$ | $$ \vec{w_1} \in W_1 $$, $$ \vec{w_2} \in W_2 $$ }, 稱為 $$ W_1 $$, $$ W_2 $$ 之和空間(sum space)
 
 ### Theorem of 和空間為 V 的子空間
@@ -161,7 +161,7 @@ $$ \vec{u} $$ = $$ \vec{u_1} $$ + $$ \vec{u_2} $$, $$ \vec{u_1} \in W_1 $$, $$ \
 $$ \vec{v} $$ = $$ \vec{v_1} $$ + $$ \vec{v_2} $$, $$ \vec{v_1} \in W_1 $$, $$ \vec{v_2} \in W_2 $$  
 $$ \Rightarrow c\vec{u} $$ + $$ d\vec{v} $$ = $$ c $$($$ \vec{u_1} $$ + $$ \vec{u_2} $$) + $$ d $$($$ \vec{v_1} $$ + $$ \vec{v_2} $$) = ($$ c\vec{u_1} $$ + $$ d\vec{v_1} $$) + ($$ c\vec{u_2} $$ + $$ d\vec{v_2} $$) $$ \in W_1 $$ + $$ W_2 $$
 
-### Define of 四個基本子空間
+### Define 四個基本子空間
 $$ A \in F^{m \times n} $$, 
 - **核空間(kernel of $$ A $$, nullspace, $$ N $$($$ A $$))**:
   - $$ ker $$($$ A $$) = { $$ \vec{x} $$: $$ n \times 1 $$ | $$ A\vec{x} $$ = $$ \vec{0} $$ }
