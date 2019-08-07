@@ -8,6 +8,7 @@
 - Cannot write `{{ book.[variables] }}`.
 
 #### Gitbook Plugins
+- `etoc`: only parse **header without katex syntax** for linking, and should be **unique string** on each markdown file.
 - `hints`: only **hints with `info` & `danger` styles** are appearing correctly on both productions of [Github Pages][Github Pages Version] and [New Gitbook][New Gitbook Version].
 - `katex`: always wrapped double-dollar signs for **really required mathematical symbols or numbers** to split the whole line into **katex pieces** for mobile correct RWD website format.
 > example:  

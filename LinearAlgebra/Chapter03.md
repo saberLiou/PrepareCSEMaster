@@ -3,7 +3,7 @@
 
 ## 3-1. 向量空間
 ---
-### Define
+### Define of Vector Space
 $$ V \ne \emptyset $$, $$ F $$: $$ field $$, 定義二運算
 - 向量加法(vector addition): +
 - 純量積(vector multiplication): $$ \cdot $$
@@ -84,3 +84,138 @@ $$ V \ne \emptyset $$, $$ F $$: $$ field $$, 定義二運算
 - **Define**: $$ V $$ = $$ \mathcal{C} $$[$$ a $$, $$ b $$] = { $$ f $$ | $$ f $$: [$$ a $$, $$ b $$] $$ \rightarrow F $$ continuous function }
 > [$$ a $$, $$ b $$]: $$ a $$ 至 $$ b $$ 之區間
 - $$ V $$ 上定義 + 及 $$ \cdot $$ : 函數的加法與純量積
+
+## 3-2. 子空間
+---
+### Define of 子空間 (subspace)
+($$ V $$, +, $$ \cdot $$ ): vector space,
+- $$ W \subseteq V $$
+- ($$ W $$, +, $$ \cdot $$ ): vector space
+
+則稱 $$ W $$ 為 $$ V $$ 之子空間(subspace)
+
+### Theorem of 子空間的充要條件
+已知 $$ V $$: vector space, $$ W \subseteq V $$, $$ W \ne \emptyset $$, 則下列敘述等價:  
+1. $$ W $$ 為 $$ V $$ 的子空間   
+2. $$ \forall \vec{u} $$, $$ \vec{v} \in W $$, $$ \vec{u} $$ + $$ \vec{v} \in W $$  
+3. $$ \forall c \in F $$, $$ \forall \vec{v} \in W $$, $$ c\vec{v} \in W $$
+> 在 $$ W \subseteq V $$ 和 $$ W \ne \emptyset $$ 的條件下，只需驗證**向量加法**及**純量積**的**封閉性**即可**證明 $$ W $$ 為 $$ V $$ 的子空間**
+
+4. $$ \forall c $$, $$ d \in F $$, $$ \forall \vec{u} $$, $$ \vec{v} \in W $$, $$ c\vec{u} $$ + $$ d\vec{v} \in W $$  
+> Corollary of 2. & 3.
+
+5. $$ \forall c_i \in F $$, $$ v_i \in W $$, $$ i $$ = $$ 1 $$, $$ 2 $$, ..., $$ k $$, $$ \displaystyle\sum_{i=1}^k c_i v_i \in W $$
+> Corollary of 4.
+
+### Square of R 的三型子空間
+1. 原點: {($$ 0 $$, $$ 0 $$)} = { $$ \vec{0} $$ }: zero space $$ \rightarrow $$ **點**
+> $$ \forall $$ vector spaces, $$ \exists $${ $$ \vec{0} $$ }
+
+2. 過原點直線 $$ \rightarrow $$ **線**
+> 若非直線，則不具**純量積封閉性**
+
+3. $$ x-y $$ 平面: $$ R^2 $$ $$ \rightarrow $$ **面**
+> $$ V $$ 為 $$ V $$ 的子空間
+
+### Theorem of 兩子空間交集
+$$ W_1 $$, $$ W_2 $$ are subspaces of $$ V $$, 則 $$ W_1 \cap W_2 $$ is a subspace of $$ V $$
+> 1. $$ \subseteq $$
+> 2. $$ \ne \emptyset $$
+> 3. **封閉性**
+
+###### proof: 
+1. $$ W_1 \subseteq V $$ 且 $$ W_2 \subseteq V $$, 則 $$ W_1 \cap W_2 \subseteq V $$
+2. $$ \because \vec{0} \in W_1 \cap W_2 $$, $$ \therefore W_1 \cap W_2 \ne \emptyset $$
+3. $$ \forall c $$, $$ d \in F $$, $$ \forall \vec{u} $$, $$ \vec{v} \in W_1 \cap W_2 $$,  
+$$ \because \vec{u} $$, $$ \vec{v} \in W_1 $$ 且 $$ W_1 $$ is a subspace of $$ V $$, $$ \therefore c\vec{u} $$ + $$ d\vec{v} $$ = $$ W_1 $$  
+$$ \because \vec{u} $$, $$ \vec{v} \in W_2 $$ 且 $$ W_2 $$ is a subspace of $$ V $$, $$ \therefore c\vec{u} $$ + $$ d\vec{v} $$ = $$ W_2 $$  
+$$ \therefore c\vec{u} $$ + $$ d\vec{v} $$ = $$ W_1 \cap W_2 $$
+
+### 兩子空間聯集
+$$ W_1 $$, $$ W_2 $$ are subspaces of $$ V $$, $$ W_1 \cap W_2 $$ **不一定**為 $$ V $$ 的 subspace
+
+###### 反例: 
+$$ V $$ = $$ R^2 $$ has two subsapces $$ W_1 $$ and $$ W_2 $$,  
+- $$ W_1 $$ = { ($$ x $$, $$ 0 $$) | $$ x \in R $$ },
+> $$ x $$ **軸**
+- $$ W_2 $$ = { ($$ 0 $$, $$ y $$) | $$ y \in R $$ },
+> $$ y $$ **軸**
+
+but $$ W_1 \cup W_2 $$ is not a subspace of $$ V $$.
+> $$ ^{ex.} $$ ($$ 1 $$, $$ 0 $$), ($$ 0 $$, $$ 1 $$) $$ \in W_1 \cup W_2 $$, but ($$ 1 $$, $$ 0 $$) + ($$ 0 $$, $$ 1 $$) = ($$ 1 $$, $$ 1 $$) $$ \notin W_1 \cup W_2 $$
+
+### Theorem of 兩子空間聯集
+$$ W_1 $$, $$ W_2 $$ are subspaces of $$ V $$, $$ W_1 \cap W_2 \Leftrightarrow W_1 \subseteq W_2 $$ or $$ W_2 \subseteq W_1 $$
+
+### Define of 和空間 (sum space)
+$$ W_1 $$, $$ W_2 $$ are subspaces of $$ V $$, $$ W_1 $$ + $$ W_2 $$ = { $$ \vec{w_1} $$ + $$ \vec{w_2} $$ | $$ \vec{w_1} \in W_1 $$, $$ \vec{w_2} \in W_2 $$ }, 稱為 $$ W_1 $$, $$ W_2 $$ 之和空間(sum space)
+
+### Theorem of 和空間為 V 的子空間
+$$ W_1 $$, $$ W_2 $$ are subspaces of $$ V $$, 則 $$ W_1 $$ + $$ W_2 $$ is a subspace of $$ V $$
+
+###### proof: 
+1. $$ W_1 \subseteq V $$ 且 $$ W_2 \subseteq V $$, 則 $$ W_1 $$ + $$ W_2 \subseteq V $$
+2. $$ \because \vec{0} $$ = $$ \vec{0} $$ + $$ \vec{0} \in W_1 $$ + $$ W_2 $$, $$ \therefore W_1 $$ + $$ W_2 \ne \emptyset $$
+3. $$ \forall c $$, $$ d \in F $$, $$ \forall \vec{u} $$, $$ \vec{v} \in W_1 $$ + $$ W_2 $$,  
+$$ \vec{u} $$ = $$ \vec{u_1} $$ + $$ \vec{u_2} $$, $$ \vec{u_1} \in W_1 $$, $$ \vec{u_2} \in W_2 $$  
+$$ \vec{v} $$ = $$ \vec{v_1} $$ + $$ \vec{v_2} $$, $$ \vec{v_1} \in W_1 $$, $$ \vec{v_2} \in W_2 $$  
+$$ \Rightarrow c\vec{u} $$ + $$ d\vec{v} $$ = $$ c $$($$ \vec{u_1} $$ + $$ \vec{u_2} $$) + $$ d $$($$ \vec{v_1} $$ + $$ \vec{v_2} $$) = ($$ c\vec{u_1} $$ + $$ d\vec{v_1} $$) + ($$ c\vec{u_2} $$ + $$ d\vec{v_2} $$) $$ \in W_1 $$ + $$ W_2 $$
+
+### Define of 四個基本子空間
+$$ A \in F^{m \times n} $$, 
+- **核空間(kernel of $$ A $$, nullspace, $$ N $$($$ A $$))**:
+  - $$ ker $$($$ A $$) = { $$ \vec{x} $$: $$ n \times 1 $$ | $$ A\vec{x} $$ = $$ \vec{0} $$ }
+  - **齊次解集**，收集 $$ A\vec{x} $$ = $$ \vec{0} $$ 之 $$ \vec{x} $$
+- **行空間(column space)**:
+  - $$ CS $$($$ A $$) = { $$ A\vec{x} $$: $$ m \times 1 $$ | $$ \vec{x} $$: $$ n \times 1 $$ }
+  - 收集 $$ A\vec{x} $$ = $$ \vec{y} $$ 之 $$ \vec{y} $$
+- **左核空間(left kernel of $$ A $$, left nullspace)**:
+  - $$ Lker $$($$ A $$) = { $$ \vec{x} $$: $$ 1 \times m $$ | $$ \vec{x}A $$ = $$ \vec{0} $$ }
+  - 收集 $$ \vec{x}A $$ = $$ \vec{0} $$ 之 $$ \vec{x} $$
+- **列空間(row) space)**:
+  - $$ RS $$($$ A $$) = { $$ \vec{x}A $$: $$ 1 \times n $$ | $$ \vec{x} $$: $$ 1 \times m $$ }
+  - 收集 $$ \vec{x}A $$ = $$ \vec{y} $$ 之 $$ \vec{y} $$
+
+> $$ ^{ex.} A =
+\begin{bmatrix} 
+    1 & 2 & 3 \\
+    1 & 1 & 2
+\end{bmatrix}
+\begin{bmatrix} 
+    ? \\
+    ? \\
+    ?
+\end{bmatrix} = 
+\begin{bmatrix} 
+    0 \\
+    0
+\end{bmatrix}
+$$ $$ \Rightarrow $$ $$ ker $$($$ A $$) $$ = \begin{Bmatrix}
+\begin{bmatrix} 
+    a \\
+    a \\
+    -a
+\end{bmatrix} | a \in R
+\end{Bmatrix} $$;
+
+> $$ ^{ex.} B =
+\begin{bmatrix} 
+    1 & 2 & 0 \\
+    1 & 2 & 0
+\end{bmatrix}
+\begin{bmatrix} 
+    ? \\
+    ? \\
+    ?
+\end{bmatrix} = 
+\begin{bmatrix} 
+    b \\
+    b
+\end{bmatrix}
+$$ $$ \Rightarrow $$ $$ CS $$($$ B $$) $$ = \begin{Bmatrix}
+\begin{bmatrix} 
+    b \\
+    b
+\end{bmatrix} | b \in R
+\end{Bmatrix} $$
+
