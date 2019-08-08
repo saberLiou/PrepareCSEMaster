@@ -236,7 +236,8 @@ From procedure A to procedure A
 
 ##### conditional: branch
 > MIPS:
-> - **beq**/**bne** *register1*, *register2*, *label*: `if (register1 == register2) $PC = label;`
+> - **beq** *register1*, *register2*, *label*: `if (register1 == register2) $PC = label;`
+> - **bne** *register1*, *register2*, *label*: `if (register1 != register2) $PC = label;`
 > - **slt** *register1*, *register2*, *register3*: `register1 = (register2 < register3) ? 1 : 0;`
 
 #### Inter Program
