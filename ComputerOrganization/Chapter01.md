@@ -180,3 +180,10 @@ Prior to the early 1980's, machines were built with more and more complex instru
 6. 跳至**啟動常式(start-up routine)**: 此程式會呼叫要被執行的主程式。當主程式結束時，會使用 exit 系統呼叫來終結程式的執行
 
 ![Compiling & Executing Steps of High-level Programming Language](../images/ComputerOrganization/Chapter01/compile_and_execute.jpg "Compiling & Executing Steps of High-level Programming Language")
+
+### Java 的轉譯步驟
+1. Java $$ \rightarrow $$ **compiler 編譯** $$ \rightarrow $$ Java bytes code
+> Java bytes code: `.class`
+2. Java bytes code $$ \rightarrow $$ **interpreter(Java Virtual Machine, JVM) 直譯** $$ \rightarrow $$ 虛擬機的機器語言(Machine language on virtual machine)
+> - JVM invoke **JIT(Just In Time) compiler**, which **profile** the running program and **selectively compile "hot" methods** into the native instruction set on which the virtual machine.
+> - Interpretation **優點: portable, machine independent** $$ \leftrightarrow $$ **缺點: lower performance**
