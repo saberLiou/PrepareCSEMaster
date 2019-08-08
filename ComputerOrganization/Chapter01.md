@@ -123,14 +123,13 @@ Prior to the early 1980's, machines were built with more and more complex instru
 
 ### 記憶體管理及相關暫存器
 
-![Procedure in Memory](../images/ComputerOrganization/Chapter01/procedure_in_
-memory.jpg "Procedure in Memory")
+![Procedure in Memory](../images/ComputerOrganization/Chapter01/procedure_in_memory.jpg "Procedure in Memory")
 
 - Stack: 放區域變數，$$ \downarrow $$
   - 啟動紀錄(Activation Record): 又稱程序框(Procedure Frame)
   - **$fp(frame pointer)**: 指向 Activation Record 第一個字組的暫存器
   - **$sp(stack pointer)**: 指向 Stack 最新資料所在位址的暫存器
-  
+
 ![Activation Record in Stack](../images/ComputerOrganization/Chapter01/activation_record_in_stack.jpg "Activation Record in Stack")
 
 - Dynamic Data(Heap): 放動態指標變數，$$ \uparrow $$
@@ -139,3 +138,47 @@ memory.jpg "Procedure in Memory")
 - Text: 放程式碼
 - Reserved: for I/O Devices.
 
+## 程式之轉譯與執行
+---
+### 高階語言步驟
+1. 高階語言(C) $$ \rightarrow $$ **compiler 編譯** $$ \rightarrow $$ 組合語言(Assembly)
+> 組合語言: `.a`(UNIX)/`.ASM`(MS-DOS)
+2. 組合語言 $$ \rightarrow $$ **assembler 組譯** $$ \rightarrow $$ 機器語言的目的模組(Object: Machine language module)
+> 機器語言的目的模組: `.o`(UNIX)/`.OBJ`(MS-DOS)
+3. 機器語言的目的模組 + 資料庫常式(Object: Library routine in Machine language) $$ \rightarrow $$ **linker 連結** $$ \rightarrow $$ 可執行檔(Executable: Machine language)
+> 靜態, 動態連接資料庫常式: `.s`, `.so`(UNIX)/`.LIB`, `.DLL`(MS-DOS)  
+> 可執行檔: `a.out`(default in UNIX)/`.EXE`(MS-DOS)
+4. 可執行檔 $$ \rightarrow $$ **loader 載入** $$ \rightarrow $$ 記憶體
+
+> 現代加速轉譯過程:
+> - 有些 compiler $$ \because $$ 自帶 assembler, 而能從高階語言直接產生機器語言的目的模組
+> - 有些系統會使用連結載入器(linking loader)直接完成最後兩步驟
+
+### 組譯器 (Assembler)
+組譯過後，機器語言的目的模組包含以下資訊:
+- 標頭(header): 目的模組的內容, 大小, 位置...etc.
+- 指令區(text segment): 指令的機器語言碼
+- 資料區(data segment): 程式生命週期內的所有靜態與動態資料
+- relocation information: 當程式載入記憶體時，指令與資料之相對位置
+- symbol table: 儲存未定義的標籤，如外部參考資料
+- debug information: 用來連結原始程式碼
+
+### 連結器 (Linker)
+三個執行步驟:
+1. 將目的模組的指令與資料**象徵性的(symbolically)**放置於記憶體中
+> 象徵性的放置: 非實際放入
+2. 決定資料與指令標籤(instruction label)的位址
+3. 決定內外部位址參考
+
+![Linker](../images/ComputerOrganization/Chapter01/linker.jpg "Linker")
+
+### 載入器 (Loader)
+六個執行步驟:
+1. 讀取可執行檔的標頭，決定指令區及資料區大小
+2. 產生一個足夠容納可執行檔的所有指令及資料之記憶體空間
+3. 複製可執行檔的指令及資料至記憶體
+4. 複製主程式的參數至堆疊
+5. 初始化暫存器，並將 $sp 設定在 Stack 的第一個可用的空間
+6. 跳至**啟動常式(start-up routine)**: 此程式會呼叫要被執行的主程式。當主程式結束時，會使用 exit 系統呼叫來終結程式的執行
+
+![Compiling & Executing Steps of High-level Programming Language](../images/ComputerOrganization/Chapter01/compile_and_execute.jpg "Compiling & Executing Steps of High-level Programming Language")
