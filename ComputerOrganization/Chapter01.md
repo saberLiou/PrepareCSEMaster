@@ -120,3 +120,22 @@ Prior to the early 1980's, machines were built with more and more complex instru
 {% endhint %}
 > CPU 存取暫存器時需經解碼程序以指定所要的暫存器: 暫存器 $$ \uparrow $$  
 > $$ \Rightarrow $$ 解碼時間 $$ \uparrow $$ $$ \Rightarrow $$ CPU的時脈週期(clock cycle time) $$ \uparrow $$ $$ \Rightarrow $$ CPU 執行效率 $$ \downarrow $$ $$ \Rightarrow $$ CPU 功率消耗 $$ \uparrow $$
+
+### 記憶體管理及相關暫存器
+
+![Procedure in Memory](../images/ComputerOrganization/Chapter01/procedure_in_
+memory.jpg "Procedure in Memory")
+
+- Stack: 放區域變數，$$ \downarrow $$
+  - 啟動紀錄(Activation Record): 又稱程序框(Procedure Frame)
+  - **$fp(frame pointer)**: 指向 Activation Record 第一個字組的暫存器
+  - **$sp(stack pointer)**: 指向 Stack 最新資料所在位址的暫存器
+  
+![Activation Record in Stack](../images/ComputerOrganization/Chapter01/activation_record_in_stack.jpg "Activation Record in Stack")
+
+- Dynamic Data(Heap): 放動態指標變數，$$ \uparrow $$
+- Static Data: 放全域變數
+  - **$gp(global pointer)**: 指向 Static Data 的暫存器
+- Text: 放程式碼
+- Reserved: for I/O Devices.
+
