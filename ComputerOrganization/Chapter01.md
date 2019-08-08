@@ -163,8 +163,7 @@ Prior to the early 1980's, machines were built with more and more complex instru
 - symbol table: 儲存未定義的標籤，如外部參考資料
 - debug information: 用來連結原始程式碼
 
-### 連結器 (Linker)
-三個執行步驟:
+### 連結器 (Linker) 的三個執行步驟
 1. 將目的模組的指令與資料**象徵性的(symbolically)**放置於記憶體中
 > 象徵性的放置: 非實際放入
 2. 決定資料與指令標籤(instruction label)的位址
@@ -172,8 +171,7 @@ Prior to the early 1980's, machines were built with more and more complex instru
 
 ![Linker](../images/ComputerOrganization/Chapter01/linker.jpg "Linker")
 
-### 載入器 (Loader)
-六個執行步驟:
+### 載入器 (Loader) 的六個執行步驟
 1. 讀取可執行檔的標頭，決定指令區及資料區大小
 2. 產生一個足夠容納可執行檔的所有指令及資料之記憶體空間
 3. 複製可執行檔的指令及資料至記憶體
