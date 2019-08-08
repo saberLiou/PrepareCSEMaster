@@ -187,3 +187,63 @@ Prior to the early 1980's, machines were built with more and more complex instru
 2. Java bytes code $$ \rightarrow $$ **interpreter(Java Virtual Machine, JVM) 直譯** $$ \rightarrow $$ 虛擬機的機器語言(Machine language on virtual machine)
 > - JVM invoke **JIT(Just In Time) compiler**, which **profile** the running program and **selectively compile "hot" methods** into the native instruction set on which the virtual machine.
 > - Interpretation **優點: portable, machine independent** $$ \leftrightarrow $$ **缺點: lower performance**
+
+## 指令類別
+---
+### Data Movement (Data Transfer)
+記憶體位址採**基底-位移(base-offset)**表示: 位移量(基底暫存器)
+> $$ ^{ex.} $$ If $s0 points to A[0], how to load A[8]'s value to $t0?  
+> $$ \Rightarrow $$ lw $t0, **32($s0)**: 8 $$ \times $$ 4 bytes
+
+- load: Memory to CPU
+> MIPS:
+> - **lw**/**lh**/**lb**/**lbu** *register*, *offset*(*base register*): `register = Memory[offset + base register];`
+- store: CPU to Memory
+> MIPS:
+> - **sw**/**sh**/**sb** *register*, *offset*(*base register*): `Memory[offset + base register] = register;`
+- move: Memory to Memory/Register to Register
+- input/output: from I/O devices
+- push/pop: to/from Stack
+
+### Operation
+
+#### Arithmetic
+For integer or floating point:
+- add
+> MIPS: 
+> - **add** *register1*, *register2*, *register3*: `register1 = register2 + register3;`
+> - **addi** *register1*, *register2*, *constant*: `register1 = register2 + constant;`
+- sub
+> MIPS:
+> - **sub** *register1*, *register2*, *register3*: `register1 = register2 - register3;` 
+- multiply
+- divide
+
+#### Logical
+- shift/rotate
+- not/and/or/set(all digits to 1)/clear(all digits to 0)
+
+### Flow Control
+
+#### Intra Program
+From procedure A to procedure A
+
+##### unconditional: jump
+> MIPS:
+> - **j** *label*: `$PC = label;`
+> - **jal** *label*: `$ra = $PC + 4; $PC = label;`
+> - **jr** *register*: `$PC = register;`
+
+##### conditional: branch
+> MIPS:
+> - **beq**/**bne** *register1*, *register2*, *label*: `if (register1 == register2) $PC = label;`
+> - **slt** *register1*, *register2*, *register3*: `register1 = (register2 < register3) ? 1 : 0;`
+
+#### Inter Program
+From procedure A to procedure B
+- call/return
+
+#### System Call
+- trap/return
+> MIPS:
+> - **syscall**
