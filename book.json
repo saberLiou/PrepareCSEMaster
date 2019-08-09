@@ -15,7 +15,6 @@
     },
     "plugins": [
         "-sharing",
-        "sharing-plus",
         "github",
         "etoc",
         "hints",
@@ -73,7 +72,8 @@
             "files": [
                 "./scripts/correct_images_folder.js",
                 "./scripts/change_apple_touch_icon_precomposed.js",
-                "./scripts/change_favicon.js"
+                "./scripts/change_favicon.js",
+                "./scripts/update_sharing_buttons.js"
             ]
         }
     },
