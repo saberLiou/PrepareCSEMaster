@@ -190,10 +190,6 @@ Prior to the early 1980's, machines were built with more and more complex instru
 ## 指令類別
 ---
 ### Data Movement (Data Transfer)
-記憶體位址採**基底-位移(base-offset)**表示: 位移量(基底暫存器)
-> $$ ^{ex.} $$ If $s0 points to A[0], how to load A[8]'s value to $t0?  
-> $$ \Rightarrow $$ lw $t0, **32($s0)**: 8 $$ \times $$ 4 bytes
-
 - load: Memory to CPU
 > MIPS:
 > - **lw**/**lh**/**lb**/**lbu** *register*, *offset*(*base register*): `register = Memory[offset + base register];`
@@ -204,9 +200,12 @@ Prior to the early 1980's, machines were built with more and more complex instru
 - input/output: from I/O devices
 - push/pop: to/from Stack
 
-### Operation
+#### 「位移量(基底暫存器)」的記憶體位址
+在 **load/store** 指令中，記憶體位址採**基底-位移(base-offset)**表示:
+> $$ ^{ex.} $$ If $s0 points to A[0], how to load A[8]'s value to $t0?  
+> $$ \Rightarrow $$ lw $t0, **32($s0)**: 8 $$ \times $$ 4 bytes
 
-#### Arithmetic
+### Operation of Arithmetic
 For integer or floating point:
 - add
 > MIPS: 
@@ -218,32 +217,64 @@ For integer or floating point:
 - multiply
 - divide
 
-#### Logical
+### Operation of Logical
 - shift/rotate
 - not/and/or/set(all digits to 1)/clear(all digits to 0)
 
-### Flow Control
+### Flow Control of Intra Program
+From **procedure A** to **procedure A**
 
-#### Intra Program
-From procedure A to procedure A
-
-##### unconditional: jump
+- unconditional: jump
 > MIPS:
 > - **j** *label*: `$PC = label;`
-> - **jal** *label*: `$ra = $PC + 4; $PC = label;`
+> - **jal** *label*: `$ra = $PC + 4; $PC = label;`  
+> $$ \rightarrow $$ 其中 **j**/**jal** 的 ***label***: 該 *label* 之 **reference**，而**非 label 本身**  
 > - **jr** *register*: `$PC = register;`
 
-##### conditional: branch
+
+- conditional: branch
 > MIPS:
 > - **beq** *register1*, *register2*, *label*: `if (register1 == register2) $PC = label;`
-> - **bne** *register1*, *register2*, *label*: `if (register1 != register2) $PC = label;`
+> - **bne** *register1*, *register2*, *label*: `if (register1 != register2) $PC = label;`  
+> $$ \rightarrow $$ 其中 **beq**/**bne** 的 ***label***: **儲存"指向這條指令所在的記憶體位址"**  
 > - **slt** *register1*, *register2*, *register3*: `register1 = (register2 < register3) ? 1 : 0;`
 
-#### Inter Program
-From procedure A to procedure B
+#### 基本區塊 (Basic Block)
+一連串**完全沒有任何 jump/branch 目的地和指令**或如果有
+- **jump/branch 目的地**(即 **label**): 只能出現在**區塊的第一條指令處**，與
+- **jump/branch 指令**: 只能出現在**區塊的最後一條指令處**
+
+的指令(群)，是 compiler 執行**最佳化**的最基本單位  
+
+$$ \rightarrow $$ **最佳化**: 以最精簡的指令(群)完成當前程式所要執行的功能，減少程式碼佔用記憶體空間並加速程式執行
+
+> $$ ^{ex.} $$ **loop statement**:  
+> ```  
+g = g + A[i];  
+i = i + j;  
+if (i != h) goto Loop;  
+```
+> | A   | g   | h   | i   | j   |  
+  |:---:|:---:|:---:|:---:|:---:|  
+  | $s5 | $s1 | $s2 | $s3 | $s4 |  
+> ```
+Loop: sll $t1, $s3, $2    # $t1 = 4 * i, 算 address offset of A[]
+      add $t1, $t1, 5     # $t1 = memory address of A[i]
+      lw  $t0, 0($t1)     # $t0 = value of A[i] from memory
+      add $s1, $s1, $t0   # g = g + A[i];
+      add $s3, $s3, $s4   # i = i + j;
+      bne $s3, $s2, Loop  # if (i != h) goto Loop;
+```
+> $$ \checkmark $$ 第一行 `Loop` label 為最後一行 `bne` 指令之 branch 目的地  
+> $$ \checkmark $$ 最後一行 `bne $s3, $s2, Loop` 為 branch 指令  
+> $$ \therefore $$ 此群 MIPS 指令即為一基本區塊
+
+### Flow Control of Inter Program
+From **procedure A** to **procedure B**
+
 - call/return
 
-#### System Call
+### Flow Control of System Call
 - trap/return
 > MIPS:
 > - **syscall**

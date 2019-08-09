@@ -393,18 +393,18 @@
 </ul>
 </li>
 <li><a href="#&#x6307;&#x4EE4;&#x985E;&#x5225;">&#x6307;&#x4EE4;&#x985E;&#x5225;</a><ul>
-<li><a href="#data-movement-data-transfer">Data Movement (Data Transfer)</a></li>
-<li><a href="#operation">Operation</a><ul>
-<li><a href="#arithmetic">Arithmetic</a></li>
-<li><a href="#logical">Logical</a></li>
+<li><a href="#data-movement-data-transfer">Data Movement (Data Transfer)</a><ul>
+<li><a href="#&#x300C;&#x4F4D;&#x79FB;&#x91CF;&#x57FA;&#x5E95;&#x66AB;&#x5B58;&#x5668;&#x300D;&#x7684;&#x8A18;&#x61B6;&#x9AD4;&#x4F4D;&#x5740;">&#x300C;&#x4F4D;&#x79FB;&#x91CF;(&#x57FA;&#x5E95;&#x66AB;&#x5B58;&#x5668;)&#x300D;&#x7684;&#x8A18;&#x61B6;&#x9AD4;&#x4F4D;&#x5740;</a></li>
 </ul>
 </li>
-<li><a href="#flow-control">Flow Control</a><ul>
-<li><a href="#intra-program">Intra Program</a></li>
-<li><a href="#inter-program">Inter Program</a></li>
-<li><a href="#system-call">System Call</a></li>
+<li><a href="#operation-of-arithmetic">Operation of Arithmetic</a></li>
+<li><a href="#operation-of-logical">Operation of Logical</a></li>
+<li><a href="#flow-control-of-intra-program">Flow Control of Intra Program</a><ul>
+<li><a href="#&#x57FA;&#x672C;&#x5340;&#x584A;-basic-block">&#x57FA;&#x672C;&#x5340;&#x584A; (Basic Block)</a></li>
 </ul>
 </li>
+<li><a href="#flow-control-of-inter-program">Flow Control of Inter Program</a></li>
+<li><a href="#flow-control-of-system-call">Flow Control of System Call</a></li>
 </ul>
 </li>
 </ul>
@@ -755,10 +755,6 @@
 <h2 id="&#x6307;&#x4EE4;&#x985E;&#x5225;">&#x6307;&#x4EE4;&#x985E;&#x5225;</h2>
 <hr>
 <h3 id="data-movement-data-transfer">Data Movement (Data Transfer)</h3>
-<p>&#x8A18;&#x61B6;&#x9AD4;&#x4F4D;&#x5740;&#x63A1;<strong>&#x57FA;&#x5E95;-&#x4F4D;&#x79FB;(base-offset)</strong>&#x8868;&#x793A;: &#x4F4D;&#x79FB;&#x91CF;(&#x57FA;&#x5E95;&#x66AB;&#x5B58;&#x5668;)</p>
-<blockquote>
-<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mrow></mrow><mrow><mi>e</mi><mi>x</mi><mi mathvariant="normal">.</mi></mrow></msup></mrow><annotation encoding="application/x-tex"> ^{ex.} </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.664392em;"></span><span class="strut bottom" style="height:0.664392em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord"><span></span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight">e</span><span class="mord mathit mtight">x</span><span class="mord mathrm mtight">.</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> If $s0 points to A[0], how to load A[8]&apos;s value to $t0?<br><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x21D2;</mo></mrow><annotation encoding="application/x-tex"> \Rightarrow </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">&#x21D2;</span></span></span></span> lw $t0, <strong>32($s0)</strong>: 8 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#xD7;</mo></mrow><annotation encoding="application/x-tex"> \times </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.58333em;"></span><span class="strut bottom" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord">&#xD7;</span></span></span></span> 4 bytes</p>
-</blockquote>
 <ul>
 <li>load: Memory to CPU<blockquote>
 <p>MIPS:</p>
@@ -778,8 +774,12 @@
 <li>input/output: from I/O devices</li>
 <li>push/pop: to/from Stack</li>
 </ul>
-<h3 id="operation">Operation</h3>
-<h4 id="arithmetic">Arithmetic</h4>
+<h4 id="&#x300C;&#x4F4D;&#x79FB;&#x91CF;&#x57FA;&#x5E95;&#x66AB;&#x5B58;&#x5668;&#x300D;&#x7684;&#x8A18;&#x61B6;&#x9AD4;&#x4F4D;&#x5740;">&#x300C;&#x4F4D;&#x79FB;&#x91CF;(&#x57FA;&#x5E95;&#x66AB;&#x5B58;&#x5668;)&#x300D;&#x7684;&#x8A18;&#x61B6;&#x9AD4;&#x4F4D;&#x5740;</h4>
+<p>&#x5728; <strong>load/store</strong> &#x6307;&#x4EE4;&#x4E2D;&#xFF0C;&#x8A18;&#x61B6;&#x9AD4;&#x4F4D;&#x5740;&#x63A1;<strong>&#x57FA;&#x5E95;-&#x4F4D;&#x79FB;(base-offset)</strong>&#x8868;&#x793A;:</p>
+<blockquote>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mrow></mrow><mrow><mi>e</mi><mi>x</mi><mi mathvariant="normal">.</mi></mrow></msup></mrow><annotation encoding="application/x-tex"> ^{ex.} </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.664392em;"></span><span class="strut bottom" style="height:0.664392em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord"><span></span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight">e</span><span class="mord mathit mtight">x</span><span class="mord mathrm mtight">.</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> If $s0 points to A[0], how to load A[8]&apos;s value to $t0?<br><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x21D2;</mo></mrow><annotation encoding="application/x-tex"> \Rightarrow </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">&#x21D2;</span></span></span></span> lw $t0, <strong>32($s0)</strong>: 8 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#xD7;</mo></mrow><annotation encoding="application/x-tex"> \times </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.58333em;"></span><span class="strut bottom" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord">&#xD7;</span></span></span></span> 4 bytes</p>
+</blockquote>
+<h3 id="operation-of-arithmetic">Operation of Arithmetic</h3>
 <p>For integer or floating point:</p>
 <ul>
 <li>add<blockquote>
@@ -800,38 +800,82 @@
 <li>multiply</li>
 <li>divide</li>
 </ul>
-<h4 id="logical">Logical</h4>
+<h3 id="operation-of-logical">Operation of Logical</h3>
 <ul>
 <li>shift/rotate</li>
 <li>not/and/or/set(all digits to 1)/clear(all digits to 0)</li>
 </ul>
-<h3 id="flow-control">Flow Control</h3>
-<h4 id="intra-program">Intra Program</h4>
-<p>From procedure A to procedure A</p>
-<h5 id="unconditional-jump">unconditional: jump</h5>
-<blockquote>
+<h3 id="flow-control-of-intra-program">Flow Control of Intra Program</h3>
+<p>From <strong>procedure A</strong> to <strong>procedure A</strong></p>
+<ul>
+<li>unconditional: jump<blockquote>
 <p>MIPS:</p>
 <ul>
 <li><strong>j</strong> <em>label</em>: <code>$PC = label;</code></li>
-<li><strong>jal</strong> <em>label</em>: <code>$ra = $PC + 4; $PC = label;</code></li>
+<li><strong>jal</strong> <em>label</em>: <code>$ra = $PC + 4; $PC = label;</code><br><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex"> \rightarrow </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">&#x2192;</span></span></span></span> &#x5176;&#x4E2D; <strong>j</strong>/<strong>jal</strong> &#x7684; <strong><em>label</em></strong>: &#x8A72; <em>label</em> &#x4E4B; <strong>reference</strong>&#xFF0C;&#x800C;<strong>&#x975E; label &#x672C;&#x8EAB;</strong>  </li>
 <li><strong>jr</strong> <em>register</em>: <code>$PC = register;</code></li>
 </ul>
 </blockquote>
-<h5 id="conditional-branch">conditional: branch</h5>
-<blockquote>
+</li>
+</ul>
+<ul>
+<li>conditional: branch<blockquote>
 <p>MIPS:</p>
 <ul>
 <li><strong>beq</strong> <em>register1</em>, <em>register2</em>, <em>label</em>: <code>if (register1 == register2) $PC = label;</code></li>
-<li><strong>bne</strong> <em>register1</em>, <em>register2</em>, <em>label</em>: <code>if (register1 != register2) $PC = label;</code></li>
+<li><strong>bne</strong> <em>register1</em>, <em>register2</em>, <em>label</em>: <code>if (register1 != register2) $PC = label;</code><br><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex"> \rightarrow </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">&#x2192;</span></span></span></span> &#x5176;&#x4E2D; <strong>beq</strong>/<strong>bne</strong> &#x7684; <strong><em>label</em></strong>: <strong>&#x5132;&#x5B58;&quot;&#x6307;&#x5411;&#x9019;&#x689D;&#x6307;&#x4EE4;&#x6240;&#x5728;&#x7684;&#x8A18;&#x61B6;&#x9AD4;&#x4F4D;&#x5740;&quot;</strong>  </li>
 <li><strong>slt</strong> <em>register1</em>, <em>register2</em>, <em>register3</em>: <code>register1 = (register2 &lt; register3) ? 1 : 0;</code></li>
 </ul>
 </blockquote>
-<h4 id="inter-program">Inter Program</h4>
-<p>From procedure A to procedure B</p>
+</li>
+</ul>
+<h4 id="&#x57FA;&#x672C;&#x5340;&#x584A;-basic-block">&#x57FA;&#x672C;&#x5340;&#x584A; (Basic Block)</h4>
+<p>&#x4E00;&#x9023;&#x4E32;<strong>&#x5B8C;&#x5168;&#x6C92;&#x6709;&#x4EFB;&#x4F55; jump/branch &#x76EE;&#x7684;&#x5730;&#x548C;&#x6307;&#x4EE4;</strong>&#x6216;&#x5982;&#x679C;&#x6709;</p>
+<ul>
+<li><strong>jump/branch &#x76EE;&#x7684;&#x5730;</strong>(&#x5373; <strong>label</strong>): &#x53EA;&#x80FD;&#x51FA;&#x73FE;&#x5728;<strong>&#x5340;&#x584A;&#x7684;&#x7B2C;&#x4E00;&#x689D;&#x6307;&#x4EE4;&#x8655;</strong>&#xFF0C;&#x8207;</li>
+<li><strong>jump/branch &#x6307;&#x4EE4;</strong>: &#x53EA;&#x80FD;&#x51FA;&#x73FE;&#x5728;<strong>&#x5340;&#x584A;&#x7684;&#x6700;&#x5F8C;&#x4E00;&#x689D;&#x6307;&#x4EE4;&#x8655;</strong></li>
+</ul>
+<p>&#x7684;&#x6307;&#x4EE4;(&#x7FA4;)&#xFF0C;&#x662F; compiler &#x57F7;&#x884C;<strong>&#x6700;&#x4F73;&#x5316;</strong>&#x7684;&#x6700;&#x57FA;&#x672C;&#x55AE;&#x4F4D;  </p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex"> \rightarrow </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">&#x2192;</span></span></span></span> <strong>&#x6700;&#x4F73;&#x5316;</strong>: &#x4EE5;&#x6700;&#x7CBE;&#x7C21;&#x7684;&#x6307;&#x4EE4;(&#x7FA4;)&#x5B8C;&#x6210;&#x7576;&#x524D;&#x7A0B;&#x5F0F;&#x6240;&#x8981;&#x57F7;&#x884C;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x6E1B;&#x5C11;&#x7A0B;&#x5F0F;&#x78BC;&#x4F54;&#x7528;&#x8A18;&#x61B6;&#x9AD4;&#x7A7A;&#x9593;&#x4E26;&#x52A0;&#x901F;&#x7A0B;&#x5F0F;&#x57F7;&#x884C;</p>
+<blockquote>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mrow></mrow><mrow><mi>e</mi><mi>x</mi><mi mathvariant="normal">.</mi></mrow></msup></mrow><annotation encoding="application/x-tex"> ^{ex.} </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.664392em;"></span><span class="strut bottom" style="height:0.664392em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord"><span></span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight">e</span><span class="mord mathit mtight">x</span><span class="mord mathrm mtight">.</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> <strong>loop statement</strong>:  </p>
+<pre><code>g = g + A[i];  
+i = i + j;  
+if (i != h) goto Loop;
+</code></pre><table>
+<thead>
+<tr>
+<th style="text-align:center">A</th>
+<th style="text-align:center">g</th>
+<th style="text-align:center">h</th>
+<th style="text-align:center">i</th>
+<th style="text-align:center">j</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$s5</td>
+<td style="text-align:center">$s1</td>
+<td style="text-align:center">$s2</td>
+<td style="text-align:center">$s3</td>
+<td style="text-align:center">$s4</td>
+</tr>
+</tbody>
+</table>
+<pre><code>Loop: sll $t1, $s3, $2    # $t1 = 4 * i, &#x7B97; address offset of A[]
+      add $t1, $t1, 5     # $t1 = memory address of A[i]
+      lw  $t0, 0($t1)     # $t0 = value of A[i] from memory
+      add $s1, $s1, $t0   # g = g + A[i];
+      add $s3, $s3, $s4   # i = i + j;
+      bne $s3, $s2, Loop  # if (i != h) goto Loop;
+</code></pre><p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">&#x2713;</mi></mrow><annotation encoding="application/x-tex"> \checkmark </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0em;"></span><span class="strut bottom" style="height:0em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">&#x2713;</span></span></span></span> &#x7B2C;&#x4E00;&#x884C; <code>Loop</code> label &#x70BA;&#x6700;&#x5F8C;&#x4E00;&#x884C; <code>bne</code> &#x6307;&#x4EE4;&#x4E4B; branch &#x76EE;&#x7684;&#x5730;<br><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">&#x2713;</mi></mrow><annotation encoding="application/x-tex"> \checkmark </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0em;"></span><span class="strut bottom" style="height:0em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">&#x2713;</span></span></span></span> &#x6700;&#x5F8C;&#x4E00;&#x884C; <code>bne $s3, $s2, Loop</code> &#x70BA; branch &#x6307;&#x4EE4;<br><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x2234;</mo></mrow><annotation encoding="application/x-tex"> \therefore </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69224em;"></span><span class="strut bottom" style="height:0.69224em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel amsrm">&#x2234;</span></span></span></span> &#x6B64;&#x7FA4; MIPS &#x6307;&#x4EE4;&#x5373;&#x70BA;&#x4E00;&#x57FA;&#x672C;&#x5340;&#x584A;</p>
+</blockquote>
+<h3 id="flow-control-of-inter-program">Flow Control of Inter Program</h3>
+<p>From <strong>procedure A</strong> to <strong>procedure B</strong></p>
 <ul>
 <li>call/return</li>
 </ul>
-<h4 id="system-call">System Call</h4>
+<h3 id="flow-control-of-system-call">Flow Control of System Call</h3>
 <ul>
 <li>trap/return<blockquote>
 <p>MIPS:</p>
@@ -842,7 +886,7 @@
 </li>
 </ul>
 <p><div id="page-footer" class="localized-footer"><hr></div></p>
-<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> Copyright&#xA9; <strong><a href="https://github.com/saberLiou" target="_blank">saberLiou</a></strong> all rights reserved. </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <i>last updated at</i> 2019-08-09 16:46:07 </span> </footer>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> Copyright&#xA9; <strong><a href="https://github.com/saberLiou" target="_blank">saberLiou</a></strong> all rights reserved. </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <i>last updated at</i> 2019-08-10 01:41:33 </span> </footer>
                                 
                                 </section>
                             
@@ -881,7 +925,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"01. 指令: 計算機的語言","level":"2.6.1","depth":2,"next":{"title":"Author's Github","level":"3.1","depth":1,"url":"https://github.com/saberLiou","ref":"https://github.com/saberLiou","articles":[]},"previous":{"title":"Computer Organization","level":"2.6","depth":1,"path":"ComputerOrganization/README.md","ref":"ComputerOrganization/README.md","articles":[{"title":"01. 指令: 計算機的語言","level":"2.6.1","depth":2,"path":"ComputerOrganization/Chapter01.md","ref":"ComputerOrganization/Chapter01.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["scripts","-sharing","sharing-plus","github","etoc","hints","katex","back-to-top-button","localized-footer","page-footer-ex","word-count"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"github":{"url":"https://github.com/saberLiou/PrepareCSEMaster"},"page-footer-ex":{"copyright":"Copyright© **[saberLiou](https://github.com/saberLiou)** all rights reserved.","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<i>last updated at</i>"},"scripts":{"files":["./scripts/correct_images_folder.js","./scripts/change_apple_touch_icon_precomposed.js","./scripts/change_favicon.js"]},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"word-count":{},"hints":{"danger":"fa fa-exclamation-cicle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"localized-footer":{"filename":"FOOTER.md","hline":"true"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"qq":false,"all":[],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":true,"line":true,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"saberLiou <saberliou@gmail.com>","localized-footer":{"hline":true,"filename":"FOOTER.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"INTRODUCTION.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"linear_algebra":{"title":"Linear Algebra","chapter0":{"title":"00. 基礎數學"},"chapter1":{"title":"01. 矩陣與線性方程組"},"chapter2":{"title":"02. 行列式"},"chapter3":{"title":"03. 向量空間"}},"discrete_mathematics":{"title":"Discrete Mathematics"},"data_structure":{"title":"Data Structure","chapter1":{"title":"01. Basic Concepts"}},"algorithm":{"title":"Algorithm"},"operating_system":{"title":"Operating System"},"computer_organization":{"title":"Computer Organization","chapter1":{"title":"01. 指令: 計算機的語言"}}},"title":"Prepare CSE Master Cheatsheet","language":"zh-tw","links":{"sharing":{"facebook":false,"twitter":false,"all":false}},"gitbook":"*","description":"Cheatsheet for preparing CSE master examination."},"file":{"path":"ComputerOrganization/Chapter01.md","mtime":"2019-08-09T08:46:07.530Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-09T08:52:07.024Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"01. 指令: 計算機的語言","level":"2.6.1","depth":2,"next":{"title":"Author's Github","level":"3.1","depth":1,"url":"https://github.com/saberLiou","ref":"https://github.com/saberLiou","articles":[]},"previous":{"title":"Computer Organization","level":"2.6","depth":1,"path":"ComputerOrganization/README.md","ref":"ComputerOrganization/README.md","articles":[{"title":"01. 指令: 計算機的語言","level":"2.6.1","depth":2,"path":"ComputerOrganization/Chapter01.md","ref":"ComputerOrganization/Chapter01.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["scripts","-sharing","sharing-plus","github","etoc","hints","katex","back-to-top-button","localized-footer","page-footer-ex","word-count"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"github":{"url":"https://github.com/saberLiou/PrepareCSEMaster"},"page-footer-ex":{"copyright":"Copyright© **[saberLiou](https://github.com/saberLiou)** all rights reserved.","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<i>last updated at</i>"},"scripts":{"files":["./scripts/correct_images_folder.js","./scripts/change_apple_touch_icon_precomposed.js","./scripts/change_favicon.js"]},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"word-count":{},"hints":{"danger":"fa fa-exclamation-cicle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"localized-footer":{"filename":"FOOTER.md","hline":"true"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"qq":false,"all":[],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":true,"line":true,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"saberLiou <saberliou@gmail.com>","localized-footer":{"hline":true,"filename":"FOOTER.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"INTRODUCTION.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"linear_algebra":{"title":"Linear Algebra","chapter0":{"title":"00. 基礎數學"},"chapter1":{"title":"01. 矩陣與線性方程組"},"chapter2":{"title":"02. 行列式"},"chapter3":{"title":"03. 向量空間"}},"discrete_mathematics":{"title":"Discrete Mathematics"},"data_structure":{"title":"Data Structure","chapter1":{"title":"01. Basic Concepts"}},"algorithm":{"title":"Algorithm"},"operating_system":{"title":"Operating System"},"computer_organization":{"title":"Computer Organization","chapter1":{"title":"01. 指令: 計算機的語言"}}},"title":"Prepare CSE Master Cheatsheet","language":"zh-tw","links":{"sharing":{"facebook":false,"twitter":false,"all":false}},"gitbook":"*","description":"Cheatsheet for preparing CSE master examination."},"file":{"path":"ComputerOrganization/Chapter01.md","mtime":"2019-08-09T17:41:33.681Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-09T17:41:40.981Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
