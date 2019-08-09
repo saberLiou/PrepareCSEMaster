@@ -3,7 +3,6 @@
 
 ## 基本概念
 ---
-- 計算機組織:「軟體最硬，硬體最軟」
 - 計算機的**命令(commands)**:
   - **低階**語言: **指令(instructions)**，為 CPU 可執行的最基本運算
   - **高階**語言: **敘述(statements)**，可由一或多條指令所構成
@@ -87,12 +86,12 @@ Prior to the early 1980's, machines were built with more and more complex instru
 ### 暫存器 (Register)
 - CPU 裡儲存運算元的記憶元件，量少而資料存取快速
 - MIPS 共有:
-  - 特殊目的暫存器(Special Purpose Register, **SPR**) x **3**
+  - 特殊目的暫存器(Special Purpose Register, **SPR**) $$ \times $$ **3**
     - **$Hi** & **$Lo**: **64-bits**暫存器，存放**乘法**運算的乘積**高($Hi)低($Lo)位元**和**除法**運算的**餘($Hi)和商($Lo)**
     - **$PC(程式計數器, Program Counter)**: **32-bits**暫存器，存放**下一個要被執行的指令所在的記憶體位址**
-  - **32-bits**浮點數運算暫存器(Floating Point Register, **FPR**): **$f0 - $f32** x **32**
+  - **32-bits**浮點數運算暫存器(Floating Point Register, **FPR**): **$f0 - $f32** $$ \times $$ **32**
     - 存在 **Coprocessor1** 裡，又稱浮點運算器(Floaing Point Unit, **FPU**)
-  - **32-bits**一般目的暫存器(General Purpose Register, **GPR**) x **32**
+  - **32-bits**一般目的暫存器(General Purpose Register, **GPR**) $$ \times $$ **32**
 
 {% hint style='danger' %}
 **注意**: 若下方表格在手機、平板裝置或電腦螢幕上跑版，可參照表格下方圖片
@@ -113,7 +112,7 @@ Prior to the early 1980's, machines were built with more and more complex instru
 ![MIPS General Purpose Registers](../images/ComputerOrganization/Chapter01/mips_general_purpose_registers.jpg "MIPS General Purpose Registers")
 
 - **溢出暫存器(splling register)**: 將不常用的變數從暫存器放入記憶體
-  - $$ \because $$ 程式裡使用的變數 > 暫存器數量 $$ \therefore $$ compiler 將常用變數存暫存器，其餘放記憶體，並 I/O by load & store 指令
+> $$ \because $$ 程式裡使用的變數 > 暫存器數量 $$ \therefore $$ compiler 將常用變數存暫存器，其餘放記憶體，並 I/O by load & store 指令
 
 {% hint style='info' %}
 存取速度: 暫存器 > 記憶體，為何不多設計一些暫存器來存取變數?
