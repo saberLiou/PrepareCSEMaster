@@ -14,26 +14,20 @@
         }
     },
     "plugins": [
-        "scripts",
         "-sharing",
         "sharing-plus",
         "github",
         "etoc",
         "hints",
         "katex",
-        "back-to-top-button",
+        "copy-code-button",
         "localized-footer",
         "page-footer-ex",
+        "back-to-top-button",
+        "scripts",
         "word-count"
     ],
     "pluginsConfig": {
-        "scripts": {
-            "files": [
-                "./scripts/correct_images_folder.js",
-                "./scripts/change_apple_touch_icon_precomposed.js",
-                "./scripts/change_favicon.js"
-            ]
-        },
         "sharing": {
             "douban": false,
             "facebook": false,
@@ -74,6 +68,13 @@
             "markdown": true,
             "update_label": "<i>last updated at</i>",
             "update_format": "YYYY-MM-DD HH:mm:ss"
+        },
+        "scripts": {
+            "files": [
+                "./scripts/correct_images_folder.js",
+                "./scripts/change_apple_touch_icon_precomposed.js",
+                "./scripts/change_favicon.js"
+            ]
         }
     },
     "localized-footer": {
