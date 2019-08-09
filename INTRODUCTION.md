@@ -11,6 +11,7 @@ Cheatsheet for preparing CSE master examination.
 - #### [Algorithm 演算法](Algorithm/README.md)  
 - #### [Operating System 作業系統](OperatingSystem/README.md)  
 - #### [Computer Organization 計算機組織](ComputerOrganization/README.md)
+> 「軟體最硬，硬體最軟」- 張凡
 
 ## Features
 ---
