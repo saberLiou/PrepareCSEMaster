@@ -116,6 +116,12 @@
             "title": "Computer Organization",
             "chapter1": {
                 "title": "01. 指令: 計算機的語言"
+            },
+            "chapter2": {
+                "title": "02. 計算機算數"
+            },
+            "chapter3": {
+                "title": "03. 了解與評估計算機的效能"
             }
         }
     }

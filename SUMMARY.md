@@ -16,6 +16,8 @@
 * [Operating System](OperatingSystem/README.md)
 * [Computer Organization](ComputerOrganization/README.md)
     * [01. 指令: 計算機的語言](ComputerOrganization/Chapter01.md)
+    * [02. 計算機算數](ComputerOrganization/Chapter02.md)
+    * [03. 了解與評估計算機的效能](ComputerOrganization/Chapter03.md)
 
 ---
 * [Author's Github](https://github.com/saberLiou)
