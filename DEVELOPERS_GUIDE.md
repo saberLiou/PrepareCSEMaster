@@ -20,6 +20,7 @@
 > must be written by **katex syntax** as  
 > $$ ax^2 $$ + $$ bx $$ + $$ c $$ = $$ d $$, $$ \forall x \in R $$
 - `localized-footer`: already installed, ready to fill something in.
+- `scripts`: In `"plugins": {}` of `book.json`, it should be placed below the plugins that need to override some javascript functionalities by customized scripts.
 
 ### Debugging
 ```bash

@@ -60,9 +60,7 @@
         },
         "hints": {
             "info": "fa fa-info-circle",
-            "tip": "fa fa-mortar-board",
-            "danger": "fa fa-exclamation-cicle",
-            "working": "fa fa-wrench"
+            "danger": "fa fa-exclamation-triangle"
         },
         "page-footer-ex": {
             "copyright": "Copyright© **[saberLiou](https://github.com/saberLiou)** all rights reserved.",
