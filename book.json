@@ -17,6 +17,7 @@
         "-sharing",
         "github",
         "etoc",
+        "anchors",
         "hints",
         "katex",
         "localized-footer",
