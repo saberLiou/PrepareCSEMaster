@@ -14,6 +14,8 @@
         }
     },
     "plugins": [
+        "expandable-chapters",
+        "splitter",
         "-sharing",
         "github",
         "etoc",
