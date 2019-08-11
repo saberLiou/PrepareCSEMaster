@@ -33,6 +33,10 @@
                 
             
                 
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/lightbox.min.css">
+                
+            
+                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
                 
             
@@ -372,7 +376,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="01-&#x6307;&#x4EE4;-&#x8A08;&#x7B97;&#x6A5F;&#x7684;&#x8A9E;&#x8A00;"><a name="01-&#x6307;&#x4EE4;-&#x8A08;&#x7B97;&#x6A5F;&#x7684;&#x8A9E;&#x8A00;" class="plugin-anchor" href="#01-&#x6307;&#x4EE4;-&#x8A08;&#x7B97;&#x6A5F;&#x7684;&#x8A9E;&#x8A00;"><i class="fa fa-link" aria-hidden="true"></i></a>01. &#x6307;&#x4EE4;: &#x8A08;&#x7B97;&#x6A5F;&#x7684;&#x8A9E;&#x8A00;</h1>
+                                <html><head></head><body><h1 id="01-&#x6307;&#x4EE4;-&#x8A08;&#x7B97;&#x6A5F;&#x7684;&#x8A9E;&#x8A00;"><a name="01-&#x6307;&#x4EE4;-&#x8A08;&#x7B97;&#x6A5F;&#x7684;&#x8A9E;&#x8A00;" class="plugin-anchor" href="#01-&#x6307;&#x4EE4;-&#x8A08;&#x7B97;&#x6A5F;&#x7684;&#x8A9E;&#x8A00;"><i class="fa fa-link" aria-hidden="true"></i></a>01. &#x6307;&#x4EE4;: &#x8A08;&#x7B97;&#x6A5F;&#x7684;&#x8A9E;&#x8A00;</h1>
 <!-- toc --><div id="toc" class="toc">
 
 <ul>
@@ -436,8 +440,8 @@
 </li>
 <li><strong>&#x6307;&#x4EE4;&#x96C6;&#x67B6;&#x69CB;(Instruction Set Architecture, ISA)</strong>: &#x70BA;&#x4E86;&#x5B78;&#x7FD2;&#x64B0;&#x5BEB;&#x4F4E;&#x968E;&#x8A9E;&#x8A00;&#x800C;&#x6240;&#x5FC5;&#x9808;&#x4E86;&#x89E3;&#x7684;&#x57FA;&#x672C;&#x786C;&#x9AD4;&#x67B6;&#x69CB;&#x53CA;&#x6307;&#x4EE4;&#x96C6;&#x4E4B;&#x5408;&#x7A31;</li>
 </ul>
-<p><div class="alert alert-info hints-alert"><div class="hints-icon"><i class="fa fa-info-circle"></i></div><div class="hints-container"><p>Prior to the early 1980&apos;s, machines were built with more and more complex instruction set, but why has there been a move to RISC machines away from complex instruction machines?</p>
-</div></div></p>
+<p></p><div class="alert alert-info hints-alert"><div class="hints-icon"><i class="fa fa-info-circle"></i></div><div class="hints-container"><p>Prior to the early 1980&apos;s, machines were built with more and more complex instruction set, but why has there been a move to RISC machines away from complex instruction machines?</p>
+</div></div><p></p>
 <blockquote>
 <ol>
 <li>Since <strong>early computers</strong> had <strong>limited memory capacities</strong> and were <strong>expensive</strong>, having a <strong>CISC</strong> instruction set enabled performing <strong>complex operations with very few instructions</strong>.</li>
@@ -482,7 +486,7 @@
 </ul>
 </li>
 </ul>
-<p><img src="../images/ComputerOrganization/Chapter01/basic_computer_structure.jpg" alt="Basic Computer Structure in ISA" title="Basic Computer Structure in ISA"></p>
+<p><a href="../images/ComputerOrganization/Chapter01/basic_computer_structure.jpg" data-lightbox="fc93737f-170c-4450-a603-92c198445dcc" data-title="Basic Computer Structure in ISA"><img src="../images/ComputerOrganization/Chapter01/basic_computer_structure.jpg" alt="Basic Computer Structure in ISA" title="Basic Computer Structure in ISA"></a></p>
 <h3 id="&#x8A18;&#x61B6;&#x9AD4;-memory"><a name="&#x8A18;&#x61B6;&#x9AD4;-memory" class="plugin-anchor" href="#&#x8A18;&#x61B6;&#x9AD4;-memory"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8A18;&#x61B6;&#x9AD4; (Memory)</h3>
 <ul>
 <li>&#x4E00;&#x500B;&#x4E00;&#x7DAD;&#x7684;&#x5927;&#x9663;&#x5217;: &#x4F4D;&#x5740;(address) =&gt; &#x4F4D;&#x5143;&#x7D44;(byte, 8 bits)</li>
@@ -585,7 +589,7 @@
 </ul>
 </li>
 </ul>
-<p><img src="../images/ComputerOrganization/Chapter01/endianness.jpg" alt="Big &amp; Little Endian" title="Big &amp; Little Endian"></p>
+<p><a href="../images/ComputerOrganization/Chapter01/endianness.jpg" data-lightbox="e1b75c02-a16d-4d41-b7c4-b4a277c7771c" data-title="Big &amp; Little Endian"><img src="../images/ComputerOrganization/Chapter01/endianness.jpg" alt="Big &amp; Little Endian" title="Big &amp; Little Endian"></a></p>
 <h3 id="&#x66AB;&#x5B58;&#x5668;-register"><a name="&#x66AB;&#x5B58;&#x5668;-register" class="plugin-anchor" href="#&#x66AB;&#x5B58;&#x5668;-register"><i class="fa fa-link" aria-hidden="true"></i></a>&#x66AB;&#x5B58;&#x5668; (Register)</h3>
 <ul>
 <li>CPU &#x88E1;&#x5132;&#x5B58;&#x904B;&#x7B97;&#x5143;&#x7684;&#x8A18;&#x61B6;&#x5143;&#x4EF6;&#xFF0C;&#x91CF;&#x5C11;&#x800C;&#x8CC7;&#x6599;&#x5B58;&#x53D6;&#x5FEB;&#x901F;</li>
@@ -603,8 +607,8 @@
 </ul>
 </li>
 </ul>
-<p><div class="alert alert-danger hints-alert"><div class="hints-icon"><i class="fa fa-exclamation-cicle"></i></div><div class="hints-container"><p><strong>&#x6CE8;&#x610F;</strong>: &#x82E5;&#x4E0B;&#x65B9;&#x8868;&#x683C;&#x5728;&#x624B;&#x6A5F;&#x3001;&#x5E73;&#x677F;&#x88DD;&#x7F6E;&#x6216;&#x96FB;&#x8166;&#x87A2;&#x5E55;&#x4E0A;&#x8DD1;&#x7248;&#xFF0C;&#x53EF;&#x53C3;&#x7167;&#x8868;&#x683C;&#x4E0B;&#x65B9;&#x5716;&#x7247;</p>
-</div></div></p>
+<p></p><div class="alert alert-danger hints-alert"><div class="hints-icon"><i class="fa fa-exclamation-cicle"></i></div><div class="hints-container"><p><strong>&#x6CE8;&#x610F;</strong>: &#x82E5;&#x4E0B;&#x65B9;&#x8868;&#x683C;&#x5728;&#x624B;&#x6A5F;&#x3001;&#x5E73;&#x677F;&#x88DD;&#x7F6E;&#x6216;&#x96FB;&#x8166;&#x87A2;&#x5E55;&#x4E0A;&#x8DD1;&#x7248;&#xFF0C;&#x53EF;&#x53C3;&#x7167;&#x8868;&#x683C;&#x4E0B;&#x65B9;&#x5716;&#x7247;</p>
+</div></div><p></p>
 <table>
 <thead>
 <tr>
@@ -655,20 +659,20 @@
 <li>Constant of Zero: Read only.</li>
 </ul>
 </blockquote>
-<p><img src="../images/ComputerOrganization/Chapter01/mips_general_purpose_registers.jpg" alt="MIPS General Purpose Registers" title="MIPS General Purpose Registers"></p>
+<p><a href="../images/ComputerOrganization/Chapter01/mips_general_purpose_registers.jpg" data-lightbox="4d24c980-5969-4607-b002-cdf6622507a4" data-title="MIPS General Purpose Registers"><img src="../images/ComputerOrganization/Chapter01/mips_general_purpose_registers.jpg" alt="MIPS General Purpose Registers" title="MIPS General Purpose Registers"></a></p>
 <ul>
 <li><strong>&#x6EA2;&#x51FA;&#x66AB;&#x5B58;&#x5668;(splling register)</strong>: &#x5C07;&#x4E0D;&#x5E38;&#x7528;&#x7684;&#x8B8A;&#x6578;&#x5F9E;&#x66AB;&#x5B58;&#x5668;&#x653E;&#x5165;&#x8A18;&#x61B6;&#x9AD4;<blockquote>
 <p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x2235;</mo></mrow><annotation encoding="application/x-tex"> \because </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69224em;"></span><span class="strut bottom" style="height:0.69224em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel amsrm">&#x2235;</span></span></span></span> &#x7A0B;&#x5F0F;&#x88E1;&#x4F7F;&#x7528;&#x7684;&#x8B8A;&#x6578; &gt; &#x66AB;&#x5B58;&#x5668;&#x6578;&#x91CF; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x2234;</mo></mrow><annotation encoding="application/x-tex"> \therefore </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69224em;"></span><span class="strut bottom" style="height:0.69224em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel amsrm">&#x2234;</span></span></span></span> compiler &#x5C07;&#x5E38;&#x7528;&#x8B8A;&#x6578;&#x5B58;&#x66AB;&#x5B58;&#x5668;&#xFF0C;&#x5176;&#x9918;&#x653E;&#x8A18;&#x61B6;&#x9AD4;&#xFF0C;&#x4E26; I/O by load &amp; store &#x6307;&#x4EE4;</p>
 </blockquote>
 </li>
 </ul>
-<p><div class="alert alert-info hints-alert"><div class="hints-icon"><i class="fa fa-info-circle"></i></div><div class="hints-container"><p>&#x5B58;&#x53D6;&#x901F;&#x5EA6;: &#x66AB;&#x5B58;&#x5668; &gt; &#x8A18;&#x61B6;&#x9AD4;&#xFF0C;&#x70BA;&#x4F55;&#x4E0D;&#x591A;&#x8A2D;&#x8A08;&#x4E00;&#x4E9B;&#x66AB;&#x5B58;&#x5668;&#x4F86;&#x5B58;&#x53D6;&#x8B8A;&#x6578;?</p>
-</div></div></p>
+<p></p><div class="alert alert-info hints-alert"><div class="hints-icon"><i class="fa fa-info-circle"></i></div><div class="hints-container"><p>&#x5B58;&#x53D6;&#x901F;&#x5EA6;: &#x66AB;&#x5B58;&#x5668; &gt; &#x8A18;&#x61B6;&#x9AD4;&#xFF0C;&#x70BA;&#x4F55;&#x4E0D;&#x591A;&#x8A2D;&#x8A08;&#x4E00;&#x4E9B;&#x66AB;&#x5B58;&#x5668;&#x4F86;&#x5B58;&#x53D6;&#x8B8A;&#x6578;?</p>
+</div></div><p></p>
 <blockquote>
 <p>CPU &#x5B58;&#x53D6;&#x66AB;&#x5B58;&#x5668;&#x6642;&#x9700;&#x7D93;&#x89E3;&#x78BC;&#x7A0B;&#x5E8F;&#x4EE5;&#x6307;&#x5B9A;&#x6240;&#x8981;&#x7684;&#x66AB;&#x5B58;&#x5668;: &#x66AB;&#x5B58;&#x5668; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x2191;</mo></mrow><annotation encoding="application/x-tex"> \uparrow </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mrel">&#x2191;</span></span></span></span><br><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x21D2;</mo></mrow><annotation encoding="application/x-tex"> \Rightarrow </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">&#x21D2;</span></span></span></span> &#x89E3;&#x78BC;&#x6642;&#x9593; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x2191;</mo></mrow><annotation encoding="application/x-tex"> \uparrow </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mrel">&#x2191;</span></span></span></span> <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x21D2;</mo></mrow><annotation encoding="application/x-tex"> \Rightarrow </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">&#x21D2;</span></span></span></span> CPU&#x7684;&#x6642;&#x8108;&#x9031;&#x671F;(clock cycle time) <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x2191;</mo></mrow><annotation encoding="application/x-tex"> \uparrow </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mrel">&#x2191;</span></span></span></span> <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x21D2;</mo></mrow><annotation encoding="application/x-tex"> \Rightarrow </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">&#x21D2;</span></span></span></span> CPU &#x57F7;&#x884C;&#x6548;&#x7387; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x2193;</mo></mrow><annotation encoding="application/x-tex"> \downarrow </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mrel">&#x2193;</span></span></span></span> <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x21D2;</mo></mrow><annotation encoding="application/x-tex"> \Rightarrow </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">&#x21D2;</span></span></span></span> CPU &#x529F;&#x7387;&#x6D88;&#x8017; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x2191;</mo></mrow><annotation encoding="application/x-tex"> \uparrow </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mrel">&#x2191;</span></span></span></span></p>
 </blockquote>
 <h3 id="&#x8A18;&#x61B6;&#x9AD4;&#x7BA1;&#x7406;&#x53CA;&#x76F8;&#x95DC;&#x66AB;&#x5B58;&#x5668;"><a name="&#x8A18;&#x61B6;&#x9AD4;&#x7BA1;&#x7406;&#x53CA;&#x76F8;&#x95DC;&#x66AB;&#x5B58;&#x5668;" class="plugin-anchor" href="#&#x8A18;&#x61B6;&#x9AD4;&#x7BA1;&#x7406;&#x53CA;&#x76F8;&#x95DC;&#x66AB;&#x5B58;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8A18;&#x61B6;&#x9AD4;&#x7BA1;&#x7406;&#x53CA;&#x76F8;&#x95DC;&#x66AB;&#x5B58;&#x5668;</h3>
-<p><img src="../images/ComputerOrganization/Chapter01/procedure_in_memory.jpg" alt="Procedure in Memory" title="Procedure in Memory"></p>
+<p><a href="../images/ComputerOrganization/Chapter01/procedure_in_memory.jpg" data-lightbox="0d45fd8f-95d2-498e-a01c-cab0b757bbf5" data-title="Procedure in Memory"><img src="../images/ComputerOrganization/Chapter01/procedure_in_memory.jpg" alt="Procedure in Memory" title="Procedure in Memory"></a></p>
 <ul>
 <li>Stack: &#x653E;&#x5340;&#x57DF;&#x8B8A;&#x6578;&#xFF0C;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x2193;</mo></mrow><annotation encoding="application/x-tex"> \downarrow </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mrel">&#x2193;</span></span></span></span><ul>
 <li>&#x555F;&#x52D5;&#x7D00;&#x9304;(Activation Record): &#x53C8;&#x7A31;&#x7A0B;&#x5E8F;&#x6846;(Procedure Frame)</li>
@@ -677,7 +681,7 @@
 </ul>
 </li>
 </ul>
-<p><img src="../images/ComputerOrganization/Chapter01/activation_record_in_stack.jpg" alt="Activation Record in Stack" title="Activation Record in Stack"></p>
+<p><a href="../images/ComputerOrganization/Chapter01/activation_record_in_stack.jpg" data-lightbox="dcf5b919-3ac2-4e34-970b-6d5ed4e64ba6" data-title="Activation Record in Stack"><img src="../images/ComputerOrganization/Chapter01/activation_record_in_stack.jpg" alt="Activation Record in Stack" title="Activation Record in Stack"></a></p>
 <ul>
 <li>Dynamic Data(Heap): &#x653E;&#x52D5;&#x614B;&#x6307;&#x6A19;&#x8B8A;&#x6578;&#xFF0C;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x2191;</mo></mrow><annotation encoding="application/x-tex"> \uparrow </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mrel">&#x2191;</span></span></span></span></li>
 <li>Static Data: &#x653E;&#x5168;&#x57DF;&#x8B8A;&#x6578;<ul>
@@ -731,7 +735,7 @@
 <li>&#x6C7A;&#x5B9A;&#x8CC7;&#x6599;&#x8207;&#x6307;&#x4EE4;&#x6A19;&#x7C64;(instruction label)&#x7684;&#x4F4D;&#x5740;</li>
 <li>&#x6C7A;&#x5B9A;&#x5167;&#x5916;&#x90E8;&#x4F4D;&#x5740;&#x53C3;&#x8003;</li>
 </ol>
-<p><img src="../images/ComputerOrganization/Chapter01/linker.jpg" alt="Linker" title="Linker"></p>
+<p><a href="../images/ComputerOrganization/Chapter01/linker.jpg" data-lightbox="4a14e21c-1619-4db8-bae5-86541f79402a" data-title="Linker"><img src="../images/ComputerOrganization/Chapter01/linker.jpg" alt="Linker" title="Linker"></a></p>
 <h3 id="&#x8F09;&#x5165;&#x5668;-loader-&#x7684;&#x516D;&#x500B;&#x57F7;&#x884C;&#x6B65;&#x9A5F;"><a name="&#x8F09;&#x5165;&#x5668;-loader-&#x7684;&#x516D;&#x500B;&#x57F7;&#x884C;&#x6B65;&#x9A5F;" class="plugin-anchor" href="#&#x8F09;&#x5165;&#x5668;-loader-&#x7684;&#x516D;&#x500B;&#x57F7;&#x884C;&#x6B65;&#x9A5F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8F09;&#x5165;&#x5668; (Loader) &#x7684;&#x516D;&#x500B;&#x57F7;&#x884C;&#x6B65;&#x9A5F;</h3>
 <ol>
 <li>&#x8B80;&#x53D6;&#x53EF;&#x57F7;&#x884C;&#x6A94;&#x7684;&#x6A19;&#x982D;&#xFF0C;&#x6C7A;&#x5B9A;&#x6307;&#x4EE4;&#x5340;&#x53CA;&#x8CC7;&#x6599;&#x5340;&#x5927;&#x5C0F;</li>
@@ -741,7 +745,7 @@
 <li>&#x521D;&#x59CB;&#x5316;&#x66AB;&#x5B58;&#x5668;&#xFF0C;&#x4E26;&#x5C07; $sp &#x8A2D;&#x5B9A;&#x5728; Stack &#x7684;&#x7B2C;&#x4E00;&#x500B;&#x53EF;&#x7528;&#x7684;&#x7A7A;&#x9593;</li>
 <li>&#x8DF3;&#x81F3;<strong>&#x555F;&#x52D5;&#x5E38;&#x5F0F;(start-up routine)</strong>: &#x6B64;&#x7A0B;&#x5F0F;&#x6703;&#x547C;&#x53EB;&#x8981;&#x88AB;&#x57F7;&#x884C;&#x7684;&#x4E3B;&#x7A0B;&#x5F0F;&#x3002;&#x7576;&#x4E3B;&#x7A0B;&#x5F0F;&#x7D50;&#x675F;&#x6642;&#xFF0C;&#x6703;&#x4F7F;&#x7528; exit &#x7CFB;&#x7D71;&#x547C;&#x53EB;&#x4F86;&#x7D42;&#x7D50;&#x7A0B;&#x5F0F;&#x7684;&#x57F7;&#x884C;</li>
 </ol>
-<p><img src="../images/ComputerOrganization/Chapter01/compile_and_execute.jpg" alt="Compiling &amp; Executing Steps of High-level Programming Language" title="Compiling &amp; Executing Steps of High-level Programming Language"></p>
+<p><a href="../images/ComputerOrganization/Chapter01/compile_and_execute.jpg" data-lightbox="3e679569-a475-486f-bd02-933a8eacae7b" data-title="Compiling &amp; Executing Steps of High-level Programming Language"><img src="../images/ComputerOrganization/Chapter01/compile_and_execute.jpg" alt="Compiling &amp; Executing Steps of High-level Programming Language" title="Compiling &amp; Executing Steps of High-level Programming Language"></a></p>
 <h3 id="java-&#x7684;&#x8F49;&#x8B6F;&#x6B65;&#x9A5F;"><a name="java-&#x7684;&#x8F49;&#x8B6F;&#x6B65;&#x9A5F;" class="plugin-anchor" href="#java-&#x7684;&#x8F49;&#x8B6F;&#x6B65;&#x9A5F;"><i class="fa fa-link" aria-hidden="true"></i></a>Java &#x7684;&#x8F49;&#x8B6F;&#x6B65;&#x9A5F;</h3>
 <ol>
 <li>Java <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex"> \rightarrow </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">&#x2192;</span></span></span></span> <strong>compiler &#x7DE8;&#x8B6F;</strong> <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex"> \rightarrow </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">&#x2192;</span></span></span></span> Java bytes code<blockquote>
@@ -889,8 +893,8 @@ if (i != h) goto Loop;
 </blockquote>
 </li>
 </ul>
-<p><div id="page-footer" class="localized-footer"><hr></div></p>
-<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> Copyright&#xA9; <strong><a href="https://github.com/saberLiou" target="_blank">saberLiou</a></strong> all rights reserved. </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <i>last updated at</i> 2019-08-10 01:47:19 </span> </footer>
+<p></p><div id="page-footer" class="localized-footer"><hr></div><p></p>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> Copyright&#xA9; <strong><a href="https://github.com/saberLiou" target="_blank">saberLiou</a></strong> all rights reserved. </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <i>last updated at</i> 2019-08-10 01:47:19 </span> </footer></body></html>
                                 
                                 </section>
                             
@@ -929,7 +933,7 @@ if (i != h) goto Loop;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"01. 指令: 計算機的語言","level":"2.6.1","depth":2,"next":{"title":"Author's Github","level":"3.1","depth":1,"url":"https://github.com/saberLiou","ref":"https://github.com/saberLiou","articles":[]},"previous":{"title":"Computer Organization","level":"2.6","depth":1,"path":"ComputerOrganization/README.md","ref":"ComputerOrganization/README.md","articles":[{"title":"01. 指令: 計算機的語言","level":"2.6.1","depth":2,"path":"ComputerOrganization/Chapter01.md","ref":"ComputerOrganization/Chapter01.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-sharing","github","etoc","anchors","hints","katex","localized-footer","page-footer-ex","back-to-top-button","scripts","word-count"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"github":{"url":"https://github.com/saberLiou/PrepareCSEMaster"},"page-footer-ex":{"copyright":"Copyright© **[saberLiou](https://github.com/saberLiou)** all rights reserved.","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<i>last updated at</i>"},"scripts":{"files":["./scripts/correct_images_folder.js","./scripts/change_apple_touch_icon_precomposed.js","./scripts/change_favicon.js","./scripts/update_sharing_buttons.js"]},"search":{},"word-count":{},"hints":{"danger":"fa fa-exclamation-cicle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"localized-footer":{"filename":"FOOTER.md","hline":"true"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"qq":false,"all":[],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":true,"line":true,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"saberLiou <saberliou@gmail.com>","localized-footer":{"hline":true,"filename":"FOOTER.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"INTRODUCTION.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"linear_algebra":{"title":"Linear Algebra","chapter0":{"title":"00. 基礎數學"},"chapter1":{"title":"01. 矩陣與線性方程組"},"chapter2":{"title":"02. 行列式"},"chapter3":{"title":"03. 向量空間"}},"discrete_mathematics":{"title":"Discrete Mathematics"},"data_structure":{"title":"Data Structure","chapter1":{"title":"01. Basic Concepts"}},"algorithm":{"title":"Algorithm"},"operating_system":{"title":"Operating System"},"computer_organization":{"title":"Computer Organization","chapter1":{"title":"01. 指令: 計算機的語言"}}},"title":"Prepare CSE Master Cheatsheet","language":"zh-tw","links":{"sharing":{"facebook":false,"twitter":false,"all":false}},"gitbook":"*","description":"Cheatsheet for preparing CSE master examination."},"file":{"path":"ComputerOrganization/Chapter01.md","mtime":"2019-08-09T17:47:19.405Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-11T06:43:09.088Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"01. 指令: 計算機的語言","level":"2.6.1","depth":2,"next":{"title":"Author's Github","level":"3.1","depth":1,"url":"https://github.com/saberLiou","ref":"https://github.com/saberLiou","articles":[]},"previous":{"title":"Computer Organization","level":"2.6","depth":1,"path":"ComputerOrganization/README.md","ref":"ComputerOrganization/README.md","articles":[{"title":"01. 指令: 計算機的語言","level":"2.6.1","depth":2,"path":"ComputerOrganization/Chapter01.md","ref":"ComputerOrganization/Chapter01.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-sharing","github","etoc","anchors","hints","katex","lightbox","localized-footer","page-footer-ex","back-to-top-button","scripts","word-count"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"github":{"url":"https://github.com/saberLiou/PrepareCSEMaster"},"page-footer-ex":{"copyright":"Copyright© **[saberLiou](https://github.com/saberLiou)** all rights reserved.","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<i>last updated at</i>"},"scripts":{"files":["./scripts/correct_images_folder.js","./scripts/change_apple_touch_icon_precomposed.js","./scripts/change_favicon.js","./scripts/update_sharing_buttons.js"]},"search":{},"word-count":{},"hints":{"danger":"fa fa-exclamation-cicle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"localized-footer":{"filename":"FOOTER.md","hline":"true"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true},"back-to-top-button":{},"sharing":{"qq":false,"all":[],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":true,"line":true,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"saberLiou <saberliou@gmail.com>","localized-footer":{"hline":true,"filename":"FOOTER.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"INTRODUCTION.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"linear_algebra":{"title":"Linear Algebra","chapter0":{"title":"00. 基礎數學"},"chapter1":{"title":"01. 矩陣與線性方程組"},"chapter2":{"title":"02. 行列式"},"chapter3":{"title":"03. 向量空間"}},"discrete_mathematics":{"title":"Discrete Mathematics"},"data_structure":{"title":"Data Structure","chapter1":{"title":"01. Basic Concepts"}},"algorithm":{"title":"Algorithm"},"operating_system":{"title":"Operating System"},"computer_organization":{"title":"Computer Organization","chapter1":{"title":"01. 指令: 計算機的語言"}}},"title":"Prepare CSE Master Cheatsheet","language":"zh-tw","links":{"sharing":{"facebook":false,"twitter":false,"all":false}},"gitbook":"*","description":"Cheatsheet for preparing CSE master examination."},"file":{"path":"ComputerOrganization/Chapter01.md","mtime":"2019-08-09T17:47:19.405Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-11T06:47:44.396Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -944,6 +948,14 @@ if (i != h) goto Loop;
     
         
         <script src="../gitbook/gitbook-plugin-etoc/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/jquery.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/lightbox.min.js"></script>
         
     
         

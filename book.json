@@ -20,6 +20,7 @@
         "anchors",
         "hints",
         "katex",
+        "lightbox",
         "localized-footer",
         "page-footer-ex",
         "back-to-top-button",
