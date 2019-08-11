@@ -14,7 +14,7 @@
         }
     },
     "plugins": [
-        "expandable-chapters-small",
+        "toggle-chapters",
         "splitter",
         "-sharing",
         "github",
