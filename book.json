@@ -20,7 +20,6 @@
         "anchors",
         "hints",
         "katex",
-        "fancybox",
         "localized-footer",
         "page-footer-ex",
         "back-to-top-button",
@@ -62,21 +61,6 @@
             "tip": "fa fa-mortar-board",
             "danger": "fa fa-exclamation-cicle",
             "working": "fa fa-wrench"
-        },
-        "fancybox": {
-            "padding": 5,
-            "margin": 5,
-            "helpers": {
-                "buttons": {
-                    "tpl": ""
-                },
-                "title": {
-                    "type": "outside"
-                }
-            },
-            "closeBtn": false,
-            "mouseWheel": false,
-            "arrows": false
         },
         "page-footer-ex": {
             "copyright": "Copyright© **[saberLiou](https://github.com/saberLiou)** all rights reserved.",
