@@ -19,7 +19,7 @@
         "-sharing",
         "github",
         "etoc",
-        "anchors",
+        "heading-anchors",
         "hints",
         "katex",
         "localized-footer",
@@ -73,7 +73,8 @@
                 "./scripts/correct_images_folder.js",
                 "./scripts/change_apple_touch_icon_precomposed.js",
                 "./scripts/change_favicon.js",
-                "./scripts/update_sharing_buttons.js"
+                "./scripts/update_sharing_buttons.js",
+                "./scripts/set_anchors.js"
             ]
         }
     },
