@@ -63,6 +63,7 @@ $$ \rightarrow \Large{\text{CPU Execution Time}} $$ = $$ \Large{\text{\color{red
 > machines run the same program.
 
 ![Measure for CPU Execution Time](../images/ComputerOrganization/Chapter03/cpu_execution_time.png "Measure for CPU Execution Time")
+> 右下角 $$ MIPS $$ 在[使用 MIPS 做為效能評估標準的謬誤](Chapter03.md#使用-mips-做為效能評估標準的謬誤)會詳細討論
 
 ### 軟硬體如何影響效能
 
@@ -74,7 +75,7 @@ $$ \rightarrow \Large{\text{CPU Execution Time}} $$ = $$ \Large{\text{\color{red
 | \***ISA** | $$ \checkmark $$ | $$ \checkmark $$ | $$ \checkmark $$ |
 | \*Computer Organization | | $$ \checkmark $$ | $$ \checkmark $$ |
 | \*VLSI Technology | | | $$ \checkmark $$ |
-- $$ \uparrow $$ \***ISA**: software; $$ \downarrow $$ \***ISA**: hardware
+- \***ISA** $$ \uparrow $$: software; \***ISA** $$ \downarrow $$: hardware
 - \***ISA**
 
 | $$ \because $$ | IC | CPI | cycle time |
@@ -94,6 +95,20 @@ $$ \rightarrow \Large{\text{CPU Execution Time}} $$ = $$ \Large{\text{\color{red
 
 ## 使用 MIPS 做為效能評估標準的謬誤
 ---
+- **$$ MIPS $$ (Million Instructions Per Second)**
+> 指令的執行率，又稱 **native MIPS**
+
+$$ MIPS $$ = $$ \dfrac{\text{Instruction rate}}{10^6} $$ = $$ \dfrac{\text{IC}}{\mathit{\text{Execution Time}} \times 10^6} $$ = $$ \dfrac{\text{clock rate}}{\text{CPI} \times 10^6} $$
+
+{% hint style='danger' %}
+此 MIPS **非 Chapter 01. 之 MIPS**(Microprocessor without Interlocked Pipe Stages)!
+{% endhint %}
+
+- 以 $$ MIPS $$ 作為 computer 效能評估標準時注意
+  - $$ MIPS $$ 雖然表示指令的執行率，卻沒有考慮每一個指令的能力
+  > $$ ^{ex.} $$ Judge by same $$ MIPS $$, **CISC > RISC**
+  - 同一 computer 的不同指令群，其 $$ MIPS $$ 不一定相同
+  - $$ MIPS $$ 甚至可能會與 Performance 成反比
 
 ## Amdahl's 定律
 ---
