@@ -29,7 +29,10 @@
     > - ~~absolute: wall clock~~
     > - **relative: CPU clock**
 
-### User CPU Time 的量測
+## 影響 CPU 效能的因素
+---
+
+### 以時脈週期來量測 CPU Execution Time
 - 時脈(clock): computer 協調硬體動作的**同步信號**  
 - 時脈週期(clock cycle): 時脈與時脈的**時間間隔**  
 > $$ ^{ex.} $$ ALU 運算時，連續的 $Hi 與 $Lo 暫存器 load 完所花的時間間隔
@@ -44,16 +47,50 @@
 | T = $$ 10^{12} $$ | p = $$ 10^{-12} $$          |
 
 - **時脈週期數(clock cycles)** = 程式所執行的**指令個數(Instruction Count, $$ \text{\color{red}{IC}} $$)** $$ \times $$ **平均執行每個指令所需的時脈週期數(Cycles Per Instruction, $$ \text{\color{green}{CPI}} $$)**
-- 一個程式的 **User CPU Time** = 程式所使用的**時脈週期數 $$ \times $$ 時脈週期時間**
+- 一個程式的 **CPU Time** = 程式所使用的**時脈週期數 $$ \times $$ 時脈週期時間**
 
 $$ \rightarrow \Large{\text{CPU Execution Time}} $$ = $$ \Large{\text{\color{red}{IC}}} $$ $$ \times $$ $$ \Large{\text{\color{green}{CPI}}} $$ $$ \times $$ $$ \Large{\text{\color{blue}{clock cycle time}}} $$
 - **CPU clock cycles**: $$ \text{\color{red}{IC}} \times \text{\color{green}{CPI}} $$
 > programs run on the same machine.
+
+  - 在一個程式內，執行**不同指令**所需的時脈週期數不一定相同時:  
+    **CPU clock cycles = $$ \displaystyle\sum_{i=1}^n $$($$ C_i \times CPI_i $$) $$ \Rightarrow $$ $$ \text{\color{green}{CPI}} $$ = $$ \displaystyle\sum_{i=1}^n $$($$ Frequency_i \times CPI_i $$)**
+    > - $$ n $$: 指令類別個數
+    > - $$ C_i $$: 指令類別 $$ i $$ 所使用之指令個數
+    > - $$ CPI_i $$: 指令類別 $$ i $$ 之 CPI
+    > - $$ Frequency_i $$: $$ \dfrac{C_i}{\text{\color{red}{IC}}} $$ 
 - **Instruction time**: $$ \text{\color{green}{CPI}} \times \text{\color{blue}{clock cycle time}} $$
 > machines run the same program.
 
-## 影響 CPU 效能的因素
----
+![Measure for CPU Execution Time](../images/ComputerOrganization/Chapter03/cpu_execution_time.png "Measure for CPU Execution Time")
+
+### 軟硬體如何影響效能
+
+|   | IC | CPI | clock rate |
+|:- |:--:|:---:|:----------:|
+| Algorithm (Thought) | $$ \checkmark $$ | $$ \checkmark $$ | |
+| High Level Programming Language | $$ \checkmark $$ | $$ \checkmark $$ | |
+| Compiler | $$ \checkmark $$ | $$ \checkmark $$ | |
+| \***ISA** | $$ \checkmark $$ | $$ \checkmark $$ | $$ \checkmark $$ |
+| \*Computer Organization | | $$ \checkmark $$ | $$ \checkmark $$ |
+| \*VLSI Technology | | | $$ \checkmark $$ |
+- $$ \uparrow $$ \***ISA**: software; $$ \downarrow $$ \***ISA**: hardware
+- \***ISA**
+
+| $$ \because $$ | IC | CPI | cycle time |
+|:-------------- |:--:|:---:|:----------:|
+| RISC | 大 | 小 | 小 |
+| CISC | 小 | 大 | 大 |
+
+- \*Computer Organization
+
+| $$ \because $$ | IC | CPI | cycle time |
+|:-------------- |:--:|:---:|:----------:|
+| single   | $$ \times $$ | 小 | 大 |
+| multiple | $$ \times $$ | 大 | 小 |
+| pipeline | $$ \times $$ | 大 | 小 |
+
+- \*VLSI Technology $$ \because $$ IC製程讓零件距離 $$ \downarrow $$ $$ \Rightarrow $$ 傳輸同步信號時間 $$ \downarrow $$
 
 ## 使用 MIPS 做為效能評估標準的謬誤
 ---
