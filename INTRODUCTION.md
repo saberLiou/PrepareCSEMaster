@@ -15,4 +15,5 @@ Cheatsheet for preparing CSE master examination.
 
 ## Features
 ---
-- Express mathematical formula with [$$ \KaTeX $$](https://katex.org/).
+- Chained **in-page link** to each title with **right anchor** by [anchor.js](https://www.bryanbraun.com/anchorjs/).
+- Powered **mathematical formula** by [$$ \KaTeX $$](https://katex.org/).
