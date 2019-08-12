@@ -112,7 +112,7 @@ $$ MIPS $$ = $$ \dfrac{\text{Instruction rate}}{10^6} $$ = $$ \dfrac{\text{IC}}{
 
 ## Amdahl's Law
 ---
-- 用來計算當一部機器**改善其中一部份後的執行時間**:  
+用來計算當一部機器**改善其中一部份後的執行時間**:  
 
 $$ \mathit{\text{Execution Time}} \bold{\text{ after}} $$ = $$ \dfrac{\bold{\text{affected }} \mathit{\text{Execution Time}}}{\bold{\text{improve rate}}} $$ + $$ \bold{\text{unaffected }} \mathit{\text{Execution Time}} $$
 > - $$ \mathit{\text{Execution Time}} \bold{\text{ after}} $$: **改善後**的執行時間
@@ -121,11 +121,11 @@ $$ \mathit{\text{Execution Time}} \bold{\text{ after}} $$ = $$ \dfrac{\bold{\tex
 > - $$ \bold{\text{unaffected }} \mathit{\text{Execution Time}} $$: **不會受改善影響**的執行時間
 
 ### 加速 (Speedup)
-機器經過某種策略的**改良後，相對於原本效能之提升程度**
+機器經過某種策略的**改良後，相對於原本效能之提升程度**:  
 
 $$ \bold{\text{speedup}} $$ = $$ \dfrac{Performance \bold{\text{ after}}}{Performance \bold{\text{ before}}} $$ = $$ \dfrac{\mathit{\text{Execution Time}} \bold{\text{ before}}}{\mathit{\text{Execution Time}} \bold{\text{ after}}} $$ = $$ \bold{\dfrac{1}{\dfrac{F}{S} + (1 - F)}} $$  
 (上下同 $$ \div $$ $$ \mathit{\text{Execution Time}} \bold{\text{ before}} $$)
-> - $$ \mathit{\text{Execution Time}} \bold{\text{ before}} $$: **改善前**的執行時間，即 $$ bold{\text{affected }} \mathit{\text{Execution Time}} $$ + $$ bold{\text{unaffected }} \mathit{\text{Execution Time}} $$
+> - $$ \mathit{\text{Execution Time}} \bold{\text{ before}} $$: **改善前**的執行時間，即 $$ \bold{\text{affected }} \mathit{\text{Execution Time}} $$ + $$ \bold{\text{unaffected }} \mathit{\text{Execution Time}} $$
 > - $$ \bold{F} $$: **原始程式花在改善部分計算的比例**，即 $$ \dfrac{\bold{\text{affected }} \mathit{\text{Execution Time}}}{\mathit{\text{Execution Time}} \bold{\text{ before}}} $$
 > - $$ \bold{S} $$ = $$ \bold{\text{improve rate}} $$
 
