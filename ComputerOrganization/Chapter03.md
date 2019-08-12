@@ -26,11 +26,31 @@
     > CPU 執行作業系統的時間，為了服務使用者程式
     - **使用者處理器時間(User CPU time)**
     > CPU 執行使用者程式的時間，即**本章所量測的執行時間(execution time)**
-    > - ~~absolute: wall clock time~~
+    > - ~~absolute: wall clock~~
     > - **relative: CPU clock**
 
 ### User CPU Time 的量測
+- 時脈(clock): computer 協調硬體動作的**同步信號**  
+- 時脈週期(clock cycle): 時脈與時脈的**時間間隔**  
+> $$ ^{ex.} $$ ALU 運算時，連續的 $Hi 與 $Lo 暫存器 load 完所花的時間間隔
+- **時脈週期時間($$ \text{\color{blue}{clock cycle time}} $$, clock period)**: 一個時脈週期的時間
+- **時脈頻率(clock rate)** = $$ \dfrac{1}{\text{clock cycle time}} $$
 
+| clock rate(Hz)    | clock cycle time(s)         |
+|:-----------------:|:---------------------------:|
+| K = $$ 10^3 $$    | m = $$ 10^{-3} $$           |
+| M = $$ 10^6 $$    | $$ \mu $$ = $$ 10^{-6} $$   |
+| G = $$ 10^9 $$    | n = $$ 10^{-9} $$           |
+| T = $$ 10^{12} $$ | p = $$ 10^{-12} $$          |
+
+- **時脈週期數(clock cycles)** = 程式所執行的**指令個數(Instruction Count, $$ \text{\color{red}{IC}} $$)** $$ \times $$ **平均執行每個指令所需的時脈週期數(Cycles Per Instruction, $$ \text{\color{green}{CPI}} $$)**
+- 一個程式的 **User CPU Time** = 程式所使用的**時脈週期數 $$ \times $$ 時脈週期時間**
+
+$$ \rightarrow \Large{\text{CPU Execution Time}} $$ = $$ \Large{\text{\color{red}{IC}}} $$ $$ \times $$ $$ \Large{\text{\color{green}{CPI}}} $$ $$ \times $$ $$ \Large{\text{\color{blue}{clock cycle time}}} $$
+- **CPU clock cycles**: $$ \text{\color{red}{IC}} \times \text{\color{green}{CPI}} $$
+> programs run on the same machine.
+- **Instruction time**: $$ \text{\color{green}{CPI}} \times \text{\color{blue}{clock cycle time}} $$
+> machines run the same program.
 
 ## 影響 CPU 效能的因素
 ---
