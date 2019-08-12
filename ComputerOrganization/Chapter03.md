@@ -89,7 +89,7 @@ $$ \rightarrow \Large{\text{CPU Execution Time}} $$ = $$ \Large{\text{\color{red
 |:-------------- |:--:|:---:|:----------:|
 | single   | $$ \times $$ | 小 | 大 |
 | multiple | $$ \times $$ | 大 | 小 |
-| pipeline | $$ \times $$ | 大 | 小 |
+| pipeline | $$ \times $$ | 小 | 小 |
 
 - \*VLSI Technology $$ \because $$ IC 製程讓零件距離 $$ \downarrow $$ $$ \Rightarrow $$ 傳輸同步信號時間 $$ \downarrow $$
 
