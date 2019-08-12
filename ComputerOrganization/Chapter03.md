@@ -63,7 +63,7 @@ $$ \rightarrow \Large{\text{CPU Execution Time}} $$ = $$ \Large{\text{\color{red
 > machines run the same program.
 
 ![Measure for CPU Execution Time](../images/ComputerOrganization/Chapter03/cpu_execution_time.png "Measure for CPU Execution Time")
-> 右下角 $$ MIPS $$ 在[使用 MIPS 做為效能評估標準的謬誤](Chapter03.md#使用-mips-做為效能評估標準的謬誤)會詳細討論
+> 右下角的 $$ MIPS $$ 在**「使用 MIPS 做為效能評估標準的謬誤」**裡會詳細討論
 
 ### 軟硬體如何影響效能
 
@@ -91,7 +91,7 @@ $$ \rightarrow \Large{\text{CPU Execution Time}} $$ = $$ \Large{\text{\color{red
 | multiple | $$ \times $$ | 大 | 小 |
 | pipeline | $$ \times $$ | 大 | 小 |
 
-- \*VLSI Technology $$ \because $$ IC製程讓零件距離 $$ \downarrow $$ $$ \Rightarrow $$ 傳輸同步信號時間 $$ \downarrow $$
+- \*VLSI Technology $$ \because $$ IC 製程讓零件距離 $$ \downarrow $$ $$ \Rightarrow $$ 傳輸同步信號時間 $$ \downarrow $$
 
 ## 使用 MIPS 做為效能評估標準的謬誤
 ---
@@ -104,14 +104,34 @@ $$ MIPS $$ = $$ \dfrac{\text{Instruction rate}}{10^6} $$ = $$ \dfrac{\text{IC}}{
 此 MIPS **非 Chapter 01. 之 MIPS**(Microprocessor without Interlocked Pipe Stages)!
 {% endhint %}
 
-- 以 $$ MIPS $$ 作為 computer 效能評估標準時注意
-  - $$ MIPS $$ 雖然表示指令的執行率，卻沒有考慮每一個指令的能力
+- 以 $$ MIPS $$ 作為 computer 效能評估標準時應注意:
+  - $$ MIPS $$ 雖然表示指令的執行率，卻沒有考慮每一個指令在不同指令集裡的能力
   > $$ ^{ex.} $$ Judge by same $$ MIPS $$, **CISC > RISC**
   - 同一 computer 的不同指令群，其 $$ MIPS $$ 不一定相同
   - $$ MIPS $$ 甚至可能會與 Performance 成反比
 
-## Amdahl's 定律
+## Amdahl's Law
 ---
+- 用來計算當一部機器**改善其中一部份後的執行時間**:  
+
+$$ \mathit{\text{Execution Time}} \bold{\text{ after}} $$ = $$ \dfrac{\bold{\text{affected }} \mathit{\text{Execution Time}}}{\bold{\text{improve rate}}} $$ + $$ \bold{\text{unaffected }} \mathit{\text{Execution Time}} $$
+> - $$ \mathit{\text{Execution Time}} \bold{\text{ after}} $$: **改善後**的執行時間
+> - $$ \bold{\text{affected }} \mathit{\text{Execution Time}} $$: **會受改善影響**的執行時間
+> - $$ \bold{\text{improve rate}} $$: **改善倍率**
+> - $$ \bold{\text{unaffected }} \mathit{\text{Execution Time}} $$: **不會受改善影響**的執行時間
+
+### 加速 (Speedup)
+機器經過某種策略的**改良後，相對於原本效能之提升程度**
+
+$$ \bold{\text{speedup}} $$ = $$ \dfrac{Performance \bold{\text{ after}}}{Performance \bold{\text{ before}}} $$ = $$ \dfrac{\mathit{\text{Execution Time}} \bold{\text{ before}}}{\mathit{\text{Execution Time}} \bold{\text{ after}}} $$ = $$ \bold{\dfrac{1}{\dfrac{F}{S} + (1 - F)}} $$  
+(上下同 $$ \div $$ $$ \mathit{\text{Execution Time}} \bold{\text{ before}} $$)
+> - $$ \mathit{\text{Execution Time}} \bold{\text{ before}} $$: **改善前**的執行時間，即 $$ bold{\text{affected }} \mathit{\text{Execution Time}} $$ + $$ bold{\text{unaffected }} \mathit{\text{Execution Time}} $$
+> - $$ \bold{F} $$: **原始程式花在改善部分計算的比例**，即 $$ \dfrac{\bold{\text{affected }} \mathit{\text{Execution Time}}}{\mathit{\text{Execution Time}} \bold{\text{ before}}} $$
+> - $$ \bold{S} $$ = $$ \bold{\text{improve rate}} $$
+
+### Make the Common Case Fast
+$$ \because $$ **改善效率**與**該部分所佔全部時間的比例**有關  
+$$ \therefore $$ 一個程式只要改善較常出現的部分，就會比去對極少出現的部分做最佳化還來得有效 
 
 ## 效能總評
 ---
