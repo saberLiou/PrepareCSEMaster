@@ -14,11 +14,13 @@
 - `hints`:
   - only **hints with `info` & `danger` styles** are appearing correctly on both productions of [Github Pages][Github Pages Version] and [New Gitbook][New Gitbook Version].
   - **cannot use katex** inside `{% hint style='' %}` `{% endhint %}`.
-- `katex`: always wrapped double-dollar signs for **really required mathematical symbols or numbers** to split the whole line into **katex pieces** for mobile correct RWD website format.
-> example:  
-> **ax^2 + bx + c = d, for all x belongs to real number**  
-> must be written by **katex syntax** as  
-> $$ ax^2 $$ + $$ bx $$ + $$ c $$ = $$ d $$, $$ \forall x \in R $$
+- `katex`:
+  - always wrapped double-dollar signs for **really required mathematical symbols or numbers** to split the whole line into **katex pieces** for mobile correct RWD website format.
+  > example:  
+  > **ax^2 + bx + c = d, for all x belongs to real number**  
+  > must be written by **katex syntax** as  
+  > $$ ax^2 $$ + $$ bx $$ + $$ c $$ = $$ d $$, $$ \forall x \in R $$
+  - You can use [`\color{}`](https://katex.org/docs/supported.html#style-color-size-and-font "KaTex Supported Functions") to color words in markdown. :art:
 - `localized-footer`: already installed, ready to fill something in.
 - `scripts`: In `"plugins": {}` of `book.json`, it should be placed below the plugins that need to override some javascript functionalities by customized scripts.
 
