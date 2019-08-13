@@ -99,13 +99,13 @@ $$ V \ne \emptyset $$, $$ F $$: $$ field $$, 定義二運算
 1. $$ W $$ 為 $$ V $$ 的子空間   
 2. $$ \forall \vec{u} $$, $$ \vec{v} \in W $$, $$ \vec{u} $$ + $$ \vec{v} \in W $$  
 3. $$ \forall c \in F $$, $$ \forall \vec{v} \in W $$, $$ c\vec{v} \in W $$
-> 在 $$ W \subseteq V $$ 和 $$ W \ne \emptyset $$ 的條件下，只需驗證**向量加法**及**純量積**的**封閉性**即可**證明 $$ W $$ 為 $$ V $$ 的子空間**
-
 4. $$ \forall c $$, $$ d \in F $$, $$ \forall \vec{u} $$, $$ \vec{v} \in W $$, $$ c\vec{u} $$ + $$ d\vec{v} \in W $$  
 > Corollary of 2. & 3.
 
 5. $$ \forall c_i \in F $$, $$ v_i \in W $$, $$ i $$ = $$ 1 $$, $$ 2 $$, ..., $$ k $$, $$ \displaystyle\sum_{i=1}^k c_i v_i \in W $$
 > Corollary of 4.
+
+$$ \rightarrow $$ 在 $$ W \subseteq V $$ 和 $$ W \ne \emptyset $$ 的條件下，只需驗證**向量加法**及**純量積**的**封閉性**即可**證明 $$ W $$ 為 $$ V $$ 的子空間**
 
 ### Square of R 的三型子空間
 1. 原點: {($$ 0 $$, $$ 0 $$)} = { $$ \vec{0} $$ }: zero space $$ \rightarrow $$ **點**
