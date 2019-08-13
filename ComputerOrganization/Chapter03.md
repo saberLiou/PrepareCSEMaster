@@ -193,7 +193,7 @@ $$ \rightarrow $$ 適用條件: **使用 $$ SPECratio $$ 無法準確評估數�
   | program 2         | (1, 10)    | (0.1, 1)   |
   | $$ \mathit{GM} $$ | **(1, 1)** | **(1, 1)** |
 
-> $$ \Rightarrow $$ **先做 $$ GM $$ 再正規化 = 先正規化再做 $$ GM $$**: $$ \dfrac{GM(X_i)}{GM(Y_i)} $$ = $$ GM(\dfrac{X_i}{Y_i}) $$，然而違背效能測量的基本原則: **只能知道時間比值，卻無法預測執行時間**
+> $$ \Rightarrow \because $$ $$ \dfrac{GM(X_i)}{GM(Y_i)} $$ = $$ GM(\dfrac{X_i}{Y_i}) $$ $$ \therefore $$ **先做 $$ GM $$ 再正規化 = 先正規化再做 $$ GM $$**，然而違背效能測量的基本原則: **只能知道時間比值，卻無法預測執行時間**
 
 ## 效能評估程式 (Benchmark)
 ---
