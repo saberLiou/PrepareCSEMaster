@@ -9,7 +9,7 @@
     - 適用於**比較執行相同程式的兩部不同個人電腦**
   - **生產量(throughput)**:
     - 單位時間內所完成的工作量(job 數量)
-    - 適用於**評比多人連線的伺服器**
+    - 適用於**評比多人連線的伺服器**之**network connection 數量**
 - 以**執行時間**定義 computer X 之效能: $$ Performance_X $$ = $$ \dfrac{1}{\mathit{\text{Execution Time}}_X} $$
 > computer X 的速度是 computer Y 的 n 倍: $$ \dfrac{Performance_X}{Performance_Y} $$ = $$ n $$
 
@@ -135,6 +135,70 @@ $$ \therefore $$ 一個程式只要改善較常出現的部分，就會比去對
 
 ## 效能總評
 ---
+### 算數平均 (Arithmetic Mean, AM)
+$$ AM $$ = $$ \dfrac{1}{n} \displaystyle\sum_{i=1}^n Time_i $$
+> - $$ n $$: 工作負載(workload)中的程式數量
+> - $$ Time_i $$: 程式 $$ i $$ 的執行時間
 
-## 效能評估程式
+$$ \rightarrow $$ 適用條件: 工作負載中的**每個程式的執行次數皆相同**
+
+### 加權算數平均 (Weighted Arithmetic Mean, WAM)
+$$ WAM $$ = $$ \displaystyle\sum_{i=1}^n Time_i \times Weight_i $$
+> - $$ Weight_i $$: 工作負載中的程式**出現頻率**
+
+$$ \rightarrow $$ 適用條件: 工作負載中的**每個程式的執行次數不一定相同**，在算**數學期望值**
+
+### 正規化 (SPECratio)
+將某一程式在某部機器上的執行時間 $$ \div $$ 此程式在各部機器上的執行時間:  
+$$ SPECratio $$ = $$ \dfrac{\bold{\text{referenced }} \mathit{\text{Execution Time}}}{\bold{\text{measured }} \mathit{\text{Execution Time}}} $$
+
+$$ \rightarrow $$ 適用條件: **同時評估數部機器的效能**，$$ SPECratio \uparrow \Rightarrow $$ 效能愈好
+> $$ ^{ex.} $$ 考慮 program 1 和 program 2 同時在 computer A 與 computer B 上的**執行時間**:  
+
+> |                   | computer A | computer B |
+  |:-----------------:|:----------:|:----------:|
+  | program 1         | 1          | 10         |
+  | program 2         | 1000       | 100        |
+  | $$ \mathit{AM} $$ | **500.5**  | **55**     |
+
+> 則正規化後:
+
+> | | 對 A 正規化 (A, B) | 對 B 正規化 (A, B) |
+  |:-----------------:|:--------------:|:-------------:|
+  | program 1         | (1, 0.1)       | (10, 1)       |
+  | program 2         | (1, 10)        | (0.1, 1)      |
+  | $$ \mathit{AM} $$ | **(1, 5.05)**  | **(5.05, 1)** |
+
+> $$ \Rightarrow $$ 分別對 A 和 B 做正規化後，透過 $$ AM $$ 比較 A 與 B 效能的結果卻不相同，且有些結果與單純計算 A 和 B 的 $$ AM $$ 做比較也有所差異，存在不確定性下無法總評效能!  
+> $$ \therefore $$ 此時應該採用下方的**幾何平均**
+
+### 幾何平均 (Geometric Mean, GM)
+$$ GM $$ = $$ \sqrt[n]{\displaystyle\prod_{i=1}^n SPECratio_i} $$
+> $$ \displaystyle\prod_{i=1}^n a_i $$ = $$ a_1 \times a_2 \times $$ ... $$ \times a_n $$
+
+$$ \rightarrow $$ 適用條件: **使用 $$ SPECratio $$ 無法準確評估數部機器的效能時**
+> $$ ^{ex.} $$ 承上題:  
+
+> |                   | computer A | computer B |
+  |:-----------------:|:----------:|:----------:|
+  | program 1         | 1          | 10         |
+  | program 2         | 1000       | 100        |
+  | $$ \mathit{GM} $$ | **31.6**   | **31.6**   |
+
+> 則正規化後:
+
+> | | 對 A 正規化 (A, B) | 對 B 正規化 (A, B) |
+  |:-----------------:|:----------:|:----------:|
+  | program 1         | (1, 0.1)   | (10, 1)    |
+  | program 2         | (1, 10)    | (0.1, 1)   |
+  | $$ \mathit{GM} $$ | **(1, 1)** | **(1, 1)** |
+
+> $$ \Rightarrow $$ **先做 $$ GM $$ 再正規化 = 先正規化再做 $$ GM $$**: $$ \dfrac{GM(X_i)}{GM(Y_i)} $$ = $$ GM(\dfrac{X_i}{Y_i}) $$，然而違背效能測量的基本原則: **只能知道時間比值，卻無法預測執行時間**
+
+## 效能評估程式 (Benchmark)
 ---
+**SPEC(System Performance Evaluation Coporation)**:
+- **SPEC CPU2000**: 評估**處理器**
+  - CINT2000: 12整數程式
+  - CFP2000: 14浮點數程式
+- **SPECweb99**: 評估**網頁伺服器**
