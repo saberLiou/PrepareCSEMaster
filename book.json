@@ -54,7 +54,7 @@
         },
         "etoc": {
 			"h2lb": 3,
-            "mindepth": 3,
+            "mindepth": 2,
             "maxdepth": 4,
             "notoc": false
         },
@@ -95,7 +95,16 @@
                 "title": "02. 行列式"
             },
             "chapter3": {
-                "title": "03. 向量空間"
+                "title": "03. 向量空間",
+                "3_1": {
+                    "title": "3-1. 向量空間"
+                },
+                "3_2": {
+                    "title": "3-2. 子空間"
+                },
+                "3_3": {
+                    "title": "3-3. 生成與線性獨立"
+                }
             }
         },
         "discrete_mathematics": {
