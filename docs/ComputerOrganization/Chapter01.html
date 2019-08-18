@@ -460,20 +460,20 @@
 <li><a href="#&#x57FA;&#x672C;&#x6982;&#x5FF5;">&#x57FA;&#x672C;&#x6982;&#x5FF5;</a></li>
 <li><a href="#mips-microprocessor-without-interlocked-pipe-stages">MIPS (Microprocessor without Interlocked Pipe Stages)</a></li>
 <li><a href="#&#x5167;&#x5132;&#x5F0F;&#x7A0B;&#x5F0F;&#x6982;&#x5FF5;-stored-program-computer-or-von-neuman-machine">&#x5167;&#x5132;&#x5F0F;&#x7A0B;&#x5F0F;&#x6982;&#x5FF5; (Stored-Program Computer or Von Neuman Machine)</a></li>
-<li><a href="#&#x6307;&#x4EE4;&#x96C6;&#x67B6;&#x69CB;-hardware-information--instruction-set">&#x6307;&#x4EE4;&#x96C6;&#x67B6;&#x69CB;: Hardware Information + Instruction Set</a><ul>
-<li><a href="#&#x8A18;&#x61B6;&#x9AD4;-memory">&#x8A18;&#x61B6;&#x9AD4; (Memory)</a><ul>
+<li><a href="#instruction-set-architecture">&#x6307;&#x4EE4;&#x96C6;&#x67B6;&#x69CB; (Instruction Set Architecture)</a><ul>
+<li><a href="#memory">&#x8A18;&#x61B6;&#x9AD4; (Memory)</a><ul>
 <li><a href="#&#x4F4D;&#x5143;&#x9806;&#x5E8F;-byte-order-or-endianness">&#x4F4D;&#x5143;&#x9806;&#x5E8F; (Byte-Order or Endianness)</a></li>
 </ul>
 </li>
-<li><a href="#&#x66AB;&#x5B58;&#x5668;-register">&#x66AB;&#x5B58;&#x5668; (Register)</a></li>
+<li><a href="#register">&#x66AB;&#x5B58;&#x5668; (Register)</a></li>
 <li><a href="#&#x8A18;&#x61B6;&#x9AD4;&#x7BA1;&#x7406;&#x53CA;&#x76F8;&#x95DC;&#x66AB;&#x5B58;&#x5668;">&#x8A18;&#x61B6;&#x9AD4;&#x7BA1;&#x7406;&#x53CA;&#x76F8;&#x95DC;&#x66AB;&#x5B58;&#x5668;</a></li>
 </ul>
 </li>
 <li><a href="#&#x7A0B;&#x5F0F;&#x4E4B;&#x8F49;&#x8B6F;&#x8207;&#x57F7;&#x884C;">&#x7A0B;&#x5F0F;&#x4E4B;&#x8F49;&#x8B6F;&#x8207;&#x57F7;&#x884C;</a><ul>
 <li><a href="#&#x9AD8;&#x968E;&#x8A9E;&#x8A00;&#x6B65;&#x9A5F;">&#x9AD8;&#x968E;&#x8A9E;&#x8A00;&#x6B65;&#x9A5F;</a></li>
-<li><a href="#&#x7D44;&#x8B6F;&#x5668;-assembler">&#x7D44;&#x8B6F;&#x5668; (Assembler)</a></li>
-<li><a href="#&#x9023;&#x7D50;&#x5668;-linker-&#x7684;&#x4E09;&#x500B;&#x57F7;&#x884C;&#x6B65;&#x9A5F;">&#x9023;&#x7D50;&#x5668; (Linker) &#x7684;&#x4E09;&#x500B;&#x57F7;&#x884C;&#x6B65;&#x9A5F;</a></li>
-<li><a href="#&#x8F09;&#x5165;&#x5668;-loader-&#x7684;&#x516D;&#x500B;&#x57F7;&#x884C;&#x6B65;&#x9A5F;">&#x8F09;&#x5165;&#x5668; (Loader) &#x7684;&#x516D;&#x500B;&#x57F7;&#x884C;&#x6B65;&#x9A5F;</a></li>
+<li><a href="#assembler">&#x7D44;&#x8B6F;&#x5668; (Assembler)</a></li>
+<li><a href="#linker">&#x9023;&#x7D50;&#x5668; (Linker) &#x7684;&#x4E09;&#x500B;&#x57F7;&#x884C;&#x6B65;&#x9A5F;</a></li>
+<li><a href="#loader">&#x8F09;&#x5165;&#x5668; (Loader) &#x7684;&#x516D;&#x500B;&#x57F7;&#x884C;&#x6B65;&#x9A5F;</a></li>
 <li><a href="#java-&#x7684;&#x8F49;&#x8B6F;&#x6B65;&#x9A5F;">Java &#x7684;&#x8F49;&#x8B6F;&#x6B65;&#x9A5F;</a></li>
 </ul>
 </li>
@@ -490,6 +490,8 @@
 <li><a href="#while-loop-statement">While Loop Statement</a></li>
 </ul>
 </li>
+<li><a href="#flow-control-of-inter-program">Flow Control of Inter Program</a></li>
+<li><a href="#flow-control-of-system-call">Flow Control of System Call</a></li>
 </ul>
 </li>
 </ul>
@@ -515,7 +517,7 @@
 </li>
 </ul>
 </li>
-<li><strong>&#x6307;&#x4EE4;&#x96C6;&#x67B6;&#x69CB;(Instruction Set Architecture, ISA)</strong>: &#x70BA;&#x4E86;&#x5B78;&#x7FD2;&#x64B0;&#x5BEB;&#x4F4E;&#x968E;&#x8A9E;&#x8A00;&#x800C;&#x6240;&#x5FC5;&#x9808;&#x4E86;&#x89E3;&#x7684;&#x57FA;&#x672C;&#x786C;&#x9AD4;&#x67B6;&#x69CB;&#x53CA;&#x6307;&#x4EE4;&#x96C6;&#x4E4B;&#x5408;&#x7A31;</li>
+<li><strong><a href="#instruction-set-architecture">&#x6307;&#x4EE4;&#x96C6;&#x67B6;&#x69CB;(Instruction Set Architecture, ISA)</a></strong>: &#x70BA;&#x4E86;&#x5B78;&#x7FD2;&#x64B0;&#x5BEB;&#x4F4E;&#x968E;&#x8A9E;&#x8A00;&#x800C;&#x6240;&#x5FC5;&#x9808;&#x4E86;&#x89E3;&#x7684;&#x57FA;&#x672C;&#x786C;&#x9AD4;&#x67B6;&#x69CB;&#x53CA;&#x6307;&#x4EE4;&#x96C6;&#x4E4B;&#x5408;&#x7A31;</li>
 </ul>
 <p><div class="alert alert-info hints-alert"><div class="hints-icon"><i class="fa fa-info-circle"></i></div><div class="hints-container"><p>Prior to the early 1980&apos;s, machines were built with more and more complex instruction set, but why has there been a move to RISC machines away from complex instruction machines?</p>
 </div></div></p>
@@ -541,12 +543,13 @@
 </ul>
 </li>
 </ul>
-<h2 id="&#x6307;&#x4EE4;&#x96C6;&#x67B6;&#x69CB;-hardware-information--instruction-set">&#x6307;&#x4EE4;&#x96C6;&#x67B6;&#x69CB;: Hardware Information + Instruction Set</h2>
+<h2 id="instruction-set-architecture">&#x6307;&#x4EE4;&#x96C6;&#x67B6;&#x69CB; (Instruction Set Architecture) </h2>
 <hr>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x2192;</mo><mstyle mathsize="1.44em"><mrow><mtext><mi mathvariant="normal">H</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">r</mi><mi mathvariant="normal">d</mi><mi mathvariant="normal">w</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">r</mi><mi mathvariant="normal">e</mi><mtext>&#xA0;</mtext><mi mathvariant="normal">I</mi><mi mathvariant="normal">n</mi><mi mathvariant="normal">f</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">r</mi><mi mathvariant="normal">m</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">t</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">n</mi></mtext></mrow></mstyle></mrow><annotation encoding="application/x-tex"> \rightarrow \Large{\text{Hardware Information}} </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.9999935999999999em;"></span><span class="strut bottom" style="height:0.9999935999999999em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">&#x2192;</span><span class="mord textstyle uncramped sizing reset-size5 size7 textstyle uncramped"><span class="mord text textstyle uncramped"><span class="mord mathrm">Hardware&#xA0;Information</span></span></span></span></span></span> + <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathsize="1.44em"><mrow><mtext><mi mathvariant="normal">I</mi><mi mathvariant="normal">n</mi><mi mathvariant="normal">s</mi><mi mathvariant="normal">t</mi><mi mathvariant="normal">r</mi><mi mathvariant="normal">u</mi><mi mathvariant="normal">c</mi><mi mathvariant="normal">t</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">n</mi><mtext>&#xA0;</mtext><mi mathvariant="normal">S</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">t</mi></mtext></mrow></mstyle></mrow><annotation encoding="application/x-tex"> \Large{\text{Instruction Set}} </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.9839952em;"></span><span class="strut bottom" style="height:0.9839952em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord textstyle uncramped sizing reset-size5 size7 textstyle uncramped"><span class="mord text textstyle uncramped"><span class="mord mathrm">Instruction&#xA0;Set</span></span></span></span></span></span></p>
 <ul>
 <li>&#x5B78;&#x7FD2;&#x4F4E;&#x968E;&#x7D44;&#x5408;&#x8A9E;&#x8A00;&#x6642;&#x6240;&#x5FC5;&#x9808;&#x4E86;&#x89E3;&#x7684;<strong>&#x786C;&#x9AD4;&#x8CC7;&#x8A0A;(Hardware Information)</strong>&#x61C9;&#x5305;&#x542B;&#x4EE5;&#x4E0B;&#x9805;&#x76EE;:<ul>
-<li><strong>&#x8A18;&#x61B6;&#x9AD4;(Memory)</strong></li>
-<li><strong>&#x66AB;&#x5B58;&#x5668;(Register)</strong></li>
+<li><strong><a href="#memory">&#x8A18;&#x61B6;&#x9AD4;(Memory)</a></strong></li>
+<li><strong><a href="#register">&#x66AB;&#x5B58;&#x5668;(Register)</a></strong></li>
 <li><strong>&#x6307;&#x4EE4;&#x683C;&#x5F0F;(Instruction Format)</strong></li>
 <li><strong>&#x5B9A;&#x5740;&#x6A21;&#x5F0F;(Addressing Mode)</strong> </li>
 </ul>
@@ -564,7 +567,7 @@
 </li>
 </ul>
 <p><img src="../images/ComputerOrganization/Chapter01/basic_computer_structure.jpg" alt="Basic Computer Structure in ISA" title="Basic Computer Structure in ISA"></p>
-<h3 id="&#x8A18;&#x61B6;&#x9AD4;-memory">&#x8A18;&#x61B6;&#x9AD4; (Memory)</h3>
+<h3 id="memory">&#x8A18;&#x61B6;&#x9AD4; (Memory) </h3>
 <ul>
 <li>&#x4E00;&#x500B;&#x4E00;&#x7DAD;&#x7684;&#x5927;&#x9663;&#x5217;: &#x4F4D;&#x5740;(address) =&gt; &#x4F4D;&#x5143;&#x7D44;(byte, 8 bits)</li>
 <li><strong>byte addressing</strong> (32 bits Memory):</li>
@@ -667,7 +670,7 @@
 </li>
 </ul>
 <p><img src="../images/ComputerOrganization/Chapter01/endianness.jpg" alt="Big &amp; Little Endian" title="Big &amp; Little Endian"></p>
-<h3 id="&#x66AB;&#x5B58;&#x5668;-register">&#x66AB;&#x5B58;&#x5668; (Register)</h3>
+<h3 id="register">&#x66AB;&#x5B58;&#x5668; (Register) </h3>
 <ul>
 <li>CPU &#x88E1;&#x5132;&#x5B58;&#x904B;&#x7B97;&#x5143;&#x7684;&#x8A18;&#x61B6;&#x5143;&#x4EF6;&#xFF0C;&#x91CF;&#x5C11;&#x800C;&#x8CC7;&#x6599;&#x5B58;&#x53D6;&#x5FEB;&#x901F;</li>
 <li>MIPS &#x5171;&#x6709;:<ul>
@@ -776,15 +779,15 @@
 <p>&#x7D44;&#x5408;&#x8A9E;&#x8A00;: <code>.a</code>(UNIX)/<code>.ASM</code>(MS-DOS)</p>
 </blockquote>
 </li>
-<li>&#x7D44;&#x5408;&#x8A9E;&#x8A00; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex"> \rightarrow </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">&#x2192;</span></span></span></span> <strong>assembler &#x7D44;&#x8B6F;</strong> <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex"> \rightarrow </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">&#x2192;</span></span></span></span> &#x6A5F;&#x5668;&#x8A9E;&#x8A00;&#x7684;&#x76EE;&#x7684;&#x6A21;&#x7D44;(Object: Machine language module)<blockquote>
+<li>&#x7D44;&#x5408;&#x8A9E;&#x8A00; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex"> \rightarrow </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">&#x2192;</span></span></span></span> <strong><a href="#assembler">assembler &#x7D44;&#x8B6F;</a></strong> <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex"> \rightarrow </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">&#x2192;</span></span></span></span> &#x6A5F;&#x5668;&#x8A9E;&#x8A00;&#x7684;&#x76EE;&#x7684;&#x6A21;&#x7D44;(Object: Machine language module)<blockquote>
 <p>&#x6A5F;&#x5668;&#x8A9E;&#x8A00;&#x7684;&#x76EE;&#x7684;&#x6A21;&#x7D44;: <code>.o</code>(UNIX)/<code>.OBJ</code>(MS-DOS)</p>
 </blockquote>
 </li>
-<li>&#x6A5F;&#x5668;&#x8A9E;&#x8A00;&#x7684;&#x76EE;&#x7684;&#x6A21;&#x7D44; + &#x8CC7;&#x6599;&#x5EAB;&#x5E38;&#x5F0F;(Object: Library routine in Machine language) <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex"> \rightarrow </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">&#x2192;</span></span></span></span> <strong>linker &#x9023;&#x7D50;</strong> <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex"> \rightarrow </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">&#x2192;</span></span></span></span> &#x53EF;&#x57F7;&#x884C;&#x6A94;(Executable: Machine language)<blockquote>
+<li>&#x6A5F;&#x5668;&#x8A9E;&#x8A00;&#x7684;&#x76EE;&#x7684;&#x6A21;&#x7D44; + &#x8CC7;&#x6599;&#x5EAB;&#x5E38;&#x5F0F;(Object: Library routine in Machine language) <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex"> \rightarrow </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">&#x2192;</span></span></span></span> <strong><a href="#linker">linker &#x9023;&#x7D50;</a></strong> <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex"> \rightarrow </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">&#x2192;</span></span></span></span> &#x53EF;&#x57F7;&#x884C;&#x6A94;(Executable: Machine language)<blockquote>
 <p>&#x975C;&#x614B;, &#x52D5;&#x614B;&#x9023;&#x63A5;&#x8CC7;&#x6599;&#x5EAB;&#x5E38;&#x5F0F;: <code>.s</code>, <code>.so</code>(UNIX)/<code>.LIB</code>, <code>.DLL</code>(MS-DOS)<br>&#x53EF;&#x57F7;&#x884C;&#x6A94;: <code>a.out</code>(default in UNIX)/<code>.EXE</code>(MS-DOS)</p>
 </blockquote>
 </li>
-<li>&#x53EF;&#x57F7;&#x884C;&#x6A94; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex"> \rightarrow </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">&#x2192;</span></span></span></span> <strong>loader &#x8F09;&#x5165;</strong> <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex"> \rightarrow </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">&#x2192;</span></span></span></span> &#x8A18;&#x61B6;&#x9AD4;</li>
+<li>&#x53EF;&#x57F7;&#x884C;&#x6A94; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex"> \rightarrow </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">&#x2192;</span></span></span></span> <strong><a href="#loader">loader &#x8F09;&#x5165;</a></strong> <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex"> \rightarrow </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">&#x2192;</span></span></span></span> &#x8A18;&#x61B6;&#x9AD4;</li>
 </ol>
 <blockquote>
 <p>&#x73FE;&#x4EE3;&#x52A0;&#x901F;&#x8F49;&#x8B6F;&#x904E;&#x7A0B;:</p>
@@ -793,8 +796,8 @@
 <li>&#x6709;&#x4E9B;&#x7CFB;&#x7D71;&#x6703;&#x4F7F;&#x7528;&#x9023;&#x7D50;&#x8F09;&#x5165;&#x5668;(linking loader)&#x76F4;&#x63A5;&#x5B8C;&#x6210;&#x6700;&#x5F8C;&#x5169;&#x6B65;&#x9A5F;</li>
 </ul>
 </blockquote>
-<h3 id="&#x7D44;&#x8B6F;&#x5668;-assembler">&#x7D44;&#x8B6F;&#x5668; (Assembler)</h3>
-<p>&#x7D44;&#x8B6F;&#x904E;&#x5F8C;&#xFF0C;&#x6A5F;&#x5668;&#x8A9E;&#x8A00;&#x7684;&#x76EE;&#x7684;&#x6A21;&#x7D44;&#x5305;&#x542B;&#x4EE5;&#x4E0B;&#x8CC7;&#x8A0A;:</p>
+<h3 id="assembler">&#x7D44;&#x8B6F;&#x5668; (Assembler) </h3>
+<p>&#x7D44;&#x8B6F;&#x904E;&#x5F8C;&#xFF0C;<strong>&#x6A5F;&#x5668;&#x8A9E;&#x8A00;&#x7684;&#x76EE;&#x7684;&#x6A21;&#x7D44;</strong>&#x5305;&#x542B;&#x4EE5;&#x4E0B;&#x8CC7;&#x8A0A;:</p>
 <ul>
 <li>&#x6A19;&#x982D;(header): &#x76EE;&#x7684;&#x6A21;&#x7D44;&#x7684;&#x5167;&#x5BB9;, &#x5927;&#x5C0F;, &#x4F4D;&#x7F6E;...etc.</li>
 <li>&#x6307;&#x4EE4;&#x5340;(text segment): &#x6307;&#x4EE4;&#x7684;&#x6A5F;&#x5668;&#x8A9E;&#x8A00;&#x78BC;</li>
@@ -803,7 +806,7 @@
 <li>symbol table: &#x5132;&#x5B58;&#x672A;&#x5B9A;&#x7FA9;&#x7684;&#x6A19;&#x7C64;&#xFF0C;&#x5982;&#x5916;&#x90E8;&#x53C3;&#x8003;&#x8CC7;&#x6599;</li>
 <li>debug information: &#x7528;&#x4F86;&#x9023;&#x7D50;&#x539F;&#x59CB;&#x7A0B;&#x5F0F;&#x78BC;</li>
 </ul>
-<h3 id="&#x9023;&#x7D50;&#x5668;-linker-&#x7684;&#x4E09;&#x500B;&#x57F7;&#x884C;&#x6B65;&#x9A5F;">&#x9023;&#x7D50;&#x5668; (Linker) &#x7684;&#x4E09;&#x500B;&#x57F7;&#x884C;&#x6B65;&#x9A5F;</h3>
+<h3 id="linker">&#x9023;&#x7D50;&#x5668; (Linker) &#x7684;&#x4E09;&#x500B;&#x57F7;&#x884C;&#x6B65;&#x9A5F; </h3>
 <ol>
 <li>&#x5C07;&#x76EE;&#x7684;&#x6A21;&#x7D44;&#x7684;&#x6307;&#x4EE4;&#x8207;&#x8CC7;&#x6599;<strong>&#x8C61;&#x5FB5;&#x6027;&#x7684;(symbolically)</strong>&#x653E;&#x7F6E;&#x65BC;&#x8A18;&#x61B6;&#x9AD4;&#x4E2D;<blockquote>
 <p>&#x8C61;&#x5FB5;&#x6027;&#x7684;&#x653E;&#x7F6E;: &#x975E;&#x5BE6;&#x969B;&#x653E;&#x5165;</p>
@@ -813,7 +816,7 @@
 <li>&#x6C7A;&#x5B9A;&#x5167;&#x5916;&#x90E8;&#x4F4D;&#x5740;&#x53C3;&#x8003;</li>
 </ol>
 <p><img src="../images/ComputerOrganization/Chapter01/linker.jpg" alt="Linker" title="Linker"></p>
-<h3 id="&#x8F09;&#x5165;&#x5668;-loader-&#x7684;&#x516D;&#x500B;&#x57F7;&#x884C;&#x6B65;&#x9A5F;">&#x8F09;&#x5165;&#x5668; (Loader) &#x7684;&#x516D;&#x500B;&#x57F7;&#x884C;&#x6B65;&#x9A5F;</h3>
+<h3 id="loader">&#x8F09;&#x5165;&#x5668; (Loader) &#x7684;&#x516D;&#x500B;&#x57F7;&#x884C;&#x6B65;&#x9A5F; </h3>
 <ol>
 <li>&#x8B80;&#x53D6;&#x53EF;&#x57F7;&#x884C;&#x6A94;&#x7684;&#x6A19;&#x982D;&#xFF0C;&#x6C7A;&#x5B9A;&#x6307;&#x4EE4;&#x5340;&#x53CA;&#x8CC7;&#x6599;&#x5340;&#x5927;&#x5C0F;</li>
 <li>&#x7522;&#x751F;&#x4E00;&#x500B;&#x8DB3;&#x5920;&#x5BB9;&#x7D0D;&#x53EF;&#x57F7;&#x884C;&#x6A94;&#x7684;&#x6240;&#x6709;&#x6307;&#x4EE4;&#x53CA;&#x8CC7;&#x6599;&#x4E4B;&#x8A18;&#x61B6;&#x9AD4;&#x7A7A;&#x9593;</li>
@@ -893,7 +896,8 @@
 <h3 id="flow-control-of-intra-program">Flow Control of Intra Program</h3>
 <p>From <strong>procedure A</strong> to <strong>procedure A</strong></p>
 <ul>
-<li>unconditional: jump<blockquote>
+<li><p>unconditional: jump</p>
+<blockquote>
 <p>MIPS:</p>
 <ul>
 <li><strong>j</strong> <em>label</em>: <code>$PC = label;</code></li>
@@ -902,9 +906,8 @@
 </ul>
 </blockquote>
 </li>
-</ul>
-<ul>
-<li>conditional: branch<blockquote>
+<li><p>conditional: branch</p>
+<blockquote>
 <p>MIPS:</p>
 <ul>
 <li><strong>beq</strong> <em>register1</em>, <em>register2</em>, <em>label</em>: <code>if (register1 == register2) $PC = label;</code></li>
@@ -1023,7 +1026,7 @@
 </li>
 </ul>
 <p><div id="page-footer" class="localized-footer"><hr></div></p>
-<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> Copyright&#xA9; <strong><a href="https://github.com/saberLiou" target="_blank">saberLiou</a></strong> all rights reserved. </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <i>last updated at</i> 2019-08-18 14:49:53 </span> </footer>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> Copyright&#xA9; <strong><a href="https://github.com/saberLiou" target="_blank">saberLiou</a></strong> all rights reserved. </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <i>last updated at</i> 2019-08-18 15:46:24 </span> </footer>
                                 
                                 </section>
                             
@@ -1066,7 +1069,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"01. 指令: 計算機的語言","level":"2.6.1","depth":2,"next":{"title":"02. 計算機算數","level":"2.6.2","depth":2,"path":"ComputerOrganization/Chapter02.md","ref":"ComputerOrganization/Chapter02.md","articles":[]},"previous":{"title":"Computer Organization","level":"2.6","depth":1,"path":"ComputerOrganization/README.md","ref":"ComputerOrganization/README.md","articles":[{"title":"01. 指令: 計算機的語言","level":"2.6.1","depth":2,"path":"ComputerOrganization/Chapter01.md","ref":"ComputerOrganization/Chapter01.md","articles":[]},{"title":"02. 計算機算數","level":"2.6.2","depth":2,"path":"ComputerOrganization/Chapter02.md","ref":"ComputerOrganization/Chapter02.md","articles":[]},{"title":"03. 了解與評估計算機的效能","level":"2.6.3","depth":2,"path":"ComputerOrganization/Chapter03.md","ref":"ComputerOrganization/Chapter03.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["toggle-chapters","splitter","-sharing","github","etoc","heading-anchors","hints","katex","code","localized-footer","page-footer-ex","back-to-top-button","scripts","word-count"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":2,"notoc":false},"github":{"url":"https://github.com/saberLiou/PrepareCSEMaster"},"page-footer-ex":{"copyright":"Copyright© **[saberLiou](https://github.com/saberLiou)** all rights reserved.","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<i>last updated at</i>"},"splitter":{},"scripts":{"files":["./scripts/correct_images_folder.js","./scripts/change_apple_touch_icon_precomposed.js","./scripts/change_favicon.js","./scripts/update_sharing_buttons.js","./scripts/set_anchors.js"]},"search":{},"word-count":{},"hints":{"danger":"fa fa-exclamation-triangle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"localized-footer":{"filename":"FOOTER.md","hline":"true"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"back-to-top-button":{},"sharing":{"qq":false,"all":[],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":true,"line":true,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"saberLiou <saberliou@gmail.com>","localized-footer":{"hline":true,"filename":"FOOTER.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"INTRODUCTION.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"linear_algebra":{"title":"Linear Algebra","chapter0":{"title":"00. 基礎數學"},"chapter1":{"title":"01. 矩陣與線性方程組"},"chapter2":{"title":"02. 行列式"},"chapter3":{"title":"03. 向量空間","3_1":{"title":"3-1. 向量空間"},"3_2":{"title":"3-2. 子空間"},"3_3":{"title":"3-3. 生成與線性獨立"}}},"discrete_mathematics":{"title":"Discrete Mathematics"},"data_structure":{"title":"Data Structure","chapter1":{"title":"01. Basic Concepts"}},"algorithm":{"title":"Algorithm"},"operating_system":{"title":"Operating System"},"computer_organization":{"title":"Computer Organization","chapter1":{"title":"01. 指令: 計算機的語言"},"chapter2":{"title":"02. 計算機算數"},"chapter3":{"title":"03. 了解與評估計算機的效能"}}},"title":"Prepare CSE Master Cheatsheet","language":"zh-tw","links":{"sharing":{"facebook":false,"twitter":false,"all":false}},"gitbook":"*","description":"Cheatsheet for preparing CSE master examination."},"file":{"path":"ComputerOrganization/Chapter01.md","mtime":"2019-08-18T06:49:53.595Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-18T06:52:13.019Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"01. 指令: 計算機的語言","level":"2.6.1","depth":2,"next":{"title":"02. 計算機算數","level":"2.6.2","depth":2,"path":"ComputerOrganization/Chapter02.md","ref":"ComputerOrganization/Chapter02.md","articles":[]},"previous":{"title":"Computer Organization","level":"2.6","depth":1,"path":"ComputerOrganization/README.md","ref":"ComputerOrganization/README.md","articles":[{"title":"01. 指令: 計算機的語言","level":"2.6.1","depth":2,"path":"ComputerOrganization/Chapter01.md","ref":"ComputerOrganization/Chapter01.md","articles":[]},{"title":"02. 計算機算數","level":"2.6.2","depth":2,"path":"ComputerOrganization/Chapter02.md","ref":"ComputerOrganization/Chapter02.md","articles":[]},{"title":"03. 了解與評估計算機的效能","level":"2.6.3","depth":2,"path":"ComputerOrganization/Chapter03.md","ref":"ComputerOrganization/Chapter03.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["toggle-chapters","splitter","-sharing","github","etoc","heading-anchors","hints","katex","code","localized-footer","page-footer-ex","back-to-top-button","scripts","word-count"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":2,"notoc":false},"github":{"url":"https://github.com/saberLiou/PrepareCSEMaster"},"page-footer-ex":{"copyright":"Copyright© **[saberLiou](https://github.com/saberLiou)** all rights reserved.","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<i>last updated at</i>"},"splitter":{},"scripts":{"files":["./scripts/correct_images_folder.js","./scripts/change_apple_touch_icon_precomposed.js","./scripts/change_favicon.js","./scripts/update_sharing_buttons.js","./scripts/set_anchors.js"]},"search":{},"word-count":{},"hints":{"danger":"fa fa-exclamation-triangle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"localized-footer":{"filename":"FOOTER.md","hline":"true"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"back-to-top-button":{},"sharing":{"qq":false,"all":[],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":true,"line":true,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"saberLiou <saberliou@gmail.com>","localized-footer":{"hline":true,"filename":"FOOTER.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"INTRODUCTION.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"linear_algebra":{"title":"Linear Algebra","chapter0":{"title":"00. 基礎數學"},"chapter1":{"title":"01. 矩陣與線性方程組"},"chapter2":{"title":"02. 行列式"},"chapter3":{"title":"03. 向量空間","3_1":{"title":"3-1. 向量空間"},"3_2":{"title":"3-2. 子空間"},"3_3":{"title":"3-3. 生成與線性獨立"}}},"discrete_mathematics":{"title":"Discrete Mathematics"},"data_structure":{"title":"Data Structure","chapter1":{"title":"01. Basic Concepts"}},"algorithm":{"title":"Algorithm"},"operating_system":{"title":"Operating System"},"computer_organization":{"title":"Computer Organization","chapter1":{"title":"01. 指令: 計算機的語言"},"chapter2":{"title":"02. 計算機算數"},"chapter3":{"title":"03. 了解與評估計算機的效能"}}},"title":"Prepare CSE Master Cheatsheet","language":"zh-tw","links":{"sharing":{"facebook":false,"twitter":false,"all":false}},"gitbook":"*","description":"Cheatsheet for preparing CSE master examination."},"file":{"path":"ComputerOrganization/Chapter01.md","mtime":"2019-08-18T07:46:24.986Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-18T07:52:37.263Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

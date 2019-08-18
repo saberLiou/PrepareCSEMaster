@@ -12,7 +12,7 @@
   - **複雜指令集**(Complex Instruction Set Computing, **CISC**): **Intel 80x86**, IBM System/360, DEC VAX, Motorola 68000, ...etc.
     - 提供較強的複雜指令，構成**較佳的程式設計環境**以減輕 programmer 的負擔
     - 兼具基本指令
-- **指令集架構(Instruction Set Architecture, ISA)**: 為了學習撰寫低階語言而所必須了解的基本硬體架構及指令集之合稱
+- **[指令集架構(Instruction Set Architecture, ISA)](#instruction-set-architecture)**: 為了學習撰寫低階語言而所必須了解的基本硬體架構及指令集之合稱
 
 {% hint style='info' %}
 Prior to the early 1980's, machines were built with more and more complex instruction set, but why has there been a move to RISC machines away from complex instruction machines?
@@ -32,11 +32,12 @@ Prior to the early 1980's, machines were built with more and more complex instru
   - **指令被表示成像數字一般的形式**，使程式能以二進制檔案的方式散佈，因此相容的指令集所造成的計算機便可共用一些現成的軟體
   - **要被執行的程式一定得先放置於記憶體中，像數字一般的被存取**
   
-## 指令集架構: Hardware Information + Instruction Set
+## 指令集架構 (Instruction Set Architecture) {#instruction-set-architecture}
 ---
+$$ \rightarrow \Large{\text{Hardware Information}} $$ + $$ \Large{\text{Instruction Set}} $$
 - 學習低階組合語言時所必須了解的**硬體資訊(Hardware Information)**應包含以下項目:
-  - **記憶體(Memory)**
-  - **暫存器(Register)**
+  - **[記憶體(Memory)](#memory)**
+  - **[暫存器(Register)](#register)**
   - **指令格式(Instruction Format)**
   - **定址模式(Addressing Mode)** 
 - 計算機基礎架構(Basic Computer Structure)五個單元:
@@ -49,7 +50,7 @@ Prior to the early 1980's, machines were built with more and more complex instru
 
 ![Basic Computer Structure in ISA](../images/ComputerOrganization/Chapter01/basic_computer_structure.jpg "Basic Computer Structure in ISA")
 
-### 記憶體 (Memory)
+### 記憶體 (Memory) {#memory}
 - 一個一維的大陣列: 位址(address) => 位元組(byte, 8 bits)
 - **byte addressing** (32 bits Memory):
 
@@ -83,7 +84,7 @@ Prior to the early 1980's, machines were built with more and more complex instru
 
 ![Big & Little Endian](../images/ComputerOrganization/Chapter01/endianness.jpg "Big & Little Endian")
 
-### 暫存器 (Register)
+### 暫存器 (Register) {#register}
 - CPU 裡儲存運算元的記憶元件，量少而資料存取快速
 - MIPS 共有:
   - 特殊目的暫存器(Special Purpose Register, **SPR**) $$ \times $$ **3**
@@ -142,19 +143,19 @@ Prior to the early 1980's, machines were built with more and more complex instru
 ### 高階語言步驟
 1. 高階語言(C) $$ \rightarrow $$ **compiler 編譯** $$ \rightarrow $$ 組合語言(Assembly)
 > 組合語言: `.a`(UNIX)/`.ASM`(MS-DOS)
-2. 組合語言 $$ \rightarrow $$ **assembler 組譯** $$ \rightarrow $$ 機器語言的目的模組(Object: Machine language module)
+2. 組合語言 $$ \rightarrow $$ **[assembler 組譯](#assembler)** $$ \rightarrow $$ 機器語言的目的模組(Object: Machine language module)
 > 機器語言的目的模組: `.o`(UNIX)/`.OBJ`(MS-DOS)
-3. 機器語言的目的模組 + 資料庫常式(Object: Library routine in Machine language) $$ \rightarrow $$ **linker 連結** $$ \rightarrow $$ 可執行檔(Executable: Machine language)
+3. 機器語言的目的模組 + 資料庫常式(Object: Library routine in Machine language) $$ \rightarrow $$ **[linker 連結](#linker)** $$ \rightarrow $$ 可執行檔(Executable: Machine language)
 > 靜態, 動態連接資料庫常式: `.s`, `.so`(UNIX)/`.LIB`, `.DLL`(MS-DOS)  
 > 可執行檔: `a.out`(default in UNIX)/`.EXE`(MS-DOS)
-4. 可執行檔 $$ \rightarrow $$ **loader 載入** $$ \rightarrow $$ 記憶體
+4. 可執行檔 $$ \rightarrow $$ **[loader 載入](#loader)** $$ \rightarrow $$ 記憶體
 
 > 現代加速轉譯過程:
 > - 有些 compiler $$ \because $$ 自帶 assembler, 而能從高階語言直接產生機器語言的目的模組
 > - 有些系統會使用連結載入器(linking loader)直接完成最後兩步驟
 
-### 組譯器 (Assembler)
-組譯過後，機器語言的目的模組包含以下資訊:
+### 組譯器 (Assembler) {#assembler}
+組譯過後，**機器語言的目的模組**包含以下資訊:
 - 標頭(header): 目的模組的內容, 大小, 位置...etc.
 - 指令區(text segment): 指令的機器語言碼
 - 資料區(data segment): 程式生命週期內的所有靜態與動態資料
@@ -162,7 +163,7 @@ Prior to the early 1980's, machines were built with more and more complex instru
 - symbol table: 儲存未定義的標籤，如外部參考資料
 - debug information: 用來連結原始程式碼
 
-### 連結器 (Linker) 的三個執行步驟
+### 連結器 (Linker) 的三個執行步驟 {#linker}
 1. 將目的模組的指令與資料**象徵性的(symbolically)**放置於記憶體中
 > 象徵性的放置: 非實際放入
 2. 決定資料與指令標籤(instruction label)的位址
@@ -170,7 +171,7 @@ Prior to the early 1980's, machines were built with more and more complex instru
 
 ![Linker](../images/ComputerOrganization/Chapter01/linker.jpg "Linker")
 
-### 載入器 (Loader) 的六個執行步驟
+### 載入器 (Loader) 的六個執行步驟 {#loader}
 1. 讀取可執行檔的標頭，決定指令區及資料區大小
 2. 產生一個足夠容納可執行檔的所有指令及資料之記憶體空間
 3. 複製可執行檔的指令及資料至記憶體
@@ -230,7 +231,6 @@ From **procedure A** to **procedure A**
 > - **jal** *label*: `$ra = $PC + 4; $PC = label;`  
 > $$ \rightarrow $$ 其中 **j**/**jal** 的 ***label***: 該 *label* 之 **reference**，而**非 label 本身**  
 > - **jr** *register*: `$PC = register;`
-
 
 - conditional: branch
 > MIPS:
@@ -292,21 +292,21 @@ Exit:
 > ** X 第 `7` 行** `Exit` label 為**第 `4` 行** `bne` 指令之 branch 目的地  
 > $$ \therefore $$ 此群 MIPS 指令**不為一基本區塊**，可再由 compiler 細切成三個基本區塊並予以最佳化:  
 > ```mipsasm
-Loop: sll $t1, $s3, 2    # $t1 = 4 * i, 算 address offset of save[]
-      add $t1, $t1, $s6  # $t1 = memory address of save[i]
-      lw  $t0, 0($t1)    # $t0 = value of save[i] from memory
-      bne $t0, $s5, Exit # if (save[i] != k) goto Exit;
-```
+> Loop: sll $t1, $s3, 2    # $t1 = 4 * i, 算 address offset of save[]
+>       add $t1, $t1, $s6  # $t1 = memory address of save[i]
+>       lw  $t0, 0($t1)    # $t0 = value of save[i] from memory
+>       bne $t0, $s5, Exit # if (save[i] != k) goto Exit;
+> ```
 > $$ \checkmark $$ 第 `1` 行 `Loop` label 為第 `4` 行 `bne` 指令之 branch 目的地  
 > $$ \checkmark $$ 第 `4` 行 `bne $t0, $s5, Exit` 為 branch 指令  
 > ```mipsasm
-      add $s3, $s3, $s4  # i = i + j;
-      j   Loop           # goto Loop;
-```
+>       add $s3, $s3, $s4  # i = i + j;
+>       j   Loop           # goto Loop;
+> ```
 > $$ \checkmark $$ 第 `2` 行 `j   Loop` 為 jump 指令  
 > ```mipsasm
-Exit:
-```
+> Exit:
+> ```
 > $$ \checkmark $$ 首行 `Exit` label 為 jump/branch 目的地
 
 ### Flow Control of Inter Program

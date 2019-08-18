@@ -11,6 +11,7 @@
 - `etoc`:
   - each header should be **unique string** on each markdown file.
   - only parse **header without katex syntax** for linking.
+  - when using **fenced code blocks(three '\`' to wrap codes)** with **`mipsasm` syntax highlight** inside **blockquotes(`>`)**, make sure to **add `>` in front of each line of codes** to let all the headers of toc(table of content) generated successfully.
 - `hints`:
   - only **hints with `info` & `danger` styles** are appearing correctly on both productions of [Github Pages][Github Pages Version] and [New Gitbook][New Gitbook Version].
   - **cannot use katex** inside `{% hint style='' %}` `{% endhint %}`.

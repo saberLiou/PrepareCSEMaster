@@ -2,6 +2,11 @@
     display: none !important;
 }
 
+/* plugin: etoc */
+.toc li ul > li:before {
+    content: "-";
+}
+
 /* plugin: heading-anchors */
 .anchorjs-link {
     color: #AAAAAA;
