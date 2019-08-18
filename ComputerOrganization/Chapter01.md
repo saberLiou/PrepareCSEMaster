@@ -196,6 +196,7 @@ $$ \rightarrow \Large{\text{Hardware Information}} $$ + $$ \Large{\text{Instruct
 > - **lw**/**lh**/**lb**/**lbu** *register*, *offset*(*base register*): `register = Memory[offset + base register];`
 - store: CPU to Memory
 > MIPS:
+> - 無 **sbu** 指令($$ \because $$ = **sb**)
 > - **sw**/**sh**/**sb** *register*, *offset*(*base register*): `Memory[offset + base register] = register;`
 - move: Memory to Memory/Register to Register
 - input/output: from I/O devices
@@ -203,8 +204,10 @@ $$ \rightarrow \Large{\text{Hardware Information}} $$ + $$ \Large{\text{Instruct
 
 #### 「位移量(基底暫存器)」的記憶體位址
 在 **load/store** 指令中，記憶體位址採**基底-位移(base-offset)**表示:
-> $$ ^{ex.} $$ If $s0 points to A[0], how to load A[8]'s value to $t0?  
-> $$ \Rightarrow $$ lw $t0, **32($s0)**: 8 $$ \times $$ 4 bytes
+> $$ ^{ex.} $$ If `$s0` points to `A[0]`, how to load `A[8]`'s value to `$t0`?  
+> ```mipsasm
+> lw $t0, 32($s0) # 32 = 8 x 4 bytes
+> ```
 
 ### Operation of Arithmetic
 For integer or floating point:
@@ -350,8 +353,18 @@ From **procedure A** to **procedure B**
 > MIPS: 指令 + `i`
 > - 無 **subi** 指令
 > - **addi** *register1*, *register2*, *constant*: `register1 = register2 + constant;`
-> - **lui**
-> - **ori**
+> > 16 bits $$ \rightarrow $$ 32 bits: empty bits filled with **leftest signed bit**
+> - **andi** *register1*, *register2*, *constant*: `register1 = register2 & constant;`
+> > 16 bits $$ \rightarrow $$ 32 bits: empty bits filled with **0**
+> - **slti** *register1*, *register2*, *constant*: `register1 = (register2 < constant) ? 1 : 0;`
+> - **lui(load upper immediate)**/**ori**: 
+> > $$ ^{ex.} $$ add 0000 0000 0011 1101 0000 1001 0000 0000 to `$s0`
+> > ```mipsasm
+> > lui $s0, 61         # $s0 = 0000 0000 0011 1101 0000 0000 0000 0000 now.
+> > ori $s0, $s0, 2304  # $s0 = 0000 0000 0011 1101 0000 1001 0000 0000 now.
+> > ```
+> > - $$ 61_{10} $$ = $$ \text{0000 0000 0011 1101}_2 $$
+> > - $$ 2304_{10} $$ = $$ \text{0000 1001 0000 0000}_2 $$
 
 ### 虛擬指令 (Pseudo Instruction or Directive Instruction) {#pseudo-instruction}
 實際機器不存在，但可透過 **assembler 轉譯**為機器可執行的指令
