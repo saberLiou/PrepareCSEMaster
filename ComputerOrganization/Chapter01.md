@@ -12,7 +12,7 @@
   - **複雜指令集**(Complex Instruction Set Computing, **CISC**): **Intel 80x86**, IBM System/360, DEC VAX, Motorola 68000, ...etc.
     - 提供較強的複雜指令，構成**較佳的程式設計環境**以減輕 programmer 的負擔
     - 兼具基本指令
-- **[指令集架構(Instruction Set Architecture, ISA)](#instruction-set-architecture)**: 為了學習撰寫低階語言而所必須了解的基本硬體架構及指令集之合稱
+- **[指令集架構(Instruction Set Architecture, ISA)](#instruction-set-architecture)**: 為了學習撰寫低階語言而所必須了解的基本**硬體架構**及**指令集**之合稱
 
 {% hint style='info' %}
 Prior to the early 1980's, machines were built with more and more complex instruction set, but why has there been a move to RISC machines away from complex instruction machines?
@@ -211,7 +211,6 @@ For integer or floating point:
 - add
 > MIPS: 
 > - **add** *register1*, *register2*, *register3*: `register1 = register2 + register3;`
-> - **addi** *register1*, *register2*, *constant*: `register1 = register2 + constant;`
 - sub
 > MIPS:
 > - **sub** *register1*, *register2*, *register3*: `register1 = register2 - register3;` 
@@ -219,24 +218,51 @@ For integer or floating point:
 - divide
 
 ### Operation of Logical
-- shift/rotate
-- not/and/or/set(all digits to 1)/clear(all digits to 0)
+- shift
+> MIPS:
+> - 無 **sla** 指令
+> - **sll/srl/sra** *register1*, *register2*, *constant*: `register1 = register2 <</>>/\ constant`
+>   - **sll/srl**: empty bits filled with **0**
+>   - **sra**: empty bits filled with **leftest signed bit**
+
+- rotate
+- not/and/or/set/clear
+> MIPS:
+> - **and/or/xor(互斥)** *register1*, *register2*, *register3*: `register1 = register2 &/|/^ register3;`
+> - **nor(not or)** *register1*, *register2*, *register3*: `register1 = ~(register2 | register3);`
+> - **not/clear(set all digits to 0)**: 為**[虛擬指令](#pseudo-instruction)**
+> - **swap**: 也是虛擬指令，可表示成
+> ```mipsasm
+> xor $s0, $s0, $s1   #    xor $s1, $s0, $s1
+> xor $s1, $s0, $s1   # or xor $s0, $s0, $s1
+> xor $s0, $s0, $s1   #    xor $s1, $s0, $s1
+> ```
+> > - 第 `1` 行執行後:
+> >   - `$s0`: `$s0` $$ \oplus $$ `$s1`
+> >   - `$s1`: `$s1`
+> > - 第 `2` 行執行後:
+> >   - `$s0`: `$s0` $$ \oplus $$ `$s1`
+> >   - `$s1`: `$s0` $$ \oplus $$ **`$s1` $$ \oplus $$ `$s1`** $$ \Rightarrow $$ `$s0` $$ \oplus $$ `$zero` $$ \Rightarrow $$ `$s0`
+> > - 第 `3` 行執行後:
+> >   - `$s0`: **`$s0`** $$ \oplus $$ `$s1` $$ \oplus $$ **`$s0`** $$ \Rightarrow $$ **`$s0` $$ \oplus $$ `$s0`** $$ \oplus $$ `$s1` $$ \Rightarrow $$ `$zero` $$ \oplus $$ `$s1` $$ \Rightarrow $$ `$s1`
+> >   - `$s1`: `$s0`
 
 ### Flow Control of Intra Program
 From **procedure A** to **procedure A**
 
-- unconditional: jump
+- unconditional: **jump**
 > MIPS:
 > - **j** *label*: `$PC = label;`
 > - **jal** *label*: `$ra = $PC + 4; $PC = label;`  
-> $$ \rightarrow $$ 其中 **j**/**jal** 的 ***label***: 該 *label* 之 **reference**，而**非 label 本身**  
+> $$ \rightarrow $$ 其中 **j**/**jal** 的 ***label***: 儲存**這條指令所在的記憶體位址**  
 > - **jr** *register*: `$PC = register;`
 
-- conditional: branch
+- conditional: **branch**
 > MIPS:
 > - **beq** *register1*, *register2*, *label*: `if (register1 == register2) $PC = label;`
 > - **bne** *register1*, *register2*, *label*: `if (register1 != register2) $PC = label;`  
-> $$ \rightarrow $$ 其中 **beq**/**bne** 的 ***label***: **儲存"指向這條指令所在的記憶體位址"**  
+> $$ \rightarrow $$ 其中 **beq**/**bne** 的 ***label***: 儲存**這條指令所在的記憶體位址**  
+> - **blt/bgt/ble/bge**: 為**[虛擬指令](#pseudo-instruction)**
 > - **slt** *register1*, *register2*, *register3*: `register1 = (register2 < register3) ? 1 : 0;`
 
 #### 基本區塊 (Basic Block)
@@ -318,3 +344,24 @@ From **procedure A** to **procedure B**
 - trap/return
 > MIPS:
 > - **syscall**
+
+### 立即指令 (Immediate Instruction) {#immediate-instruction}
+其中一個**運算元(operator)**為**常數**的指令
+> MIPS: 指令 + `i`
+> - 無 **subi** 指令
+> - **addi** *register1*, *register2*, *constant*: `register1 = register2 + constant;`
+> - **lui**
+> - **ori**
+
+### 虛擬指令 (Pseudo Instruction or Directive Instruction) {#pseudo-instruction}
+實際機器不存在，但可透過 **assembler 轉譯**為機器可執行的指令
+ 
+| 虛擬指令 | 轉譯後的 MIPS 指令 |
+|:-------:|:----------------:|
+| `not $t0, $s0` | `nor $t0, $s0, $zero` + `nor $t0, $s0, $t0` |
+| `clear $t0` | `add $t0, $zero, $zero` |
+| `blt $s1, $s2, L`($$ < $$) | `slt $t0, $s1, $s2` + `bne $t0, $zero, L` |
+| `bgt $s1, $s2, L`($$ > $$) | `slt $t0, $s2, $s1` + `bne $t0, $zero, L` |
+| `ble $s1, $s2, L`($$ \ge $$) | `slt $t0, $s2, $s1` + `beq $t0, $zero, L` |
+| `bge $s1, $s2, L`($$ \le $$) | `slt $t0, $s1, $s2` + `beq $t0, $zero, L` |
+| `move $t1, $t2` | `add $t1, $t2, $zero` |
