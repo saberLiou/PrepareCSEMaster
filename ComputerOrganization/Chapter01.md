@@ -193,7 +193,7 @@ $$ \rightarrow \Large{\text{Hardware Information}} $$ + $$ \Large{\text{Instruct
 ### Data Movement (Data Transfer)
 - load: Memory to CPU
 > MIPS:
-> - **lw**/**lh**/**lb**/**lbu** *register*, *offset*(*base register*): `register = Memory[offset + base register];`
+> - **lw**/**lh**/**lhu**/**lb**/**lbu** *register*, *offset*(*base register*): `register = Memory[offset + base register];`
 - store: CPU to Memory
 > MIPS:
 > - 無 **sbu** 指令($$ \because $$ = **sb**)
@@ -224,17 +224,17 @@ For integer or floating point:
 - shift
 > MIPS:
 > - 無 **sla** 指令
-> - **sll/srl/sra** *register1*, *register2*, *constant*: `register1 = register2 <</>>/\ constant`
->   - **sll/srl**: empty bits filled with **0**
+> - **sll**/**srl**/**sra** *register1*, *register2*, *constant*: `register1 = register2 <</>>/\ constant`
+>   - **sll**/**srl**: empty bits filled with **0**
 >   - **sra**: empty bits filled with **leftest signed bit**
 
 - rotate
 - not/and/or/set/clear
 > MIPS:
-> - **and/or/xor(互斥)** *register1*, *register2*, *register3*: `register1 = register2 &/|/^ register3;`
+> - **and**/**or**/**xor(互斥)** *register1*, *register2*, *register3*: `register1 = register2 &/|/^ register3;`
 > - **nor(not or)** *register1*, *register2*, *register3*: `register1 = ~(register2 | register3);`
-> - **not/clear(set all digits to 0)**: 為**[虛擬指令](#pseudo-instruction)**
-> - **swap**: 也是虛擬指令，可表示成
+> - **not**/**clear(set all digits to 0)**: 為**[虛擬指令](#pseudo-instruction)**
+> - **swap**: 也是虛擬指令，可被轉譯成
 > ```mipsasm
 > xor $s0, $s0, $s1   #    xor $s1, $s0, $s1
 > xor $s1, $s0, $s1   # or xor $s0, $s0, $s1
@@ -265,8 +265,8 @@ From **procedure A** to **procedure A**
 > - **beq** *register1*, *register2*, *label*: `if (register1 == register2) $PC = label;`
 > - **bne** *register1*, *register2*, *label*: `if (register1 != register2) $PC = label;`  
 > $$ \rightarrow $$ 其中 **beq**/**bne** 的 ***label***: 儲存**這條指令所在的記憶體位址**  
-> - **blt/bgt/ble/bge**: 為**[虛擬指令](#pseudo-instruction)**
-> - **slt** *register1*, *register2*, *register3*: `register1 = (register2 < register3) ? 1 : 0;`
+> - **blt**/**bgt**/**ble**/**bge**: 為**[虛擬指令](#pseudo-instruction)**
+> - **slt**/**sltu** *register1*, *register2*, *register3*: `register1 = (register2 < register3) ? 1 : 0;`
 
 #### 基本區塊 (Basic Block)
 一連串**完全沒有任何 jump/branch 目的地和指令**或如果有
@@ -351,14 +351,15 @@ From **procedure A** to **procedure B**
 ### 立即指令 (Immediate Instruction) {#immediate-instruction}
 其中一個**運算元(operator)**為**常數**的指令
 > MIPS: 指令 + `i`
-> - 無 **subi** 指令
+> - **lui(load upper immediate)** *register*, *constant*: `register = constant << pow(2, 16);`
 > - **addi** *register1*, *register2*, *constant*: `register1 = register2 + constant;`
 > > 16 bits $$ \rightarrow $$ 32 bits: empty bits filled with **leftest signed bit**
-> - **andi** *register1*, *register2*, *constant*: `register1 = register2 & constant;`
+> - 無 **subi** 指令
+> - **andi**/**ori** *register1*, *register2*, *constant*: `register1 = register2 &/| constant;`
 > > 16 bits $$ \rightarrow $$ 32 bits: empty bits filled with **0**
-> - **slti** *register1*, *register2*, *constant*: `register1 = (register2 < constant) ? 1 : 0;`
-> - **lui(load upper immediate)**/**ori**: 
-> > $$ ^{ex.} $$ add 0000 0000 0011 1101 0000 1001 0000 0000 to `$s0`
+> - **slti**/**sltiu** *register1*, *register2*, *constant*: `register1 = (register2 < constant) ? 1 : 0;`
+
+> > $$ ^{ex.} $$ How to set `$s0` to $$ \text{0000 0000 0011 1101} $$ $$ \text{0000 1001 0000 0000}_2 $$ ?
 > > ```mipsasm
 > > lui $s0, 61         # $s0 = 0000 0000 0011 1101 0000 0000 0000 0000 now.
 > > ori $s0, $s0, 2304  # $s0 = 0000 0000 0011 1101 0000 1001 0000 0000 now.
@@ -378,3 +379,6 @@ From **procedure A** to **procedure B**
 | `ble $s1, $s2, L`($$ \ge $$) | `slt $t0, $s2, $s1` + `beq $t0, $zero, L` |
 | `bge $s1, $s2, L`($$ \le $$) | `slt $t0, $s1, $s2` + `beq $t0, $zero, L` |
 | `move $t1, $t2` | `add $t1, $t2, $zero` |
+
+## 程序呼叫
+---
