@@ -64,7 +64,7 @@
             "danger": "fa fa-exclamation-triangle"
         },
         "code": {
-            "copyButtons": true
+            "copyButtons": false
         },
         "page-footer-ex": {
             "copyright": "Copyright© **[saberLiou](https://github.com/saberLiou)** all rights reserved.",

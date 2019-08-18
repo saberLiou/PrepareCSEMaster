@@ -250,7 +250,7 @@ $$ \rightarrow $$ **最佳化**: 以最精簡的指令(群)完成當前程式所
 > $$ ^{ex.} $$ 將以下方 **[Loop Statement](#loop-statement)** 和 **[While Loop Statement](#while-loop-statement)** 的 MIPS 指令群說明是否為基本區塊
 
 #### Loop Statement
-```  
+```c
 Loop: 
     g = g + A[i];  
     i = i + j;  
@@ -259,7 +259,7 @@ Loop:
 | A   | g   | h   | i   | j   |  
 |:---:|:---:|:---:|:---:|:---:|  
 | $s5 | $s1 | $s2 | $s3 | $s4 |  
-```
+```mipsasm
 Loop: sll $t1, $s3, 2     # $t1 = 4 * i, 算 address offset of A[]
       add $t1, $t1, $s5   # $t1 = memory address of A[i]
       lw  $t0, 0($t1)     # $t0 = value of A[i] from memory
@@ -272,14 +272,14 @@ Loop: sll $t1, $s3, 2     # $t1 = 4 * i, 算 address offset of A[]
 > $$ \therefore $$ 此群 MIPS 指令即為一**基本區塊**
 
 #### While Loop Statement
-```  
+```c
 while (save[i] == k)
     i = i + j;  
 ```
 | i   | j   | k   | save |
 |:---:|:---:|:---:|:----:|
 | $s3 | $s4 | $s5 | $s6  |
-```
+```mipsasm
 Loop: sll $t1, $s3, 2    # $t1 = 4 * i, 算 address offset of save[]
       add $t1, $t1, $s6  # $t1 = memory address of save[i]
       lw  $t0, 0($t1)    # $t0 = value of save[i] from memory
@@ -288,6 +288,26 @@ Loop: sll $t1, $s3, 2    # $t1 = 4 * i, 算 address offset of save[]
       j   Loop           # goto Loop;
 Exit:
 ```
+> ** X ** 第 `1` 行 `Loop` label 為**第 `6` 行** `j` 指令之 jump 目的地  
+> ** X 第 `7` 行** `Exit` label 為**第 `4` 行** `bne` 指令之 branch 目的地  
+> $$ \therefore $$ 此群 MIPS 指令**不為一基本區塊**，可再由 compiler 細切成三個基本區塊並予以最佳化:  
+> ```mipsasm
+Loop: sll $t1, $s3, 2    # $t1 = 4 * i, 算 address offset of save[]
+      add $t1, $t1, $s6  # $t1 = memory address of save[i]
+      lw  $t0, 0($t1)    # $t0 = value of save[i] from memory
+      bne $t0, $s5, Exit # if (save[i] != k) goto Exit;
+```
+> $$ \checkmark $$ 第 `1` 行 `Loop` label 為第 `4` 行 `bne` 指令之 branch 目的地  
+> $$ \checkmark $$ 第 `4` 行 `bne $t0, $s5, Exit` 為 branch 指令  
+> ```mipsasm
+      add $s3, $s3, $s4  # i = i + j;
+      j   Loop           # goto Loop;
+```
+> $$ \checkmark $$ 第 `2` 行 `j   Loop` 為 jump 指令  
+> ```mipsasm
+    Exit:
+```
+> $$ \checkmark $$ 首行 `Exit` label 為 jump/branch 目的地
 
 ### Flow Control of Inter Program
 From **procedure A** to **procedure B**
