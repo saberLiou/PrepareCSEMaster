@@ -249,7 +249,7 @@ From **procedure A** to **procedure A**
 $$ \rightarrow $$ **最佳化**: 以最精簡的指令(群)完成當前程式所要執行的功能，減少程式碼佔用記憶體空間並加速程式執行
 > $$ ^{ex.} $$ 將以下方 **[Loop Statement](#loop-statement)** 和 **[While Loop Statement](#while-loop-statement)** 的 MIPS 指令群說明是否為基本區塊
 
-#### Loop Statement
+#### Loop Statement {#loop-statement}
 ```c
 Loop: 
     g = g + A[i];  
@@ -271,7 +271,7 @@ Loop: sll $t1, $s3, 2     # $t1 = 4 * i, 算 address offset of A[]
 > $$ \checkmark $$ 第 `6` 行 `bne $s3, $s2, Loop` 為 branch 指令  
 > $$ \therefore $$ 此群 MIPS 指令即為一**基本區塊**
 
-#### While Loop Statement
+#### While Loop Statement {#while-loop-statement}
 ```c
 while (save[i] == k)
     i = i + j;  
@@ -305,7 +305,7 @@ Loop: sll $t1, $s3, 2    # $t1 = 4 * i, 算 address offset of save[]
 ```
 > $$ \checkmark $$ 第 `2` 行 `j   Loop` 為 jump 指令  
 > ```mipsasm
-    Exit:
+Exit:
 ```
 > $$ \checkmark $$ 首行 `Exit` label 為 jump/branch 目的地
 

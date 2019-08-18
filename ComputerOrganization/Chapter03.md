@@ -63,7 +63,7 @@ $$ \rightarrow \Large{\text{CPU Execution Time}} $$ = $$ \Large{\text{\color{red
 > machines run the same program.
 
 ![Measure for CPU Execution Time](../images/ComputerOrganization/Chapter03/cpu_execution_time.png "Measure for CPU Execution Time")
-> 右下角的 $$ MIPS $$ 在**「使用 MIPS 做為效能評估標準的謬誤」**裡會詳細討論
+> 右下角的 $$ MIPS $$ 在**「[使用 MIPS 做為效能評估標準的謬誤](#using-mips-mistakes)」**裡會詳細討論
 
 ### 軟硬體如何影響效能
 
@@ -93,7 +93,7 @@ $$ \rightarrow \Large{\text{CPU Execution Time}} $$ = $$ \Large{\text{\color{red
 
 - \*VLSI Technology $$ \because $$ IC 製程讓零件距離 $$ \downarrow $$ $$ \Rightarrow $$ 傳輸同步信號時間 $$ \downarrow $$
 
-## 使用 MIPS 做為效能評估標準的謬誤
+## 使用 MIPS 做為效能評估標準的謬誤 {#using-mips-mistakes}
 ---
 - **$$ MIPS $$ (Million Instructions Per Second)**
 > 指令的執行率，又稱 **native MIPS**
