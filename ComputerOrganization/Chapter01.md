@@ -247,27 +247,47 @@ From **procedure A** to **procedure A**
 的指令，是 compiler 執行「最佳化」的最基本單位  
 
 $$ \rightarrow $$ **最佳化**: 以最精簡的指令(群)完成當前程式所要執行的功能，減少程式碼佔用記憶體空間並加速程式執行
+> $$ ^{ex.} $$ 將以下方 **[Loop Statement](#loop-statement)** 和 **[While Loop Statement](#while-loop-statement)** 的 MIPS 指令群說明是否為基本區塊
 
-> $$ ^{ex.} $$ **loop statement**:  
-> ```  
-g = g + A[i];  
-i = i + j;  
-if (i != h) goto Loop;  
+#### Loop Statement
+```  
+Loop: 
+    g = g + A[i];  
+    i = i + j;  
+    if (i != h) goto Loop;  
 ```
-> | A   | g   | h   | i   | j   |  
-  |:---:|:---:|:---:|:---:|:---:|  
-  | $s5 | $s1 | $s2 | $s3 | $s4 |  
-> ```
-Loop: sll $t1, $s3, $2    # $t1 = 4 * i, 算 address offset of A[]
-      add $t1, $t1, 5     # $t1 = memory address of A[i]
+| A   | g   | h   | i   | j   |  
+|:---:|:---:|:---:|:---:|:---:|  
+| $s5 | $s1 | $s2 | $s3 | $s4 |  
+```
+Loop: sll $t1, $s3, 2     # $t1 = 4 * i, 算 address offset of A[]
+      add $t1, $t1, $s5   # $t1 = memory address of A[i]
       lw  $t0, 0($t1)     # $t0 = value of A[i] from memory
       add $s1, $s1, $t0   # g = g + A[i];
       add $s3, $s3, $s4   # i = i + j;
       bne $s3, $s2, Loop  # if (i != h) goto Loop;
 ```
-> $$ \checkmark $$ 第一行 `Loop` label 為最後一行 `bne` 指令之 branch 目的地  
-> $$ \checkmark $$ 最後一行 `bne $s3, $s2, Loop` 為 branch 指令  
-> $$ \therefore $$ 此群 MIPS 指令即為一基本區塊
+> $$ \checkmark $$ 第 `1` 行 `Loop` label 為第 `6` 行 `bne` 指令之 branch 目的地  
+> $$ \checkmark $$ 第 `6` 行 `bne $s3, $s2, Loop` 為 branch 指令  
+> $$ \therefore $$ 此群 MIPS 指令即為一**基本區塊**
+
+#### While Loop Statement
+```  
+while (save[i] == k)
+    i = i + j;  
+```
+| i   | j   | k   | save |
+|:---:|:---:|:---:|:----:|
+| $s3 | $s4 | $s5 | $s6  |
+```
+Loop: sll $t1, $s3, 2    # $t1 = 4 * i, 算 address offset of save[]
+      add $t1, $t1, $s6  # $t1 = memory address of save[i]
+      lw  $t0, 0($t1)    # $t0 = value of save[i] from memory
+      bne $t0, $s5, Exit # if (save[i] != k) goto Exit;
+      add $s3, $s3, $s4  # i = i + j;
+      j   Loop           # goto Loop;
+Exit:
+```
 
 ### Flow Control of Inter Program
 From **procedure A** to **procedure B**

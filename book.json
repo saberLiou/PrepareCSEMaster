@@ -22,6 +22,7 @@
         "heading-anchors",
         "hints",
         "katex",
+        "code",
         "localized-footer",
         "page-footer-ex",
         "back-to-top-button",
@@ -61,6 +62,9 @@
         "hints": {
             "info": "fa fa-info-circle",
             "danger": "fa fa-exclamation-triangle"
+        },
+        "code": {
+            "copyButtons": true
         },
         "page-footer-ex": {
             "copyright": "Copyright© **[saberLiou](https://github.com/saberLiou)** all rights reserved.",
