@@ -206,7 +206,7 @@ $$ \rightarrow \Large{\text{Hardware Information}} $$ + $$ \Large{\text{Instruct
 在 **load/store** 指令中，記憶體位址採**基底-位移(base-offset)**表示:
 > $$ ^{ex.} $$ If `$s0` points to `A[0]`, how to load `A[8]`'s value to `$t0`?  
 > ```mipsasm
-> lw $t0, 32($s0) # 32 = 8 x 4 bytes
+> lw $t0, 32($s0) # offset: 32 = 8 x 4 bytes
 > ```
 
 ### Operation of Arithmetic
