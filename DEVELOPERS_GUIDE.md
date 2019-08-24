@@ -1,5 +1,10 @@
 # Developer's Guide
 
+## Installation
+```bash
+$ npm install -g gitbook-cli
+```
+
 ## Developing
 
 ### Writing
