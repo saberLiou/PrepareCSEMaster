@@ -37,6 +37,7 @@
     * [5-6. 特殊類型遞迴關係式](DiscreteMathematics/Chapter05/06.md)
 * [Data Structure](DataStructure/README.md)
   * [01. Basic Concepts](DataStructure/Chapter01.md)
+  * [03. Stack & Queue](DataStructure/Chapter03.md)
 * [Algorithm](Algorithm/README.md)
 * [Operating System](OperatingSystem/README.md)
 * [Computer Organization](ComputerOrganization/README.md)

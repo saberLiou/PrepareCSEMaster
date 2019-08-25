@@ -184,6 +184,9 @@
             "title": "Data Structure",
             "chapter1": {
                 "title": "01. Basic Concepts"
+            },
+            "chapter3": {
+                "title": "03. Stack & Queue"
             }
         },
         "algorithm": {
