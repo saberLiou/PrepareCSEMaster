@@ -1,4 +1,5 @@
 # {{ book.linear_algebra.title }}
+<!-- notoc -->
 
 [{{ book.linear_algebra.chapter0.title }}](Chapter00/README.md)  
 [{{ book.linear_algebra.chapter1.title }}](Chapter01/README.md)  
