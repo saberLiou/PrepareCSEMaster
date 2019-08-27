@@ -15,7 +15,7 @@ Cheatsheet for preparing CSE master examination.
 
 ## Links
 ---
-- [黃子嘉 - 線代離散研究室](https://groups.google.com/group/zjhwang "黃子嘉 - 線代離散研究室")
+- **[黃子嘉 - 線代離散研究室](https://groups.google.com/group/zjhwang "黃子嘉 - 線代離散研究室")**
 
 ## Features
 ---
