@@ -33,6 +33,7 @@ $ npm install -g gitbook-cli
 ### Debugging
 ```bash
 $ gitbook serve ./ docs
+$ open http://localhost:4000
 ```
 to launch a local debugging server in valid ready-to-deploy folder for [production on Github Pages][Github Pages Version].
 

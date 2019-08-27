@@ -13,6 +13,10 @@ Cheatsheet for preparing CSE master examination.
 - #### [Computer Organization 計算機組織](ComputerOrganization/README.md)
 > 「軟體最硬，硬體最軟」- 張凡
 
+## Links
+---
+- [黃子嘉 - 線代離散研究室](https://groups.google.com/group/zjhwang "黃子嘉 - 線代離散研究室")
+
 ## Features
 ---
 - Chained **in-page link** to each title with **right anchor** by **[anchor.js](https://www.bryanbraun.com/anchorjs/)**.
