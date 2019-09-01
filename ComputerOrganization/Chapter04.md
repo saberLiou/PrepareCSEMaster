@@ -1,6 +1,5 @@
 # {{ book.computer_organization.chapter4.title }}
-<!-- notoc -->
+<!-- toc -->
 
-{% hint style='danger' %}
-### Under Construction. 趕工中...
-{% endhint %}
+## 基本零件(Basic Component)
+---

@@ -223,8 +223,8 @@ For integer or floating point:
 ### Operation of Logical
 - shift
 > MIPS:
-> - 無 **sla** 指令
-> - **sll**/**srl**/**sra** *register1*, *register2*, *constant*: `register1 = register2 <</>>/\ constant`
+> - 無 **sla(shift left arithmetic)** 指令
+> - **sll**/**srl**/**sra** *register1*, *register2*, *constant*: `register1 = register2 <</>>// constant`
 >   - **sll**/**srl**: empty bits filled with **0**
 >   - **sra**: empty bits filled with **leftest signed bit**
 
@@ -256,17 +256,18 @@ From **procedure A** to **procedure A**
 - unconditional: **jump**
 > MIPS:
 > - **j** *label*: `$PC = label;`
-> - **jal** *label*: `$ra = $PC + 4; $PC = label;`  
-> $$ \rightarrow $$ 其中 **j**/**jal** 的 ***label***: 儲存**這條指令所在的記憶體位址**  
+> - **jal(jump and link)** *label*: `$ra = $PC + 4; $PC = label;`  
+> $$ \rightarrow $$ 其中 **j**/**jal** 的 ***label***: 儲存**這條指令所在的記憶體位址**的**參考(reference)**  
+> $$ \rightarrow $$ `$ra = $PC + 4;` 請參考**「[程序呼叫](#procedure-call)」**  
 > - **jr** *register*: `$PC = register;`
 
 - conditional: **branch**
 > MIPS:
 > - **beq** *register1*, *register2*, *label*: `if (register1 == register2) $PC = label;`
 > - **bne** *register1*, *register2*, *label*: `if (register1 != register2) $PC = label;`  
-> $$ \rightarrow $$ 其中 **beq**/**bne** 的 ***label***: 儲存**這條指令所在的記憶體位址**  
+> $$ \rightarrow $$ 其中 **beq**/**bne** 的 ***label***: 儲存**這條指令所在的記憶體位址**的**參考(reference)**    
 > - **blt**/**bgt**/**ble**/**bge**: 為**[虛擬指令](#pseudo-instruction)**
-> - **slt**/**sltu** *register1*, *register2*, *register3*: `register1 = (register2 < register3) ? 1 : 0;`
+> - **slt(set if less than)**/**sltu** *register1*, *register2*, *register3*: `register1 = (register2 < register3) ? 1 : 0;`
 
 #### 基本區塊 (Basic Block)
 一連串**完全沒有任何 jump/branch 目的地和指令**或如果有
@@ -380,5 +381,32 @@ From **procedure A** to **procedure B**
 | `bge $s1, $s2, L`($$ \le $$) | `slt $t0, $s1, $s2` + `beq $t0, $zero, L` |
 | `move $t1, $t2` | `add $t1, $t2, $zero` |
 
-## 程序呼叫
+## 程序呼叫 {#procedure-call}
 ---
+1. 將引數放在被呼叫程序(Callee)可以存取的地方
+> set arguments(`$a0` ~ `$a3`)
+2. 將控制權轉移給被呼叫程序
+> `jal Callee`
+3. 取得被呼叫程序所需的儲存資源，如果呼叫程序(Caller)在被呼叫程序結束後仍需要使用
+> save saved registers(`$s0` ~ `$s7`)  
+> and temporary registers(`$t0` ~ `$t9`) into Memory
+
+  3.1 取得**引數**與**程序返回位址**，如果被呼叫程序亦為**呼叫本身或其他程序的呼叫程序**
+  > save arguments(`$a0` ~ `$a3`) and return address(`$ra`) into Memory
+4. 執行被呼叫程序所指定工作
+> execute specified jobs
+
+  - 還原**引數**與**程序返回位址**，如果被呼叫程序亦為**呼叫本身或其他程序的呼叫程序**
+  > restore arguments(`$a0` ~ `$a3`) and return address(`$ra`) from Memory
+5. 將所得結果放在呼叫程序可以存取得到的地方
+> set return values(`$v0` ~ `$v1`)
+
+  - 還原被呼叫程序所需的儲存資源
+  > restore saved registers(`$s0` ~ `$s7`)  
+  > and temporary registers(`$t0` ~ `$t9`) from Memory
+6. 將控制權交回給呼叫程序
+> `jr $ra`
+
+## MIPS 定址模式
+---
+**定址模式(addressing mode)**: 指令**取得運算元**或**計算目的位址**的方法
