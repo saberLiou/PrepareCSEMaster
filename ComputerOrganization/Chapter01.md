@@ -38,8 +38,8 @@ $$ \rightarrow \Large{\text{Hardware Information}} $$ + $$ \Large{\text{Instruct
 - 學習低階組合語言時所必須了解的**硬體資訊(Hardware Information)**應包含以下項目:
   - **[記憶體(Memory)](#memory)**
   - **[暫存器(Register)](#register)**
-  - **指令格式(Instruction Format)**
-  - **定址模式(Addressing Mode)** 
+  - **[指令格式(Instruction Format)](#mips-instruction-format)**
+  - **[定址模式(Addressing Mode)](#mips-addressing-mode)** 
 - 計算機基礎架構(Basic Computer Structure)五個單元:
   - 控制單元(Control Unit)
   - 資料路徑(Datapath): ALU + Registers, 真正處理資料和執行指令之電路
@@ -110,6 +110,7 @@ $$ \rightarrow \Large{\text{Hardware Information}} $$ + $$ \Large{\text{Instruct
 > - \*Temporaries & \*More Temporaries: 存放運算過程中之結果
 > - \*Constant of Zero: Read only.
 
+#### Registers Table {#registers-table}
 ![MIPS General Purpose Registers](../images/ComputerOrganization/Chapter01/mips_general_purpose_registers.jpg "MIPS General Purpose Registers")
 
 - **溢出暫存器(splling register)**: 將不常用的變數從暫存器放入記憶體
@@ -462,6 +463,90 @@ Recursive: addi $a0, $a0, -1  # n -= 1;
            jr   $ra           # Return to Caller
 ```
 
-## MIPS 定址模式
+## MIPS 指令格式  {#mips-instruction-format}
+---
+- 算術及邏輯指令: **R-type**
+> 3 registers
+
+| op | rs | rt | rd | shamt | funct |
+|:--:|:--:|:--:|:--:|:-----:|:-----:|
+| 6  | 5  | 5  | 5  | 5     | 6     |
+> - op: **OPcode**(operation code)
+> - rs, rt: source
+> - rd: destination
+> - shamt: shift amount
+> - funct: **Function Code**
+
+- 載入, 儲存, 分支與立即版本之算數及邏輯指令: **I-type**
+> 2 registers + 16-bits constant/address
+
+| op | rs | rt | address/immediate |
+|:--:|:--:|:--:|:-----------------:|
+| 6  | 5  | 5  | 16                |
+> - rs: source
+> - **rt**: **source**/**destination**
+
+- 跳躍指令: **J-type**
+> 26-bits address
+
+| op | address |
+|:--:|:-------:|
+| 6  | 26      |
+
+### 指令組譯三步驟
+Assembly $$ \rightarrow $$ Machine Language:
+1. 判斷該指令為 **R-type**, **I-type** 或 **J-type**  
+2. 畫出對應的指令格式  
+3. 查 **[OPcode Table](#opcode-table)**, **[Function Code Table](#function-code-table)** 及 **[Registers Table](#registers-table)**  
+
+#### OPcode Table {#opcode-table}
+![OPcode Table](../images/ComputerOrganization/Chapter01/opcode_table.jpg "OPcode Table")
+
+#### Function Code Table  {#function-code-table}
+![Function Code Table](../images/ComputerOrganization/Chapter01/function_code_table.jpg "Function Code Table")
+
+### 指令反組譯三步驟
+Machine Language $$ \rightarrow $$ Assembly:
+1. 根據最左邊 6 bits 至 **[OPcode Table](#opcode-table)** 查詢為何種指令  
+2. 將 32 bits 依其所對應到的指令格式切開
+3. 查 **[Function Code Table](#function-code-table)** 及 **[Registers Table](#registers-table)**
+
+### Branch 指令的 PC 相對定址法 (PC-relative Addressing)
+branch 目的位址 = PC + branch 位移
+
+$$ \rightarrow $$ 16-bits address: 以 **branch 所在的下一個指令**為基準點的 $$ \pm $$ 距離跳躍目的地的**指令(字組)個數**
+> 跳躍範圍最多可達 $$ -2^{15} $$ ~ $$ 2^{15} - 1 $$ 個 words($$ -2^{15} $$ ~ $$ 2^{15} - 1 $$ 個 bits)
+
+#### 遠距離的分支 (Long Distance Branch)
+當跳躍目的地的距離 > 16-bits address 所能表示時(> $$ 2^{15} $$ 個 words)
+> $$ ^{ex.} $$
+> ```mipsasm
+>        beq/bne $s0, $s1, Label
+>        ...                      # > 2 的 15 次個 words
+> Label:
+> ```
+
+此時 assembler 會使用一個無條件的 jump 指令，設定其目的地為原 branch 之目的地，並將原 branch 指令改成相反條件的對應 branch 指令($$ ^{ex.} $$ `beq` $$ \leftrightarrow $$ `bne`)，其目的地設置在無條件的 jump 指令的下方  
+> $$ \Downarrow $$
+> ```mipsasm
+>        bne/beq $s0, $s1, Label2
+>        j Label                 
+> Label2:
+>        ...
+> Label:
+> ```
+
+### Jump 指令的定址
+- $$ \because $$ 作業系統在管理記憶體時會將記憶體切割成 **16 個大區塊**，任何一程式只能侷限在一區塊內  
+$$ \therefore $$ 區塊號碼(相同區塊內的任何指令其**最左邊 4 bit**)相同，不用紀錄
+- $$ \because $$ 記憶體**4 的整數倍數的對齊**  
+$$ \therefore $$ jump 目的地的指令其**最右邊 4 bit**不用紀錄
+
+$$ \rightarrow $$ 32 bits - 4 bits - 2 bits = **26-bits** address
+
+### MIPS Machine Language Translation Example
+![MIPS Machine Language Translation Example](../images/ComputerOrganization/Chapter01/mips_machine_language_translation.jpg "MIPS Machine Language Translation Example")
+
+## MIPS 定址模式  {#mips-addressing-mode}
 ---
 **定址模式(addressing mode)**: 指令**取得運算元**或**計算目的位址**的方法
