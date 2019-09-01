@@ -407,6 +407,61 @@ From **procedure A** to **procedure B**
 6. 將控制權交回給呼叫程序
 > `jr $ra`
 
+![Procedure Call](../images/ComputerOrganization/Chapter01/procedure_call.jpg "Procedure Call")
+
+### Recursive Factorial by MIPS
+Wriiten in **C**:
+```c
+int factorial(int n) {
+    if (n < 1) return 1;
+    else return n * factorial(n - 1);
+}
+```
+Written in **MIPS**:
+```mipsasm
+factorial: addi $sp, $sp, -8          # Push 2 empty items into Stack in Memory
+           sw   $ra, 4($sp)           # Save return address to one item
+           sw   $a0, 0($sp)           # Save argument n to another item
+           slti $t0, $a0, 1           # temp = (n < 1) ? 1 : 0;
+           beq  $t0, $zero, Recursive # if (temp == 0) goto Recur;
+           addi $v0, $zero, 1         # return_value = 1;
+           addi $sp, $sp, 8           # Pop 2 items off Stack in Memory
+           jr   $ra                   # Return to Caller
+Recursive: addi $a0, $a0, -1  # n -= 1;
+           jal  factorial     # factorial(n - 1);
+           lw   $a0, 0($sp)   # Return from jal: restore argument n
+           lw   $ra, 4($sp)   # Restore return address
+           addi $sp, $sp, 8   # Pop 2 items off Stack in Memory
+           mul  $v0, $a0, $v0 # return_value = n * factorial(n - 1);
+           jr   $ra           # Return to Caller
+```
+
+### Recursive Sum by MIPS
+Wriiten in **C**:
+```c
+int sum(int n) {
+    if (n == 0) return 0;
+    else return n + sum(n - 1);
+}
+```
+Written in **MIPS**:
+```mipsasm
+sum: addi $sp, $sp, -8          # Push 2 empty items into Stack in Memory
+     sw   $ra, 4($sp)           # Save return address to one item
+     sw   $a0, 0($sp)           # Save argument n to another item
+     bne  $a0, $zero, Recursive # if (n != 0) goto Recursive;
+     addi $v0, $zero, 0         # return_value = 0;
+     addi $sp, $sp, 8           # Pop 2 items off Stack in Memory
+     jr   $ra                   # Return to Caller
+Recursive: addi $a0, $a0, -1  # n -= 1;
+           jal  sum           # sum(n - 1);
+           lw   $a0, 0($sp)   # Return from jal: restore argument n
+           lw   $ra, 4($sp)   # Restore return address
+           addi $sp, $sp, 8   # Pop 2 items off Stack in Memory
+           add  $v0, $a0, $v0 # return_value = n + sum(n - 1);
+           jr   $ra           # Return to Caller
+```
+
 ## MIPS 定址模式
 ---
 **定址模式(addressing mode)**: 指令**取得運算元**或**計算目的位址**的方法
