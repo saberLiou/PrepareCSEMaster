@@ -494,7 +494,7 @@ Recursive: addi $a0, $a0, -1  # n -= 1;
 | 6  | 26      |
 
 ### 指令組譯三步驟
-Assembly $$ \rightarrow $$ Machine Language:
+Assembly $$ \rightarrow $$ Machine Language:  
 1. 判斷該指令為 **R-type**, **I-type** 或 **J-type**  
 2. 畫出對應的指令格式  
 3. 查 **[OPcode Table](#opcode-table)**, **[Function Code Table](#function-code-table)** 及 **[Registers Table](#registers-table)**  
@@ -506,16 +506,16 @@ Assembly $$ \rightarrow $$ Machine Language:
 ![Function Code Table](../images/ComputerOrganization/Chapter01/function_code_table.jpg "Function Code Table")
 
 ### 指令反組譯三步驟
-Machine Language $$ \rightarrow $$ Assembly:
+Machine Language $$ \rightarrow $$ Assembly:  
 1. 根據最左邊 6 bits 至 **[OPcode Table](#opcode-table)** 查詢為何種指令  
-2. 將 32 bits 依其所對應到的指令格式切開
-3. 查 **[Function Code Table](#function-code-table)** 及 **[Registers Table](#registers-table)**
+2. 將 32 bits 依其所對應到的指令格式切開  
+3. 查 **[Function Code Table](#function-code-table)** 及 **[Registers Table](#registers-table)**  
 
 ### Branch 指令的 PC 相對定址法 (PC-relative Addressing)
 branch 目的位址 = PC + branch 位移
 
 $$ \rightarrow $$ 16-bits address: 以 **branch 所在的下一個指令**為基準點的 $$ \pm $$ 距離跳躍目的地的**指令(字組)個數**
-> 跳躍範圍最多可達 $$ -2^{15} $$ ~ $$ 2^{15} - 1 $$ 個 words($$ -2^{15} $$ ~ $$ 2^{15} - 1 $$ 個 bits)
+> 跳躍範圍最多可達 $$ -2^{15} $$ ~ $$ 2^{15} - 1 $$ 個 words($$ -2^{17} $$ ~ $$ 2^{17} - 1 $$ 個 bits)
 
 #### 遠距離的分支 (Long Distance Branch)
 當跳躍目的地的距離 > 16-bits address 所能表示時(> $$ 2^{15} $$ 個 words)
@@ -549,4 +549,9 @@ $$ \rightarrow $$ 32 bits - 4 bits - 2 bits = **26-bits** address
 
 ## MIPS 定址模式  {#mips-addressing-mode}
 ---
-**定址模式(addressing mode)**: 指令**取得運算元**或**計算目的位址**的方法
+**定址模式(addressing mode)**: 指令**取得運算元**或**計算目的位址**的方法  
+1. **立即定址模式(Immediate addressing)**  
+2. **暫存器定址模式(Register addressing)**  
+3. **基底或位移定址模式(Base or Displacement addressing)**  
+4. **程式計數器相對位址定址模式(PC-relative addressing)**  
+5. **虛擬直接定址模式(Pseudodirect addressing)**
