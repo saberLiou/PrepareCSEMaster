@@ -2,11 +2,6 @@
     display: none !important;
 }
 
-/* plugin: theme-vuejs */
-#carbonads {
-    display: none !important;
-}
-
 /* plugin: etoc */
 .toc li ul > li:before {
     content: "-";

@@ -14,7 +14,7 @@
         }
     },
     "plugins": [
-        "theme-vuejs",
+        "theme-vuejs-2",
         "toggle-chapters",
         "splitter",
         "-sharing",

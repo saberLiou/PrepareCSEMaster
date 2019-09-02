@@ -7,7 +7,6 @@ body {
   font-size: 15px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #34495e;
   background-color: #fff;
   margin: 0;
 }
@@ -16,19 +15,24 @@ body {
 .book-langs-index {
   font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
 }
+
 .book-langs-index .inner .languages {
-  padding: 20px 0px;
+  padding: 20px 0;
 }
+
 .book-langs-index .inner .languages li {
   float: none;
 }
+
 li a {
   color: #42b983;
   font-weight: 600;
 }
 
 /* set correct fonts on sidebar and main page */
-.book .book-body .page-wrapper .page-inner section.normal, .book-summary { font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif; }
+.book .book-body .page-wrapper .page-inner section.normal, .book-summary {
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+}
 
 /* sidebar */
 .book-summary ul.summary li a,
@@ -36,16 +40,24 @@ li a {
   color: #7f8c8d;
   font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
 }
+
 .book .book-summary ul.summary li span {
   opacity: 0.6;
   cursor: not-allowed;
 }
-.book-summary ul.summary li.active>a {
+
+.book-summary ul.summary li.active > a {
   color: #42b983;
   font-weight: 600;
 }
-#book-search-input { background-color: #fafafa; }
-.book-summary { background-color: #fff; }
+
+#book-search-input {
+  background-color: #fafafa;
+}
+
+.book-summary {
+  background-color: #fff;
+}
 
 /* markdown content found on pages */
 .markdown-section h1,
@@ -56,15 +68,18 @@ li a {
   font-weight: 600;
   color: #2c3e50;
 }
+
 .markdown-section a {
   color: #42b983;
   font-weight: 600;
 }
+
 .markdown-section p,
 .markdown-section ul,
 .markdown-section ol {
   word-spacing: 0.05em;
 }
+
 .markdown-section em {
   color: #7f8c8d;
 }
@@ -81,6 +96,7 @@ li a {
   -moz-osx-font-smoothing: initial;
   background-color: #f8f8f8;
 }
+
 code span.css,
 code span.javascript,
 code span.html,
@@ -88,10 +104,12 @@ span[class^="hljs-"] {
   -webkit-font-smoothing: initial;
   -moz-osx-font-smoothing: initial;
 }
-.markdown-section pre>code {
+
+.markdown-section pre > code {
   font-size: 0.8em;
   display: block;
 }
+
 .markdown-section code:after, .markdown-section code:before {
   content: none;
   letter-spacing: 0.05em;
@@ -104,6 +122,7 @@ code, pre {
   -webkit-font-smoothing: initial;
   -moz-osx-font-smoothing: initial;
 }
+
 code {
   color: #e96900;
   padding: 3px 5px;
@@ -117,7 +136,11 @@ code .token {
   -webkit-font-smoothing: initial;
   -moz-osx-font-smoothing: initial;
 }
-pre code { position: relative; }
+
+pre code {
+  position: relative;
+}
+
 pre code.lang-html:after,
 pre code.lang-js:after,
 pre code.lang-bash:after,
@@ -133,24 +156,31 @@ pre code.lang-css:after {
   height: 15px;
   font-weight: 600;
 }
+
 pre code.lang-html:after {
   content: 'HTML';
 }
+
 pre code.lang-js:after {
   content: 'JS';
 }
+
 pre code.lang-bash:after {
   content: 'Shell';
 }
+
 pre code.lang-css:after {
   content: 'CSS';
 }
+
 .content img {
   max-width: 100%;
 }
+
 .content span.light {
   color: #7f8c8d;
 }
+
 .content span.info {
   font-size: 0.85em;
   display: inline-block;
@@ -158,45 +188,55 @@ pre code.lang-css:after {
   width: 280px;
   margin-left: 20px;
 }
+
 .markdown-section h1 {
   margin: 0 0 1em;
 }
+
 .markdown-section h2 {
   margin: 45px 0 0.8em;
   padding-bottom: 0.7em;
   border-bottom: 1px solid #ddd;
 }
+
 .markdown-section h3 {
   margin: 52px 0 1.2em;
 }
+
 .markdown-section figure,
 .markdown-section p,
 .markdown-section ul,
 .markdown-section ol {
   margin: 1.2em 0;
 }
+
 .markdown-section p,
 .markdown-section ul,
 .markdown-section ol {
   line-height: 1.6em;
 }
+
 .markdown-section ul,
 .markdown-section ol {
   padding-left: 1.5em;
 }
+
 .markdown-section a {
   color: #42b983;
   font-weight: 600;
 }
+
 .markdown-section blockquote {
   margin: 2em 0;
   padding-left: 20px;
   border-left: 4px solid #42b983;
 }
+
 .markdown-section blockquote p {
   font-weight: 600;
   margin-left: 0;
 }
+
 .markdown-section iframe {
   margin: 1em 0;
 }
@@ -205,15 +245,16 @@ pre code.lang-css:after {
 img {
   border: none;
 }
+
 .highlight {
   overflow-x: auto;
   position: relative;
-  padding: 0;
   background-color: #f8f8f8;
   padding: 0.8em 0.8em 0.4em;
   line-height: 1.1em;
   border-radius: 2px;
 }
+
 .highlight table,
 .highlight tr,
 .highlight td {
@@ -222,6 +263,7 @@ img {
   padding: 0;
   margin: 0;
 }
+
 .highlight .gutter {
   width: 1.5em;
 }
@@ -232,60 +274,18 @@ img {
   margin: 15px;
   font-size: 13px;
 }
+
 #carbonads .carbon-img {
   float: left;
   margin-right: 10px;
 }
+
 #carbonads .carbon-text {
   color: #444;
 }
+
 #carbonads .carbon-poweredby {
   color: #999;
   display: block;
   margin-top: 5px;
-}
-
-.bsa-cpc {
-  font-size: .9em;
-  background-color: #f8f8f8;
-  max-width: 770px;
-  margin: 0px auto;
-}
-.bsa-cpc a._default_ {
-  text-align: left;
-  display: block;
-  padding: 10px 15px 12px;
-  margin-bottom: 20px;
-  color: #666;
-  font-weight: 400;
-  line-height: 18px;
-}
-.bsa-cpc a._default_ .default-image,
-.bsa-cpc a._default_ .default-title,
-.bsa-cpc a._default_ .default-description {
-  display: inline;
-  vertical-align: middle;
-  margin-right: 6px;
-}
-.bsa-cpc a._default_ .default-image img {
-  height: 20px;
-  border-radius: 3px;
-  vertical-align: middle;
-  position: relative;
-  top: -1px;
-}
-.bsa-cpc a._default_ .default-title {
-  font-weight: 600;
-}
-.bsa-cpc a._default_ .default-description:after {
-  font-size: 0.85em;
-  content: "Sponsored";
-  color: #1C90F3;
-  border: 1px solid #1C90F3;
-  border-radius: 3px;
-  padding: 0 4px 1px;
-  margin-left: 6px;
-}
-.bsa-cpc .default-ad {
-  display: none;
 }
