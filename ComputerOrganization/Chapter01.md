@@ -457,7 +457,9 @@ Recursive: addi $a0, $a0, -1  # n -= 1;
 ```
 
 ## MIPS 指令格式  {#mips-instruction-format}
-- 算術及邏輯指令: **R-type**
+
+### R-type {#r-type}
+**算術及邏輯**指令
 > 3 registers
 
 | op | rs | rt | rd | shamt | funct |
@@ -469,7 +471,8 @@ Recursive: addi $a0, $a0, -1  # n -= 1;
 > - shamt: shift amount
 > - funct: **Function Code**
 
-- 載入, 儲存, 分支與立即版本之算數及邏輯指令: **I-type**
+### I-type {#i-type}
+**載入**, **儲存**, **分支**與**立即版本之算數及邏輯**指令
 > 2 registers + 16-bits constant/address
 
 | op | rs | rt | address/immediate |
@@ -478,7 +481,8 @@ Recursive: addi $a0, $a0, -1  # n -= 1;
 > - rs: source
 > - **rt**: **source**/**destination**
 
-- 跳躍指令: **J-type**
+### J-type {#j-type}
+**跳躍**指令:
 > 26-bits address
 
 | op | address |
@@ -503,10 +507,38 @@ Machine Language $$ \rightarrow $$ Assembly:
 2. 將 32 bits 依其所對應到的指令格式切開  
 3. 查 **[Function Code Table](#function-code-table)** 及 **[Registers Table](#registers-table)**  
 
-### Branch 指令的 PC 相對定址法 (PC-relative Addressing)
-branch 目的位址 = PC + branch 位移
+### MIPS Machine Language Translation Example
+![MIPS Machine Language Translation Example](../images/ComputerOrganization/Chapter01/mips_machine_language_translation.jpg "MIPS Machine Language Translation Example")
 
-$$ \rightarrow $$ 16-bits address: 以 **branch 所在的下一個指令**為基準點的 $$ \pm $$ 距離跳躍目的地的**指令(字組)個數**
+## MIPS 定址模式  {#mips-addressing-mode}
+**定址模式(addressing mode)**: 指令**取得運算元**或**計算目的位址**的方法，考型:
+- 名詞解釋
+- 列舉
+- 指令分類
+
+### 暫存器定址模式(Register Addressing)
+**運算元**即為**暫存器**
+> The operand is a register.  
+> $$ ^{ex.} $$ `add`, `sub`, `and`, `or`, ...
+> - **`jr` 屬於此模式**
+
+### 立即定址模式(Immediate Addressing)
+**運算元**即為包含在**指令中的 16-bits 常數**
+> The operand is a constant within the instruction itself.  
+> $$ ^{ex.} $$ `addi`, `andi`, `ori`, ...
+> - **`lui` 屬於此模式**
+
+### 基底或位移定址模式(Base or Displacement Addressing)
+**運算元**在記憶體中，而其記憶體位置的計算方式為將**基底暫存器的內容**加上**指令中 16-bits 常數**
+> The operand is at the memory location whose address is the sum of a register and a constant within the instruction.  
+> $$ ^{ex.} $$ `lw`, `sw`, `lb`, `sb`,...
+
+### 程式計數器相對位址定址模式(PC-relative Addressing)
+**目的位址**為**程式計數器(`$PC`)的內容**加上**指令中 16-bits 常數(位移量)**
+> The address is the sum of the PC and a constant within the instruction.  
+> $$ ^{ex.} $$ `beq`, `bne`, ...
+
+$$ \rightarrow $$ **16-bits 常數(位移量)**: 以 **branch 所在的下一個指令**為基準點的 $$ \pm $$ 距離跳躍目的地的**指令(字組)個數**
 > 跳躍範圍最多可達 $$ -2^{15} $$ ~ $$ 2^{15} - 1 $$ 個 words($$ -2^{17} $$ ~ $$ 2^{17} - 1 $$ 個 bits)
 
 #### 遠距離的分支 (Long Distance Branch)
@@ -528,21 +560,14 @@ $$ \rightarrow $$ 16-bits address: 以 **branch 所在的下一個指令**為基
 > Label:
 > ```
 
-### Jump 指令的定址
+### 虛擬直接定址模式(Pseudodirect Addressing)
+跳躍的**目的位址**為**指令中的 26-bits 常數**與**程式計數器高位元(leftest 4 bits)**之結合
+> The jump address is the 26 bits of the instruction concatenated with the upper bits of the PC.  
+> $$ ^{ex.} $$ `j`, `jal`, ...
+
 - $$ \because $$ 作業系統在管理記憶體時會將記憶體切割成 **16 個大區塊**，任何一程式只能侷限在一區塊內  
 $$ \therefore $$ 區塊號碼(相同區塊內的任何指令其**最左邊 4 bit**)相同，不用紀錄
 - $$ \because $$ 記憶體**4 的整數倍數的對齊**  
 $$ \therefore $$ jump 目的地的指令其**最右邊 4 bit**不用紀錄
 
 $$ \rightarrow $$ 32 bits - 4 bits - 2 bits = **26-bits** address
-
-### MIPS Machine Language Translation Example
-![MIPS Machine Language Translation Example](../images/ComputerOrganization/Chapter01/mips_machine_language_translation.jpg "MIPS Machine Language Translation Example")
-
-## MIPS 定址模式  {#mips-addressing-mode}
-**定址模式(addressing mode)**: 指令**取得運算元**或**計算目的位址**的方法  
-1. **立即定址模式(Immediate addressing)**  
-2. **暫存器定址模式(Register addressing)**  
-3. **基底或位移定址模式(Base or Displacement addressing)**  
-4. **程式計數器相對位址定址模式(PC-relative addressing)**  
-5. **虛擬直接定址模式(Pseudodirect addressing)**

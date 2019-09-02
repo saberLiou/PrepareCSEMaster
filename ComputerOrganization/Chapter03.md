@@ -49,16 +49,17 @@
 
 $$ \rightarrow \Large{\text{CPU Execution Time}} $$ = $$ \Large{\text{\color{red}{IC}}} $$ $$ \times $$ $$ \Large{\text{\color{green}{CPI}}} $$ $$ \times $$ $$ \Large{\text{\color{blue}{clock cycle time}}} $$
 - **CPU clock cycles**: $$ \text{\color{red}{IC}} \times \text{\color{green}{CPI}} $$
-> programs run on the same machine.
+> **programs run on the same machine.**
 
   - 在一個程式內，執行**不同指令**所需的時脈週期數不一定相同時:  
     **CPU clock cycles = $$ \displaystyle\sum_{i=1}^n $$($$ C_i \times CPI_i $$) $$ \Rightarrow $$ $$ \text{\color{green}{CPI}} $$ = $$ \displaystyle\sum_{i=1}^n $$($$ Frequency_i \times CPI_i $$)**
     > - $$ n $$: 指令類別個數
     > - $$ C_i $$: 指令類別 $$ i $$ 所使用之指令個數
     > - $$ CPI_i $$: 指令類別 $$ i $$ 之 CPI
-    > - $$ Frequency_i $$: $$ \dfrac{C_i}{\text{\color{red}{IC}}} $$ 
+    > - $$ Frequency_i $$: $$ \dfrac{C_i}{\text{\color{red}{IC}}} $$
+
 - **Instruction time**: $$ \text{\color{green}{CPI}} \times \text{\color{blue}{clock cycle time}} $$
-> machines run the same program.
+> **machines run the same program.**
 
 ![Measure for CPU Execution Time](../images/ComputerOrganization/Chapter03/cpu_execution_time.png "Measure for CPU Execution Time")
 > 右下角的 $$ MIPS $$ 在**「[使用 MIPS 做為效能評估標準的謬誤](#using-mips-mistakes)」**裡會詳細討論
