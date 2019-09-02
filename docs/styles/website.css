@@ -12,5 +12,13 @@
     color: #AAAAAA;
 }
 .anchorjs-link:hover {
-    color: #FF5231;
+    color: #42b983;
+}
+
+/* plugin: back-to-top-button */
+.back-to-top {
+    background: rgba(66, 185, 131, 0.5);
+}
+.back-to-top:hover {
+    background: rgba(66, 185, 131, 0.9);
 }
