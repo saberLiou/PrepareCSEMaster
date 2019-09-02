@@ -2,7 +2,6 @@
 <!-- toc -->
 
 ## 基本概念
----
 - 計算機的**命令(commands)**:
   - **低階**語言: **指令(instructions)**，為 CPU 可執行的最基本運算
   - **高階**語言: **敘述(statements)**，可由一或多條指令所構成
@@ -22,18 +21,15 @@ Prior to the early 1980's, machines were built with more and more complex instru
 > 3. **Pipeline** easier: **RISC > CISC** instructions.
 
 ## MIPS (Microprocessor without Interlocked Pipe Stages)
----
 - 課本使用: MIPS **R2000**
 - **字組(word)**: ? bits(字組大小)的CPU一次可以處理的資料量，其一般目的暫存器(General Purpose Registers, GPR)與算術邏輯運算單元(Arithmetic Logic Unit, ALU)亦為 ? bits
 
 ## 內儲式程式概念 (Stored-Program Computer or Von Neuman Machine)
----
 - 兩個主要建構原則:
   - **指令被表示成像數字一般的形式**，使程式能以二進制檔案的方式散佈，因此相容的指令集所造成的計算機便可共用一些現成的軟體
   - **要被執行的程式一定得先放置於記憶體中，像數字一般的被存取**
   
 ## 指令集架構 (Instruction Set Architecture) {#instruction-set-architecture}
----
 $$ \rightarrow \Large{\text{Hardware Information}} $$ + $$ \Large{\text{Instruction Set}} $$
 - 學習低階組合語言時所必須了解的**硬體資訊(Hardware Information)**應包含以下項目:
   - **[記憶體(Memory)](#memory)**
@@ -140,7 +136,6 @@ $$ \rightarrow \Large{\text{Hardware Information}} $$ + $$ \Large{\text{Instruct
 - Reserved: for I/O Devices.
 
 ## 程式之轉譯與執行
----
 ### 高階語言步驟
 1. 高階語言(C) $$ \rightarrow $$ **compiler 編譯** $$ \rightarrow $$ 組合語言(Assembly)
 > 組合語言: `.a`(UNIX)/`.ASM`(MS-DOS)
@@ -190,7 +185,6 @@ $$ \rightarrow \Large{\text{Hardware Information}} $$ + $$ \Large{\text{Instruct
 > - Interpretation **優點: portable, machine independent** $$ \leftrightarrow $$ **缺點: lower performance**
 
 ## 指令類別
----
 ### Data Movement (Data Transfer)
 - load: Memory to CPU
 > MIPS:
@@ -383,7 +377,6 @@ From **procedure A** to **procedure B**
 | `move $t1, $t2` | `add $t1, $t2, $zero` |
 
 ## 程序呼叫 {#procedure-call}
----
 1. 將引數放在被呼叫程序(Callee)可以存取的地方
 > set arguments(`$a0` ~ `$a3`)
 2. 將控制權轉移給被呼叫程序
@@ -464,7 +457,6 @@ Recursive: addi $a0, $a0, -1  # n -= 1;
 ```
 
 ## MIPS 指令格式  {#mips-instruction-format}
----
 - 算術及邏輯指令: **R-type**
 > 3 registers
 
@@ -548,7 +540,6 @@ $$ \rightarrow $$ 32 bits - 4 bits - 2 bits = **26-bits** address
 ![MIPS Machine Language Translation Example](../images/ComputerOrganization/Chapter01/mips_machine_language_translation.jpg "MIPS Machine Language Translation Example")
 
 ## MIPS 定址模式  {#mips-addressing-mode}
----
 **定址模式(addressing mode)**: 指令**取得運算元**或**計算目的位址**的方法  
 1. **立即定址模式(Immediate addressing)**  
 2. **暫存器定址模式(Register addressing)**  

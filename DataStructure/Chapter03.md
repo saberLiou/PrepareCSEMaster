@@ -2,7 +2,7 @@
 <!-- toc -->
 
 ## Stack 的定義, 製作與應用
----
+
 ### Define Stack
 是一個具有**後進先出**(Last In First Out, **LIFO**)性質之有序串列，其中
 - 插入元素: **push**

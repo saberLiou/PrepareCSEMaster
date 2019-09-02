@@ -2,7 +2,6 @@
 <!-- toc -->
 
 ## 效能 (Performance) 的定義
----
 - 兩種衡量計算機效能的標準:
   - **反應時間(respone time)**:
     - 工作從開始到結束所花的時間，又稱**執行時間(execution time)**
@@ -30,7 +29,6 @@
     > - **relative: CPU clock**
 
 ## 影響 CPU 效能的因素
----
 
 ### 以時脈週期來量測 CPU Execution Time
 - 時脈(clock): computer 協調硬體動作的**同步信號**  
@@ -94,7 +92,6 @@ $$ \rightarrow \Large{\text{CPU Execution Time}} $$ = $$ \Large{\text{\color{red
 - \*VLSI Technology $$ \because $$ IC 製程讓零件距離 $$ \downarrow $$ $$ \Rightarrow $$ 傳輸同步信號時間 $$ \downarrow $$
 
 ## 使用 MIPS 做為效能評估標準的謬誤 {#using-mips-mistakes}
----
 - **$$ MIPS $$ (Million Instructions Per Second)**
 > 指令的執行率，又稱 **native MIPS**
 
@@ -111,7 +108,6 @@ $$ MIPS $$ = $$ \dfrac{\text{Instruction rate}}{10^6} $$ = $$ \dfrac{\text{IC}}{
   - $$ MIPS $$ 甚至可能會與 Performance 成反比
 
 ## Amdahl's Law
----
 用來計算當一部機器**改善其中一部份後的執行時間**:  
 
 $$ \mathit{\text{Execution Time}} \bold{\text{ after}} $$ = $$ \dfrac{\bold{\text{affected }} \mathit{\text{Execution Time}}}{\bold{\text{improve rate}}} $$ + $$ \bold{\text{unaffected }} \mathit{\text{Execution Time}} $$
@@ -134,7 +130,6 @@ $$ \because $$ **改善效率**與**該部分所佔全部時間的比例**有關
 $$ \therefore $$ 一個程式只要改善較常出現的部分，就會比去對極少出現的部分做最佳化還來得有效 
 
 ## 效能總評
----
 ### 算數平均 (Arithmetic Mean, AM)
 $$ AM $$ = $$ \dfrac{1}{n} \displaystyle\sum_{i=1}^n Time_i $$
 > - $$ n $$: 工作負載(workload)中的程式數量
@@ -196,7 +191,6 @@ $$ \rightarrow $$ 適用條件: **使用 $$ SPECratio $$ 無法準確評估數�
 > $$ \Rightarrow \because $$ $$ \dfrac{GM(X_i)}{GM(Y_i)} $$ = $$ GM(\dfrac{X_i}{Y_i}) $$ $$ \therefore $$ **先做 $$ GM $$ 再正規化 = 先正規化再做 $$ GM $$**，然而違背效能測量的基本原則: **只能知道時間比值，卻無法預測執行時間**
 
 ## 效能評估程式 (Benchmark)
----
 **SPEC(System Performance Evaluation Coporation)**:
 - **SPEC CPU2000**: 評估**處理器**
   - CINT2000: 12整數程式

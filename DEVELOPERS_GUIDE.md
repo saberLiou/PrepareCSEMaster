@@ -27,7 +27,7 @@ $ npm install -g gitbook-cli
   > must be written by **katex syntax** as  
   > $$ ax^2 $$ + $$ bx $$ + $$ c $$ = $$ d $$, $$ \forall x \in R $$
   - You can use [`\color{}`](https://katex.org/docs/supported.html#style-color-size-and-font "KaTex Supported Functions") syntax to **color words in markdown**. :art:
-- `localized-footer`: already installed, ready to fill something in.
+- `localized-footer`: already installed but disabled, waiting to fill something in.
 - `scripts`: In `"plugins": {}` of `book.json`, it should be placed below the plugins that need to override some javascript functionalities by customized scripts.
 
 ### Debugging
