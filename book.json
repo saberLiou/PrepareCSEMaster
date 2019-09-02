@@ -31,9 +31,6 @@
         "word-count"
     ],
     "pluginsConfig": {
-        "fontsettings": {
-            "size": 4
-        },
         "sharing": {
             "douban": false,
             "facebook": false,
