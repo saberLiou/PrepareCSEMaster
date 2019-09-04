@@ -44,7 +44,8 @@
   * [01. 指令: 計算機的語言](ComputerOrganization/Chapter01.md)
   * [02. 計算機算數](ComputerOrganization/Chapter02.md)
   * [03. 了解與評估計算機的效能](ComputerOrganization/Chapter03.md)
-  * [04. 處理器：資料路徑與控制](ComputerOrganization/Chapter04.md)
+  * [04. 處理器：資料路徑與控制單元](ComputerOrganization/Chapter04.md)
+  * [05. 利用管線增加效能](ComputerOrganization/Chapter05.md)
 
 ---
 * [Author's Github](https://github.com/saberLiou)
