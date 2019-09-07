@@ -195,7 +195,10 @@
             "title": "Algorithm"
         },
         "operating_system": {
-            "title": "Operating System"
+            "title": "Operating System",
+            "chapter1": {
+                "title": "01. 導論"
+            }
         },
         "computer_organization": {
             "title": "Computer Organization",

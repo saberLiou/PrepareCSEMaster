@@ -40,6 +40,7 @@
   * [03. Stack & Queue](DataStructure/Chapter03.md)
 * [Algorithm](Algorithm/README.md)
 * [Operating System](OperatingSystem/README.md)
+  * [01. 導論](OperatingSystem/Chapter01.md)
 * [Computer Organization](ComputerOrganization/README.md)
   * [01. 指令: 計算機的語言](ComputerOrganization/Chapter01.md)
   * [02. 計算機算數](ComputerOrganization/Chapter02.md)
