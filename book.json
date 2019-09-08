@@ -197,7 +197,10 @@
         "operating_system": {
             "title": "Operating System",
             "chapter1": {
-                "title": "01. 導論"
+                "title": "01. 作業系統及 System Types 介紹"
+            },
+            "chapter2": {
+                "title": "02. I/O 運作方式, Interrupt 介紹及 Hardware Resource Protection"
             }
         },
         "computer_organization": {
