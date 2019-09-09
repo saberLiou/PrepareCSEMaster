@@ -4,7 +4,12 @@
 ```bash
 $ npm install -g gitbook-cli
 ```
-and **[download jq](https://stedolan.github.io/jq/download/)** for auto-generating `SUMMARY.md` by `summarize.sh` if you want to use it.
+
+If you want to use
+```shell
+$ sh summarize.sh
+```
+for **auto-generating `SUMMARY.md` and its related markdown stubs** after any modifications written in `variables` of `book.json`, please **[download jq](https://stedolan.github.io/jq/download/)** to ensure the script executed correctly.
 
 ## Developing
 
@@ -12,11 +17,6 @@ and **[download jq](https://stedolan.github.io/jq/download/)** for auto-generati
 
 #### SUMMARY.md
 - any `{{ book.[variables] }}` syntax is useless in it.
-- you can use
-```shell
-$ sh summarize.sh
-```
-to auto-generate `SUMMARY.md` after any modification happened in `variables` of `book.json`.
 
 #### Gitbook Plugins
 - `etoc`:
