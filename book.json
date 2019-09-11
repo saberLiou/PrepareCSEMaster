@@ -180,6 +180,18 @@
                 "5_6": {
                     "title": "5-6. 特殊類型遞迴關係式"
                 }
+            },
+            "chapter6": {
+                "title": "06. 圖論",
+                "6_1": {
+                    "title": "圖的種類及術語"
+                },
+                "6_2": {
+                    "title": "圖形表示法與同構"
+                },
+                "6_3": {
+                    "title": "圖的基本性質"
+                }
             }
         },
         "data_structure": {
@@ -189,6 +201,9 @@
             },
             "chapter3": {
                 "title": "03. Stack & Queue"
+            },
+            "chapter6": {
+                "title": "06. Graph"
             }
         },
         "algorithm": {
