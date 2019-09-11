@@ -99,7 +99,7 @@ $$ \rightarrow \Large{\text{CPU Execution Time}} $$ = $$ \Large{\text{\color{red
 $$ MIPS $$ = $$ \dfrac{\text{Instruction rate}}{10^6} $$ = $$ \dfrac{\text{IC}}{\mathit{\text{Execution Time}} \times 10^6} $$ = $$ \dfrac{\text{clock rate}}{\text{CPI} \times 10^6} $$
 
 {% hint style='danger' %}
-此 MIPS **非**「**{{ book.computer_organization.chapter1.title }}**」之 **MIPS(Microprocessor without Interlocked Pipe Stages)**!
+此 MIPS **非**「**01. 指令: 計算機的語言**」之 **MIPS(Microprocessor without Interlocked Pipe Stages)**!
 {% endhint %}
 
 - 以 $$ MIPS $$ 作為 computer 效能評估標準時應注意:
