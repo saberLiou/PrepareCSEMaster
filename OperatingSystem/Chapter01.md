@@ -64,9 +64,13 @@ True/False?
   - 讓每個 users 覺得有自己專屬的 computer 之感覺
 
 - 技術:
-  - **CPU Scheduling** 採用 **RR(輪迴)排班**(**04. Processes**)
-  - 採用 **Swapping**, 即 **Virtual Memory**(**08. Virtual Memory**)
-  - 採用 **Spooling**, 讓每個 users 有自己的 I/O-device 之感覺，同時也**一併使用 Buffering**
+  - **CPU Scheduling** 採用 **RR(輪迴)排班**
+  > 詳見「**04. Processes**」
+
+  - 採用 **Swapping**，即 **Virtual Memory**
+  > 詳見「**08. Virtual Memory**」
+
+  - 採用 **Spooling**，讓每個 users 有自己的 I/O-device 之感覺，同時也**一併使用 Buffering**
 
 ### 多處理器系統 (Multiprocessors/Multicores System)
 
