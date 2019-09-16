@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/bin/bash/env bash
+
+echo "Use GNU bash, version ${BASH_VERSION} in ${BASH} to execute the script.";
 
 BOOK="book.json";
 ROOT_PWD=".variables";
@@ -41,7 +43,7 @@ do
             chapter_title=$(cat $BOOK | jq -r ${ROOT_PWD}${chapter_json_pwd}'.title');
 
             chapter_number=${chapter:7};
-            chapter_title_number=$([ ${#chapter_number} -lt 2 ] && echo "0${chapter_number}" || echo ${chapter_number});
+            chapter_title_number=$([ ${#chapter_number} -lt 2 ] && echo -e "0${chapter_number}" || echo -e ${chapter_number});
 
             case ${subject} in
                 "linear_algebra"|"discrete_mathematics")
@@ -73,21 +75,21 @@ do
                             subchapter_title=$(cat $BOOK | jq -r ${ROOT_PWD}${subchapter_json_pwd}'.title');
 
                             subchapter_number="$(cut -d'_' -f2 <<<${subchapter})";
-                            subchapter_title_number=$([ ${#subchapter_number} -lt 2 ] && echo "0${subchapter_number}" || echo ${subchapter_number});
+                            subchapter_title_number=$([ ${#subchapter_number} -lt 2 ] && echo -e "0${subchapter_number}" || echo -e ${subchapter_number});
 
                             chapter_readme="${chapter_readme}[{{ book${chapter_json_pwd}.${subchapter}.title }}](${subchapter_title_number}.md)  \n";
 
                             md_file="${title//[[:space:]]/}/Chapter${chapter_title_number}/${subchapter_title_number}.md";
                             if [ ! -f $md_file ]; then	# touch markdown if not exist.
                                 touch $md_file;
-                                echo "# {{ book${chapter_json_pwd}.${subchapter}.title }}\n<!-- notoc -->\n\n${UNDER_CONSTRUCTION_STUB}\c" > $md_file;
+                                echo -e "# {{ book${chapter_json_pwd}.${subchapter}.title }}\n<!-- notoc -->\n\n${UNDER_CONSTRUCTION_STUB}\c" > $md_file;
                             fi
 
                             content="${content}\t\t* [${subchapter_title}](${title//[[:space:]]/}/Chapter${chapter_title_number}/${subchapter_title_number}.md)\n";
                         done
                     fi
                     
-                    echo "${chapter_readme}\c" > $chapter_readme_md_file;
+                    echo -e "${chapter_readme}\c" > $chapter_readme_md_file;
                     printf %s "$(cat ${chapter_readme_md_file})" > ${chapter_readme_md_file};   # remove last '\n' of the file.
                     ;;
                 *)  # default
@@ -96,7 +98,7 @@ do
                     md_file="${title//[[:space:]]/}/Chapter${chapter_title_number}.md";
                     if [ ! -f $md_file ]; then	# touch markdown if not exist.
                         touch $md_file;
-                        echo "# {{ book${chapter_json_pwd}.title }}\n<!-- notoc -->\n\n${UNDER_CONSTRUCTION_STUB}\c" > $md_file;
+                        echo -e "# {{ book${chapter_json_pwd}.title }}\n<!-- notoc -->\n\n${UNDER_CONSTRUCTION_STUB}\c" > $md_file;
                     fi
 
                     content="${content}\t* [${chapter_title}](${md_file})\n";
@@ -105,10 +107,10 @@ do
         done
     fi
 
-    echo "${subject_readme}\c" > $subject_readme_md_file;
+    echo -e "${subject_readme}\c" > $subject_readme_md_file;
     printf %s "$(cat ${subject_readme_md_file})" > ${subject_readme_md_file};   # remove last '\n' of the file.
 done
 
 footer="\n---\n* [Author's Github](https://github.com/saberLiou)";
 
-echo "${header}${content}${footer}\c" > $SUMMARY;
+echo -e "${header}${content}${footer}\c" > $SUMMARY;

@@ -6,8 +6,8 @@ $ npm install -g gitbook-cli
 ```
 
 If you want to use
-```shell
-$ sh summarize.sh
+```bash
+$ bash summarize.sh
 ```
 for **auto-generating `SUMMARY.md` and its related markdown stubs** after any modifications written in `variables` of `book.json`, please **[download jq](https://stedolan.github.io/jq/download/)** to ensure the script executed correctly.
 
