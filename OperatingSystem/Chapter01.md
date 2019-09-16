@@ -70,9 +70,24 @@ True/False?
   - 採用 **Swapping**，即 **Virtual Memory**
   > 詳見「**08. Virtual Memory**」
 
-  - 採用 **Spooling**，讓每個 users 有自己的 I/O-device 之感覺，同時也**一併使用 Buffering**
+  - 採用 **Spooling**，讓每個 users 有自己的 I/O Device 之感覺，同時也**一併使用 Buffering**
 
-### 多處理器系統 (Multiprocessors/Multicores System)
+### 多處理器系統 (Multiprocessors System)
+- Define: 又稱 Multiprocessing System, **平行系統(Parallel System)** 或 **緊密耦合系統(Tightly Coupled System)**，主要特色如下:
+  - 一部機器(或**主機板**)內裝置**多顆 Processors**(或 **CPUs**)，彼此**共享**此一機器內的 Memory, Bus, I/O Devices, power-supply, ...etc.
+  - 通常所有 CPU **均受同一個 clock 之時脈控制**
+  - 通常由**同一個 OS** 管控所有 CPU
+  - 這些 Processors 之間的溝通大都採 **Shared Memory** 的方式
+  > 詳見「**06. Process Synchronization**」
+
+- 優點:
+  - **產能增加(Increased Throughput)**
+  - **可靠度提昇(Increased Reliability)**
+  - 運算能力之**規模擴充具經濟效益(Economy of Scale)**
+
+#### 對稱式多處理器 (Symmetric Multiprocessors, SMP)
+
+#### 非對稱式多處理器 (Asymmetric Multiprocessors, ASMP)
 
 ### 分散式系統 (Distributed System)
 
