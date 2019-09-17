@@ -75,15 +75,25 @@ True/False?
 ### 多處理器系統 (Multiprocessors System)
 - Define: 又稱 Multiprocessing System, **平行系統(Parallel System)** 或 **緊密耦合系統(Tightly Coupled System)**，主要特色如下:
   - 一部機器(或**主機板**)內裝置**多顆 Processors**(或 **CPUs**)，彼此**共享**此一機器內的 Memory, Bus, I/O Devices, power-supply, ...etc.
-  - 通常所有 CPU **均受同一個 clock 之時脈控制**
+  - 通常所有 CPUs **均受同一個 clock 之時脈控制**
   - 通常由**同一個 OS** 管控所有 CPU
   - 這些 Processors 之間的溝通大都採 **Shared Memory** 的方式
   > 詳見「**06. Process Synchronization**」
 
+![Multiprocessors System](../images/OperatingSystem/Chapter01/multiprocessors_system.jpg "Multiprocessors System")
+
 - 優點:
-  - **產能增加(Increased Throughput)**
-  - **可靠度提昇(Increased Reliability)**
-  - 運算能力之**規模擴充具經濟效益(Economy of Scale)**
+  - **產能增加(Increased Throughput)**: $$ \because $$ 支持 **Parallel Computing**，$$ \therefore $$ 同一時間內可有多個 jobs 在不同 CPU 上平行執行；然而，**$$ n $$ 顆 CPUs 之產能必定 $$ < $$ 一顆 CPU 產能 $$ \times $$ $$ n $$ 倍**，$$ \because $$
+  
+    - **資源競爭(Resource Contention)**: $$ \because $$ 共享資源
+    - **Processors 之間的 communications** 會導致不見得所有 jobs 都可以被平行執行
+  
+    $$ \therefore $$ 效能會被抵減
+
+  - **可靠度提昇(Increased Reliability)**: 當某顆 CPU 壞了，其他 CPUs 仍可正常執行工作，系統不至於因而停頓或終止
+    - **漸進式毀損(graceful degradation)**: 系統不會因為某些硬體或軟體的元件故障而停頓，仍保持續運作之能力，又可稱為**適度的降級**、**從容弱化**或**故障弱化(fail-soft)**
+    - **容錯系統(fault tolerant system)**: 具有 graceful degradation 能力的系統
+  - 運算能力之**規模擴充具經濟效益(Economy of Scale)**: $$ \because $$ 這些 CPUs **共享**此機器的 Memory, Bus, ...等其他資源，$$ \therefore $$ 成本 $$ \downarrow $$
 
 #### 對稱式多處理器 (Symmetric Multiprocessors, SMP)
 
