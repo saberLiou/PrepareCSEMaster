@@ -51,7 +51,7 @@ True/False?
 1.  Multiprogramming System 一定要 Multiprocessors(多顆 CPU) System 支持才行
 2.  Multiprogramming System 一定要 Multiusers(多人) System 支持才行
 {% endhint %}
-> 1. False $$ \because $$ **Single CPU by Concurrent Execution** 也可以
+> 1. False $$ \because $$ **Single-CPU by Concurrent Execution** 也可以
 > 2. False $$ \because $$ **Single-users System** 也可以
 
 ### 分時系統 (Time-Sharing System)
@@ -85,19 +85,42 @@ True/False?
 - 優點:
   - **產能增加(Increased Throughput)**: $$ \because $$ 支持 **Parallel Computing**，$$ \therefore $$ 同一時間內可有多個 jobs 在不同 CPU 上平行執行；然而，**$$ n $$ 顆 CPUs 之產能必定 $$ < $$ 一顆 CPU 產能 $$ \times $$ $$ n $$ 倍**，$$ \because $$
   
-    - **資源競爭(Resource Contention)**: $$ \because $$ 共享資源
+    - **資源競爭(Resource Contention)**，$$ \because $$ 共享資源
     - **Processors 之間的 communications** 會導致不見得所有 jobs 都可以被平行執行
   
     $$ \therefore $$ 效能會被抵減
 
-  - **可靠度提昇(Increased Reliability)**: 當某顆 CPU 壞了，其他 CPUs 仍可正常執行工作，系統不至於因而停頓或終止
+  - **可靠度提昇(Increased Reliability)**: 當某顆 CPU 故障，其他 CPUs 仍可正常執行工作，系統不至於因而停頓或終止
     - **漸進式毀損(graceful degradation)**: 系統不會因為某些硬體或軟體的元件故障而停頓，仍保持續運作之能力，又可稱為**適度的降級**、**從容弱化**或**故障弱化(fail-soft)**
     - **容錯系統(fault tolerant system)**: 具有 graceful degradation 能力的系統
   - 運算能力之**規模擴充具經濟效益(Economy of Scale)**: $$ \because $$ 這些 CPUs **共享**此機器的 Memory, Bus, ...等其他資源，$$ \therefore $$ 成本 $$ \downarrow $$
 
 #### 對稱式多處理器 (Symmetric Multiprocessors, SMP)
+- Define: 每個 Processor 所負責(提供)的工作能力**皆相同(identical)**，且均有對等權利存取各式資源
+- 設計重點: **Load Balancing**
+> 詳見「**04. Processes**」
+
+- 優點:
+  - **Reliability 較高**
+  - **Throughput 較高**
+- 缺點: **OS 之設計與開發較複雜**，$$ \because $$ **Load Balancing** 須針對共享資源及 data 提供嚴謹的互斥存取機制
 
 #### 非對稱式多處理器 (Asymmetric Multiprocessors, ASMP)
+- Define: 每個 Processor 所負責(提供)的工作能力**不盡相同**，通常採 **Master-slave(主僕式，或稱 Boss-employee)架構**，即有顆 Master CPU 負責管理資源配置與分派工作給其餘 Slave CPUs
+- 優點: **OS 之設計與開發較簡單**，$$ \because $$ 很容易**從 Single-CPU OS 版本修改**而得
+- 缺點:
+  - **Reliability 較低**: $$ \because $$ 每一個 CPU 工作能力不一定相同 $$ ^{ex.} $$ 若 **Master CPU 故障**，則系統會停頓直到選出新的 Master 才會恢復運作
+  - **Throughput 較低**: $$ \because $$ **Master CPU** 會是**效能瓶頸**
+
+#### 多核 CPU 晶片 (Multicores CPU Chip)
+以 OS 角度來看，以下兩者**皆相同**且視為 **2 個 "logical" CPUs**
+
+![Multicores CPU Chip](../images/OperatingSystem/Chapter01/multicores_cpu_chip.jpg "Multicores CPU Chip")
+
+- **速度較 2 Single-core CPUs 快**，$$ \because $$ 不用透過 Bus 溝通
+- **更省能源(power saving)**
+
+![2 Single-core CPUs](../images/OperatingSystem/Chapter01/2_single_core_cpus.jpg "2 Single-core CPUs")
 
 ### 分散式系統 (Distributed System)
 
