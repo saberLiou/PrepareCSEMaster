@@ -55,7 +55,7 @@ True/False?
 > 2. False $$ \because $$ **Single-users System** 也可以
 
 ### 分時系統 (Time-Sharing System)
-- Define: 又稱**Multitasking(多工) System**, It's **a logical extension of Multiprogramming System**(**Multiprogramming System 之一種**). CPU switches jobs **more frquently than Multiprogramming System**(恐龍本稱為**Batch System**) so that users can interact with each job while it's running, creating **interactive computing**. $$ \Rightarrow $$ 適合 **Interactions with users**
+- Define: 又稱**Multitasking(多工) System**, It's **a logical extension of Multiprogramming System**(**Multiprogramming System 之一種**). CPU switches jobs **more frquently than Multiprogramming System** so that users can interact with each job while it's running, creating **interactive computing**. $$ \Rightarrow $$ 適合 **Interactions with users**
 > $$ ^{ex.} $$ Mainframe 大型主機 $$ \leftrightarrow $$ 終端機群, Unix
 
 - 強調:
@@ -109,7 +109,8 @@ True/False?
 - Define: 每個 Processor 所負責(提供)的工作能力**不盡相同**，通常採 **Master-slave(主僕式，或稱 Boss-employee)架構**，即有顆 Master CPU 負責管理資源配置與分派工作給其餘 Slave CPUs
 - 優點: **OS 之設計與開發較簡單**，$$ \because $$ 很容易**從 Single-CPU OS 版本修改**而得
 - 缺點:
-  - **Reliability 較低**: $$ \because $$ 每一個 CPU 工作能力不一定相同 $$ ^{ex.} $$ 若 **Master CPU 故障**，則系統會停頓直到選出新的 Master 才會恢復運作
+  - **Reliability 較低**: $$ \because $$ 每一個 CPU 工作能力不一定相同  
+    $$ ^{ex.} $$ 若 **Master CPU 故障**，則系統會停頓直到選出新的 Master 才會恢復運作
   - **Throughput 較低**: $$ \because $$ **Master CPU** 會是**效能瓶頸**
 
 #### 多核 CPU 晶片 (Multicores CPU Chip)
@@ -127,3 +128,19 @@ True/False?
 ### 即時系統 (Real-Time System)
 
 ### 手持系統 (Handheld System, Mobile Computing)
+- Example: **mobile devices**
+  - 個人數位助理(Personal Digital Assistants, PDAs)
+  - smart phone: Apple iOS, Android by Google support
+- 主要是因為 mobile device hardware 上天生的限制，使得在 OS 及 Application 設計時有所要求/限制，如下表所示:
+
+| hardware 之天生限制 | software 之設計要求/限制 |
+|:----------------- |:---------------------- |
+| 1. **slower Processor** $$ \because $$ power-supply 有限且耗能大 + 散熱問題 | $$ \Rightarrow $$ 運算不宜過度複雜 |
+| 2. **Memory size 小** | $$ \Rightarrow $$ 程式宜精簡 + 不用的 Memory space 即刻 released |
+| 3. **display screen 小** | $$ \Rightarrow $$ 顯示之結果或內容疑有所剪裁 $$ ^{ex.} $$ **網頁截取(Web Clipping)**或**[響應式網頁設計(Responsive Web Design, RWD)](https://zh.wikipedia.org/wiki/響應式網頁設計)**|
+
+### 批次系統 (Batch System)
+- Define: 將一些**非急迫性**或**具週期性**的 jobs 累積成堆，再整批送入系統處理，過程中**不須與 user 互動(interaction)**
+- 主要目的: 提高冷門時段之資源利用度(resources utilization)
+- **不適用**於需 **user-interactive** 或 **real-time** 的 Applications.
+- Example: 報稅系統、下載軟體更新、掃毒、磁碟重組、庫存盤點 ...etc.
