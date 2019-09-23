@@ -74,10 +74,10 @@ True/False?
 
 ### 多處理器系統 (Multiprocessors System)
 - Define: 又稱 Multiprocessing System, **平行系統(Parallel System)** 或 **緊密耦合系統(Tightly Coupled System)**，主要特色如下:
-  - 一部機器(或**主機板**)內裝置**多顆 Processors**(或 **CPUs**)，彼此**共享**此一機器內的 Memory, Bus, I/O Devices, power-supply, ...etc.
+  - 一部 machine (或**主機板**)內裝置**多顆 Processors**(或 **CPUs**)，彼此**共享**此一 machine 內的 Memory, Bus, I/O Devices, power-supply, ...etc.
   - 通常所有 CPUs **均受同一個 clock 之時脈控制**
-  - 通常由**同一個 OS** 管控所有 CPU
-  - 這些 Processors 之間的溝通大都採 **Shared Memory** 的方式
+  - 通常由**同一個 OS** 管控所有 CPUs
+  - Processors 之間的溝通大都採 **Shared Memory** 的方式
   > 詳見「**06. Process Synchronization**」
 
 ![Multiprocessors System](../images/OperatingSystem/Chapter01/multiprocessors_system.jpg "Multiprocessors System")
@@ -93,7 +93,7 @@ True/False?
   - **可靠度提昇(Increased Reliability)**: 當某顆 CPU 故障，其他 CPUs 仍可正常執行工作，系統不至於因而停頓或終止
     - **漸進式毀損(graceful degradation)**: 系統不會因為某些硬體或軟體的元件故障而停頓，仍保持續運作之能力，又可稱為**適度的降級**、**從容弱化**或**故障弱化(fail-soft)**
     - **容錯系統(fault tolerant system)**: 具有 graceful degradation 能力的系統
-  - 運算能力之**規模擴充具經濟效益(Economy of Scale)**: $$ \because $$ 這些 CPUs **共享**此機器的 Memory, Bus, ...等其他資源，$$ \therefore $$ 成本 $$ \downarrow $$
+  - 運算能力之**規模擴充具經濟效益(Economy of Scale)**: $$ \because $$ 這些 CPUs **共享**此 machine 的 Memory, Bus, ...等其他資源，$$ \therefore $$ 成本 $$ \downarrow $$
 
 #### 對稱式多處理器 (Symmetric Multiprocessors, SMP)
 - Define: 每個 Processor 所負責(提供)的工作能力**皆相同(identical)**，且均有對等權利存取各式資源
@@ -124,6 +124,13 @@ True/False?
 ![2 Single-core CPUs](../images/OperatingSystem/Chapter01/2_single_core_cpus.jpg "2 Single-core CPUs")
 
 ### 分散式系統 (Distributed System)
+- Define: 又稱**鬆散耦合系統(Loosely Coupled System)**，主要特色如下:
+  - 多部 machines 彼此以 **Network(LAN, MAN, WAN, ...)** 相互連接
+  - 每部 machine 內的 CPU 有各自的 (local) Memory, Bus, I/O Devices, power-supply, ...etc.，**並非共享**
+  - 各 CPU **clock 之時脈控制不一定相同**
+  - 各 CPU 上的 **OS 也不一定相同**
+  - Processors 之間的溝通，大都採 **Message Passing** 的方式
+  > 詳見「**06. Process Synchronization**」
 
 ### 即時系統 (Real-Time System)
 

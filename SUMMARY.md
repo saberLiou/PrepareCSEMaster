@@ -12,6 +12,8 @@
 		* [3-1. 向量空間](LinearAlgebra/Chapter03/01.md)
 		* [3-2. 子空間](LinearAlgebra/Chapter03/02.md)
 		* [3-3. 生成與線性獨立](LinearAlgebra/Chapter03/03.md)
+		* [3-4. 基底與維度](LinearAlgebra/Chapter03/04.md)
+		* [3-5. 直和](LinearAlgebra/Chapter03/05.md)
 * [Discrete Mathematics](DiscreteMathematics/README.md)
 	* [01. 基礎數學](DiscreteMathematics/Chapter01/README.md)
 	* [02. 關係與函數](DiscreteMathematics/Chapter02/README.md)
