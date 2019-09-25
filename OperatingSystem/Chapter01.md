@@ -85,7 +85,7 @@ True/False?
 - 優點:
   - **產能增加(Increased Throughput)**: $$ \because $$ 支持 **Parallel Computing**，$$ \therefore $$ 同一時間內可有多個 jobs 在不同 CPU 上平行執行；然而，**$$ n $$ 顆 CPUs 之產能必定 $$ < $$ 一顆 CPU 產能 $$ \times $$ $$ n $$ 倍**，$$ \because $$
   
-    - **資源競爭(Resource Contention)**，$$ \because $$ 共享資源
+    - **資源競爭(Resource Contention)**
     - **Processors 之間的 communications** 會導致不見得所有 jobs 都可以被平行執行
   
     $$ \therefore $$ 效能會被抵減
@@ -131,6 +131,19 @@ True/False?
   - 各 CPU 上的 **OS 也不一定相同**
   - Processors 之間的溝通，大都採 **Message Passing** 的方式
   > 詳見「**06. Process Synchronization**」
+- 優點:
+  - **產能增加(Increased Throughput)**
+  - **可靠度提昇(Increased Reliability)**
+  - **遠端通訊(Remote Communication)**: $$ ^{ex.} $$ email, FTP over Internet.
+  - **資源共享(Resource Sharing)** $$ \Rightarrow $$ cost $$ \downarrow $$，支援兩種 computing models:
+    - **Client-server** Computing
+      - server: 提供某些服務之 machines
+      > $$ ^{ex.} $$ file/mail/printer/DNS/computing server
+      - client: 不提供任何服務，純粹向 server 提出(request)服務請求，再接收由 server 所提供之服務(response)
+    - **Peer-to-peer** Computing
+      - 無法(或不用)區分出 client 或 server
+      - machine(or node) 即是 client 也是 server
+      - 一個 node 加入此 computing model 時，會 register its service request and provided，採 **central lookup service** 或 **broadcasting** 方式
 
 ### 即時系統 (Real-Time System)
 
