@@ -28,7 +28,7 @@
 
 ## System Types
 
-### 多元程式設計系統 (Multiprogramming System)
+### 多元程式設計系統 (Multiprogramming System)  {#multiprogramming-system}
 - Define: 系統允許多個 jobs(Processes) in the Memory 同時執行
   - 主要目的: **提高 CPU utilization**，避免 CPU idle
   - 作法: 透過 **Job Scheduling**(or **CPU Scheduling**) 技術達成  
@@ -54,8 +54,8 @@ True/False?
 > 1. False $$ \because $$ **Single-CPU by Concurrent Execution** 也可以
 > 2. False $$ \because $$ **Single-users System** 也可以
 
-### 分時系統 (Time-Sharing System)
-- Define: 又稱**Multitasking(多工) System**, It's **a logical extension of Multiprogramming System**(**Multiprogramming System 之一種**). CPU switches jobs **more frquently than Multiprogramming System** so that users can interact with each job while it's running, creating **interactive computing**. $$ \Rightarrow $$ 適合 **Interactions with users**
+### 分時系統 (Time-Sharing System) {#time-sharing-system}
+- Define: 又稱**Multitasking(多工) System**, It's **a logical extension of [Multiprogramming System](#multiprogramming-system)**(**Multiprogramming System 之一種**). CPU switches jobs **more frquently than Multiprogramming System** so that users can interact with each job while it's running, creating **interactive computing**. $$ \Rightarrow $$ 適合 **Interactions with users**
 > $$ ^{ex.} $$ Mainframe 大型主機 $$ \leftrightarrow $$ 終端機群, Unix
 
 - 強調:
@@ -146,6 +146,38 @@ True/False?
       - 一個 node 加入此 computing model 時，會 register its service request and provided，採 **central lookup service** 或 **broadcasting** 方式
 
 ### 即時系統 (Real-Time System)
+可分為兩種 subtypes:
+
+#### 硬性即時系統 (Hard Real-Time System)
+- Define: **This system must ensure the critical tasks complete on time**. 即必須保證重要工作可以準時完成，若超過時間，即算失效/失敗
+- Example: 軍事防衛系統、核能安控、工廠自動化生產、機器人控制 ...etc.
+
+![Hard Real-Time System](../images/OperatingSystem/Chapter01/hard_real_time_system.jpg "Hard Real-Time System")
+
+- 系統設計之考量:
+  - 任何可能影響時間之因素皆須納入考量
+  > $$ ^{ex.} $$ signal/data 傳輸、CPU 計算速度、algorithmn 之效能 ...etc.
+  - **任何可能造成處理時間過長或不可預期之設備或機制，宜少用或不用**
+    - **Disk 少用或不用** $$ \Rightarrow $$ 程式改成燒錄在 ROM 或做成晶片，或放 RAM
+    > $$ ^{ex.} $$ embedded real-time system
+    - **Virtual Memory 不予採用** $$ \because $$ **page fault** 處理時間太長
+    > $$ \therefore $$ **不會與 [Time-Sharing System](#time-sharing-system) 並存**
+  - **盡量降低 kernel 之介入干預時間**
+  > 通常 Hard Real-Time System 是沒有 OS 的，如果要有也是特殊設計，並非一般商用 OS  
+  > $$ \Rightarrow $$ 一般商用的 OS ($$ ^{ex.} $$ UNIX, Linux, Windows, Solaris, ...etc) 不支援 hard real-time features
+
+#### 軟性即時系統 (Soft Real-Time System)
+- Define: This system must ensure the **real-time process has the highest priority** than the others and **retain this level of priority until its completed**.
+> 重要的即時工作**維持權值，不可衰退**
+- Example: **Multimedia System**, **Virtual Reality**, **Science Simulation**, ..etc.
+- 系統設計之考量:
+  - 就 **CPU Scheduling** 而言，提供 **Preemptive Priority** 法則，**不提供 Aging** 技術
+  > 詳見「**04. Processes**」
+  - 支持 **Virtual Memory** 之使用，前提為 real-time process 之 Pages 皆須在 Memory 中直到完工
+  > $$ \therefore $$ **可與 [Time-Sharing System](#time-sharing-system) 並存**
+  - 盡量**降低 kernel 之 Dispatch Latency**
+  > 詳見「**04. Processes**」
+  - 一般商用的 OS ($$ ^{ex.} $$ UNIX, Linux, Windows, Solaris, ...etc) 支援 soft real-time features
 
 ### 手持系統 (Handheld System, Mobile Computing)
 - Example: **mobile devices**
