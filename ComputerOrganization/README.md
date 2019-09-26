@@ -6,3 +6,4 @@
 [{{ book.computer_organization.chapter3.title }}](Chapter03.md)  
 [{{ book.computer_organization.chapter4.title }}](Chapter04.md)  
 [{{ book.computer_organization.chapter5.title }}](Chapter05.md)  
+[{{ book.computer_organization.chapter6.title }}](Chapter06.md)  
