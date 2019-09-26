@@ -61,7 +61,7 @@
 	* [03. 了解與評估計算機的效能](ComputerOrganization/Chapter03.md)
 	* [04. 處理器：資料路徑與控制單元](ComputerOrganization/Chapter04.md)
 	* [05. 利用管線增加效能](ComputerOrganization/Chapter05.md)
-	* [05. 容量大且速度快的記憶體](ComputerOrganization/Chapter06.md)
+	* [06. 容量大且速度快的記憶體](ComputerOrganization/Chapter06.md)
 
 ---
 * [Author's Github](https://github.com/saberLiou)
