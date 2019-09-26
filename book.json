@@ -17,7 +17,7 @@
         "theme-vuejs-2",
         "toggle-chapters",
         "splitter",
-        "pageview-count",
+        "-pageview-count",
         "-sharing",
         "github",
         "etoc",
