@@ -65,7 +65,7 @@ True/False?
 
 - 技術:
   - **CPU Scheduling** 採用 **RR(輪迴)排班**
-  > 詳見「**04. Processes**」
+  > 詳見「**04. Process 與 Thread Management**」
 
   - 採用 **Swapping**，即 **Virtual Memory**
   > 詳見「**08. Virtual Memory**」
@@ -98,7 +98,7 @@ True/False?
 #### 對稱式多處理器 (Symmetric Multiprocessors, SMP)
 - Define: 每個 Processor 所負責(提供)的工作能力**皆相同(identical)**，且均有對等權利存取各式資源
 - 設計重點: **Load Balancing**
-> 詳見「**04. Processes**」
+> 詳見「**04. Process 與 Thread Management**」
 
 - 優點:
   - **Reliability 較高**
@@ -172,11 +172,11 @@ True/False?
 - Example: **Multimedia System**, **Virtual Reality**, **Science Simulation**, ..etc.
 - 系統設計之考量:
   - 就 **CPU Scheduling** 而言，提供 **Preemptive Priority** 法則，**不提供 Aging** 技術
-  > 詳見「**04. Processes**」
+  > 詳見「**04. Process 與**」
   - 支持 **Virtual Memory** 之使用，前提為 real-time process 之 Pages 皆須在 Memory 中直到完工
   > $$ \therefore $$ **可與 [Time-Sharing System](#time-sharing-system) 並存**
   - 盡量**降低 kernel 之 Dispatch Latency**
-  > 詳見「**04. Processes**」
+  > 詳見「**04. Process 與 Thread Management**」
   - 一般商用的 OS ($$ ^{ex.} $$ UNIX, Linux, Windows, Solaris, ...etc) 支援 soft real-time features
 
 ### 手持系統 (Handheld System, Mobile Computing)

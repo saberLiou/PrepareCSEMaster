@@ -129,7 +129,7 @@ $$ \therefore $$ **速度**上: **儘早重新開始 > 需要的字組先送**
 - **[EDO RAM](https://zh.wikipedia.org/wiki/EDO_RAM)**(**Extended Data Output** Random Access Memory): 2 dimensions(page)
 - **SDRAM**(**Synchronous** Dynamic Random Access Memory): 3 dimensions(pages)，**爆量存取(burst access)**的資料藉由**時脈訊號(clock signal)**所控制
 - **DDR SDRAM**(**Double Data Rate** Synchronous Dynamic Random Access Memory): 資料在**時脈的上升與下降邊緣皆可傳輸** $$ \Rightarrow $$ **同樣的時脈速度**可獲得**雙倍頻寬**
-- **QDR SDRAM**(**Quad Data Rate** Synchronous Dynamic Random Access Memory): 分開輸入與輸出，讀寫可同時進行 $$ \Rightarrow $$ **同樣的時脈速度**可獲得**四倍頻寬**
+- **QDR SDRAM**(**Quad Data Rate** Synchronous Dynamic Random Access Memory): 分開輸入與輸出，**讀寫可同時進行** $$ \Rightarrow $$ **同樣的時脈速度**可獲得**四倍頻寬**
 
 > 考試會考**縮寫拼出全名**
 
