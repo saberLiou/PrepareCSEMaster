@@ -45,7 +45,7 @@ $$ \because $$ 記憶體**容量** $$ \uparrow \Rightarrow $$ 找尋存取位址
 > - **Cache** Memory: **SRAM**
 > - **Main** Memory: **DRAM**
 
-### 區塊的命中與失誤
+### 區塊的命中與失誤    {#block-read-hit-and-miss}
 - 兩記憶體層次中最小的資料傳輸單位稱為**區塊(block)**或**行(line)**
 - **命中(hit)**: CPU 可以在**層次較近**的記憶體中找到需要的資料
 > 比率: **命中率(hit rate/ratio)**
@@ -91,3 +91,46 @@ Steps:
 > 載入 38, CPU 讀取 $$ \rightarrow $$ 36 $$ \rightarrow $$ 37 $$ \rightarrow $$ 39
 
 $$ \therefore $$ **速度**上: **儘早重新開始 > 需要的字組先送**
+
+## 快取的基礎概念
+**讀取快取的命中與失誤**已在**[區塊的命中與失誤](#block-read-hit-and-miss)**中講解，以下為寫入命中後與失誤時快取與主記憶體如何處理與配置
+
+### 寫入命中後快取的處理
+- **寫穿(write-through)**: CPU 寫入快取的**同時也寫入主記憶體**
+  - 優點: **設計簡單**
+  - 缺點: **效能差**
+- **寫入緩衝器(write-buffer)**: **寫穿的改良**，CPU 寫入快取的**同時也寫入緩衝器**，寫入後 CPU 可以繼續執行；當 CPU 企圖寫入已滿的緩衝器時，必須被暫停直到緩衝器寫入主記憶體後清空為止
+> **緩衝器(buffer)**: 小小記憶體，可用 **SRAM**
+- **寫回(write-back)**: CPU 要寫入記憶體時，**只先寫入快取**，直到在快取中被寫入的區塊要**被置換時才寫入主記憶體**
+  - 優點: **效能佳**
+  - 缺點: **設計複雜**
+
+### 寫入失誤時快取的配置
+- **寫入配置(write-allocate)**: 在快取中配置一區塊，由主記憶體中取得所需區塊資料後，將其寫入配置之區塊中
+> 通常搭配: **寫回(write-back)**
+- **寫入不配置(no-write-allocate)**: 又稱**繞過寫入(write-around)**，直接繞過快取，寫入在主記憶體中該區塊的部分，而不在快取中配置此區塊
+> 通常搭配: **寫穿(write-through)**
+
+### 快取的實現
+- **分離式快取(split/seperate cache)**: 分成**指令快取**與**資料快取**，為 **[Harvard Architecture](https://zh.wikipedia.org/wiki/哈佛架構)**，現今的**商用 computer**、**pipeline Datapath**($$ \because $$ **avoid structural hazard**) 皆是
+  - 優點: **頻寬較大**
+  - 缺點: **命中率較低**
+- **結合式快取(combined/unified cache)**
+  - 優點: **命中率較高**
+  - 缺點: **頻寬較小**
+
+> **頻寬(bandwidth)**: 資料量 / 單位時間
+
+### 設計支援快取的記憶體系統
+![Different Memory Organizations](../images/ComputerOrganization/Chapter06/different_memory_organizations.jpg "Different Memory Organizations")
+> **交錯(interleaving)**: 位址透過匯流排送至需要存取的 1 word Memory banks 時，允許**同時存或取**所需資料
+
+### 提升記憶體結構支援快取
+- **[EDO RAM](https://zh.wikipedia.org/wiki/EDO_RAM)**(**Extended Data Output** Random Access Memory): 2 dimensions(page)
+- **SDRAM**(**Synchronous** Dynamic Random Access Memory): 3 dimensions(pages)，**爆量存取(burst access)**的資料藉由**時脈訊號(clock signal)**所控制
+- **DDR SDRAM**(**Double Data Rate** Synchronous Dynamic Random Access Memory): 資料在**時脈的上升與下降邊緣皆可傳輸** $$ \Rightarrow $$ **同樣的時脈速度**可獲得**雙倍頻寬**
+- **QDR SDRAM**(**Quad Data Rate** Synchronous Dynamic Random Access Memory): 分開輸入與輸出，讀寫可同時進行 $$ \Rightarrow $$ **同樣的時脈速度**可獲得**四倍頻寬**
+
+> 考試會考**縮寫拼出全名**
+
+### 快取效能的量測
